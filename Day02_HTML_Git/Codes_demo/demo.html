@@ -1,0 +1,198 @@
+<!--
+demo.html
+Giới thiệu về HTML
++ Hyper Text Markup Language
++ Dựng khung, phần thô cho website
++ Học HTML là học các thẻ và cách thể hiện
+của các thẻ này
++ Thẻ HTML có 2 kiểu: kiểu đầy đủ: có cả thẻ đóng và thẻ mở, thẻ khuyết: mở và đóng thẻ trong thẻ mở
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="title" content="Seo title" />
+		<meta charset="utf8" />
+		<title>My title</title>
+	</head>
+	<body>
+		Hello World
+		<!--
+		- Trình duyệt: Chrome
+		- Ngôn ngữ trình duyệt: tiếng Anh
+		- Học các thẻ HTML chính
+		 -->
+		 <!-- Các thẻ h - heading - tiêu đề, thẻ đầy đủ, SEO, h1 -> h6 -->
+		 <h1>Thẻ h1</h1>
+		 <h2>Thẻ h2</h2>
+		 <h3>Thẻ h3</h3>
+		 <h4>Thẻ h4</h4>
+		 <h5>Thẻ h5</h5>
+		 <h6>Thẻ h6</h6>
+		 <!-- Thẻ p - đoạn văn - paragraph, thẻ đầy đủ -->
+		 <p>Thẻ p1</p>
+		 <p>Thẻ p2</p>
+		 <!-- Thẻ br - xuống dòng text - break, thẻ khuyết -->
+		 Đoạn text <br />
+		 bị xuống dòng
+		 <!-- Thẻ hr - đường kẻ ngang - horizontal - thẻ khuyết -->
+		 <hr />
+		 <!-- Thẻ i - in nghiêng text - italic - thẻ đầy đủ -->
+		 <i>In nghiêng</i>
+		 <!-- Thẻ b - in đậm - bold - đầy đủ -->
+		 <b>In đậm</b>
+		 <!-- Thẻ u - gạch chân - underline - đầy đủ -->
+		 <u>Gạch chân</u>
+		 <!-- Thẻ div - khối/khung trên trang, chứa các thẻ khác, có tác dụng khi học về CSS, thẻ đầy đủ -->
+		 <div>Thẻ div</div>
+		 Nội dung test
+		 <div>
+		 	<p>Thẻ p1</p>
+		 	<b>Thẻ b1</b>
+		 	<div>Thẻ div1</div>
+		 </div>
+
+		 <!-- Thẻ span - có tác dụng khi học về CSS, style  text trong 1 văn bản ngang hàng - thẻ đầy đủ -->
+		 <span>Thẻ span</span>
+		 Nội dung 1 <span>màu đỏ</span>
+		 <!-- Thẻ meta - viết trong thẻ <head>, cấu hình cho trang: seo - thẻ khuyết -->
+
+		 <!-- Thẻ img - hiển thị ảnh - image, thẻ khuyết. Copy 1 ảnh bất kỳ vào ngang hàng với file .html hiện tại -->
+		 <!-- Lập trình có 2 kiểu đường dẫn:
+		 + Tuyệt đối: đi từ ổ gốc của máy tính đến file hiện tại
+		 + Tương đối: đường dẫn so với 1 file khác -> hay dùng 
+		  -->
+		 <img src="rose.jpeg" 
+		 title="Thuộc tính này có ở tất cả thẻ HTML, rê chuột qua thẻ để xem nội dung"
+		 alt="Hiển thị nội dung này khi đường dẫn ảnh ko tồn tại"
+		 width="100px"
+		 height="100px"
+		  />
+		  <!-- Đơn vị độ dài chính trong Web: px, % -->
+		  <!-- Bảng: table, tr - table row, td - table data, thẻ đầy đủ-->
+		  <!-- Tạo 1 bảng có 4 hàng, mỗi hàng 3 cột -->
+		  <table border="1" cellspacing="0" cellpadding="8">
+		  	<tr>
+		  		<td>Hàng 1 cột 1</td>
+		  		<td>Hàng 1 cột 2</td>
+		  		<td>Hàng 1 cột 3</td>
+		  	</tr>
+		  	<tr>
+		  		<!-- Khi gộp cột/hàng luôn phải giữ nguyên cấu trúc ban đầu của bảng -->
+		  		<td colspan="2">Hàng 2 cột 1</td>
+		  		<!-- <td>Hàng 2 cột 2</td> -->
+		  		<td>Hàng 2 cột 3</td>
+		  	</tr>
+		  	<tr>
+		  		<td rowspan="2">Hàng 3 cột 1</td>
+		  		<td>Hàng 3 cột 2</td>
+		  		<td>Hàng 3 cột 3</td>
+		  	</tr>
+		  	<tr>
+		  		<!-- <td>Hàng 4 cột 1</td> -->
+		  		<td>Hàng 4 cột 2</td>
+		  		<td>Hàng 4 cột 3</td>
+		  	</tr>
+		  </table>
+		  <!-- Thẻ ul - li - danh sách ko có thứ tự - unorder list - thẻ đầy đủ -->
+		  <ul>
+		  	<li>Thẻ li thứ nhất</li>
+		  	<li>Thẻ li thứ 2</li>
+		  	<li>Thẻ li thứ 3</li>
+		  </ul>
+		  <!-- Thẻ ol - li - order list - danh sách có thứ tự - thẻ đầy đủ -->
+		  <ol>
+		  	<li>Thẻ li thứ nhất</li>
+		  	<li>Thẻ li thứ 2</li>
+		  	<li>Thẻ li thứ 3</li>
+		  </ol>
+		  <!-- Thẻ a - Link - anchor link - Thẻ đầy đủ -->
+		  <a href="https://google.vn" target="_blank">
+		  	Click để tới Google
+		  </a>
+		  <a href="#">Click vào ko tới đâu cả</a>
+		  <!-- Thẻ button - Hiển thị ra các nút - Đầy đủ -->
+		  <button>Nút button</button>
+		  <button>
+		  	<a href="">Thẻ a</a>
+		  </button>
+		  <!-- Thẻ center - Căn giữa nội dung bên trong, thực tế ko dùng thẻ này để căn giữa, đầy đủ -->
+		  <center>Nội dung dc căn giữa</center>
+
+		  <!-- Thẻ liên quan đến form: form, input, textarea, select, option -->
+		  <!-- Bắt buộc phải dùng thẻ form bao ngoài các input, để chức năng gửi thông tin đi/submit form mới hoạt động đc -->
+		  <form action="" method="post">
+		  	Nhập tên:
+		  	<input type="text" name="fullname"
+		  	placeholder="Nhập tên của bạn" 
+		  	value="Nguyễn Văn A"
+		  	/>
+		  	<br />
+		  	Nhập mật khẩu:
+		  	<input type="password" />
+		  	<br />
+		  	Nhập số:
+		  	<input type="number" />
+		  	<br />
+		  	Nhập email:
+		  	<input type="email" />
+		  	<br />
+		  	Chọn giới tính:
+		  	<!-- Để radio hoạt động chính xác -> name phải giống nhau -->
+		  	<input type="radio" name="gender" /> Nam
+		  	<input type="radio" name="gender" /> Nữ
+		  	<input type="radio" name="gender" checked /> Khác
+		  	<br />
+		  	Chọn nghề nghiệp:
+		  	<input type="checkbox" /> Dev
+		  	<input type="checkbox" /> Tester
+		  	<input type="checkbox" checked /> BrSE
+		  	<br />
+		  	Nhập mô tả trên nhiều dòng
+		  	<!-- Thẻ này hiểu đc ký tự khoảng cách bên trong nội dung của nó -->
+		  	<textarea rows="5" cols="10"></textarea>
+		  	<br />
+		  	Chọn quốc gia:
+		  	<select>
+		  		<option>VN</option>
+		  		<option>Japan</option>
+		  		<option>Korea</option>
+		  	</select>
+		  	Chọn nhiều option:
+		  	<select multiple>
+		  		<option>VN</option>
+		  		<option>Japan</option>
+		  		<option>Korea</option>
+		  	</select>
+		  	<br />
+		  	Upload file:
+		  	<input type="file" />
+		  	Upload nhiều file tại 1 thời điểm
+		  	<input type="file" multiple />
+		  	<!-- Nút gửi thông tin đi/submit form -->
+		  	<!-- Có 2 cách submit form: click nút submit, đứng trong input -> enter,chỉ hoạt động đc khi có thẻ <form> bao ngoài -->
+		  	<input type="submit" value="Gửi" />
+		  	<!-- Nút reset form -->
+		  	<input type="reset" value="Xóa dữ liệu" />
+		  </form>
+
+		  <!-- 1 số thẻ HMTL5:  -->
+		  <header></header>
+		  <section></section>
+		  <article></article>
+		  <footer></footer>
+		  <nav></nav>
+		  <aside></aside>
+
+		  <!--
+		   GIT
+		   - Là công cụ giúp quản lý code và làm việc nhóm
+		   - 1 team có 3 ng A, B, C
+		   A code chức năng login
+		   B code chức năng register
+		   -> thực tế ko gộp code theo kiểu thủ công-> dùng tool tự động -> GIT
+		   - Thao tác với GIT cơ bản: tạo 1 kho lưu trữ trên GIT -> đẩy code từ local lên kho đó
+		   - Có rất nhiều dịch vụ cung cấp GIT: Github, GitLab, Bitbucket ...
+		   github.com
+		--> 
+	</body>
+</html>
