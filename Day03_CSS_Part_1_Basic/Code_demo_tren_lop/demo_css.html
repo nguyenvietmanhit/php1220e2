@@ -1,0 +1,124 @@
+<!-- demo_css.html -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Demo CSS</title>
+		<!-- Nhúng file .css tại đây -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1>Demo về CSS</h1>
+		<!--
+		CSS
+		- Cascading Style Sheet
+		- Thiết kế web trang trí cho HTML
+		- Chrome
+		- Thiết kế web Responsive
+		- CSS2, CSS3
+		- Học Thư viện Bootstrap của CSS
+		CÚ PHÁP KHAI BÁO CSS
+		 -->
+		<style type="text/css">
+			h1 {
+				color: red;
+			}
+			/* h1: selector - là đối tượng bị css; 
+			   color: thuộc tính css;
+			   red: giá trị của thuộc tính css tương ứng;
+			*/
+			/* CÁC SELECTOR TRONG CSS */
+			/* - Selector theo tên thẻ */
+			p {
+				background-color: pink;
+			}
+			/* - Selector theo thuộc tính id và class của thẻ HTML */
+			/* id: có tính duy nhất, ; */
+			/* class: dùng chung cho nhiều phần tử; */
+			#p-id {
+				color: blue;
+			}
+			.p-class {
+				color: yellow;
+			}
+			/* - Selector theo cấp */
+			#div-id p {
+				background-color: green;
+			}
+			/* - Selector theo thuộc tính thẻ */
+			input[type=text] {
+				background-color: red;
+			}
+			input[type=number] {
+				background-color: yellow;
+			}
+			/* - Selector theo trạng thái  */
+			#h3-test:hover {
+				color: red;
+			}
+			/* Ví trí của phần tử trong cấu trúc cha - con trực tiếp */
+			ul li:first-child {
+				background-color: red;
+			}
+			ul li:last-child {
+				background-color: yellow;
+			}
+			ul li:nth-child(2) {
+				background-color: blue;
+			}
+			.b-class::before {
+				/* Bắt buộc phải có content */
+				content: 'Phía trước';
+			}
+			.b-class::after {
+				/* Bắt buộc phải có content */
+				content: 'Phía sau';
+			}
+			/* CÁC CÁCH KHAI BÁO VÙNG LÀM VIỆC VỚI CSS
+			 */
+			 /* - Khai báo CSS inline trong thẻ HTML sử dụng thuộc tính style */
+			 /* - Inline trong file .html, sử dụng thẻ <style> */
+			 /* - Từ file .css bên ngoài, tạo file style.css, ngang hàng với file .html hiện tại, cần nhúng file .css vào */
+		</style>
+		<i id="i-id">Thẻ i</i>
+
+
+		<h2 style="color: red">Thẻ h2</h2>
+
+		<b class="b-class">Thẻ b</b>
+
+		<ul>
+			<li>Thẻ li 1</li>
+			<li>Thẻ li 2</li>
+			<li>Thẻ li 3</li>
+			<li>Thẻ li 4</li>
+			<li>Thẻ li 5</li>
+		</ul>
+
+		<h3 id="h3-test">Thẻ h3</h3>
+
+		<form method="post" action="">
+			<input type="text" placeholder="Nhập tên" />
+			<input type="number" value="5" />
+		</form>
+
+		<div id="div-id">
+			<p>
+			Thẻ p1 con
+				<b>dsasda</b>
+			</p>
+
+			<p>Thẻ p2 con</p>
+			<p>Thẻ p3 con</p>
+		</div>
+
+
+		<p id="p-id">Thẻ p với id</p>
+		<p class="p-class">Thẻ p với class</p>
+		<a href="#" class="p-class">Thẻ a</a>
+
+
+		<p>Thẻ p1</p>
+		<p>Thẻ p2</p>
+	</body>
+</html>
