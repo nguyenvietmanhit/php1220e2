@@ -1,0 +1,165 @@
+<!-- demo_css.html -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8" />
+		<title>Demo về CSS</title>
+		<!-- Nhúng file css từ bên ngoài -->
+		<!-- Lập trình có 2 kiểu đường dẫn:
+		- Đường dẫn tuyệt đối/vật lý
+		C:/nvmanh/abc/style.css
+		- Đường dẫn tương đối: đường dẫn của file muốn nhúng so với file hiện tại, ko đc chứa ký tự / ở đầu đường dẫn
+		 -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1>Demo CSS cơ bản phần 1</h1>
+		<!-- 
+		Ngôn ngữ CSS
+		1 - Khái niệm
+		+ Cascading Style Sheets
+		+ Ngôn ngữ trang trí cho HTML
+		+ Website hiện nay đều cần responsive để hiển thị tương thích với tất cả thiết bị như PC, Ipad, Mobile -> bắt buộc phải dùng CSS thì mới xử lý
+		+ Học 1 thư viện của CSS là Bootstrap
+		2 - Cú pháp khai báo
+		selector {
+			thuộc-tính-css: giá-trị-tương-ứng
+		}
+		 -->
+		 <h1>Thẻ h1</h1>
+		 <style type="text/css">
+		 	/*
+		 	+ Selector: là đối tượng HTML bị chịu tác động của css, với ví dụ sau thì selector là thẻ h1;
+			+ Property: thuộc tính, vd là color;
+			+ Value: giá trị của thuộc tính, vd là red;
+		 	*/
+		 	h1 {
+		 		color: red;
+		 	}
+
+		 	/* 3 - Các kiểu selector */
+		 	/* - Selector theo tên thẻ HTML */
+		 	a {
+		 		color: yellow;
+		 	}
+
+		 	/* - Selector theo thuộc tính id và class của thẻ HTML */
+		 	/* Selector theo id: mang tính duy nhất trên trang; */
+		 	/* Selector theo id bắt đầu với #  */
+		 	#p-id {
+		 		color: red;
+		 	}
+		 	#p-id-2 {
+		 		color: green;
+		 	}
+		 	/* Selector theo class: áp dụng cho nhiều đối tượng HTML có chung class; */
+		 	/* Xác định selector theo class bắt đầu với ký tự .  */
+		 	.common {
+		 		color: pink;
+		 	}
+		 	/* - Selector theo cấp */
+		 	/* Tất cả thẻ trong id=div-id sẽ bị ăn CSS */
+		 	#div-id p {
+		 		background-color: blue;
+		 	}
+		 	/* Chỉ CSS cho các selector là con trực tiếp, sử dung ký tự phân cấp là dấu >  */
+		 	#div-id > p {
+		 		color: red;
+		 	}
+		 	/* Ngoài ra còn có các ký tự phân tách khác là dấu + và ~ */
+
+		 	/* - Selector theo thuộc tính thẻ */
+		 	input[type=text] {
+		 		background-color: red;
+		 	}
+		 	input[type=number] {
+		 		background-color: green;
+		 	}
+		 	input[type=email] {
+		 		background-color: yellow;
+		 	}
+
+		 	/* Selector theo trạng thái thẻ */
+		 	/* Trạng thái hover: rê chuột qua thẻ; */
+		 	#a-hover:hover {
+		 		color: red;
+		 	}
+		 	/* Các trạng thái vị trí của đối tượng HTML trong cấu trúc cha con, chỉ áp dụng được đối với cha con trực tiếp */
+		 	ul li:first-child {
+		 		background-color: blue;
+		 	}
+		 	ul li:last-child {
+		 		background-color: red;
+		 	}
+		 	ul li:nth-child(2) {
+		 		background-color: purple;
+		 	}
+		 	ul li:nth-child(3) {
+		 		background-color: yellow;
+		 	}
+		 	/* Selector theo vị trí trước sau phần tử hiện tại: before, after; */
+		 	/* Bắt buộc phải có thuộc tính content */
+		 	#a-before-after:before {
+		 		content: 'Trước thẻ a';
+		 	}
+		 	#a-before-after:after {
+		 		content: 'Sau thẻ a';
+		 	}
+
+		 	/* 4 - Các cách nhúng code CSS,có 3 cách:;
+			- Nhúng inline trong thẻ HTML thông qua thuộc tính style có sẵn của thẻ, ko khuyến khích viết theo cách này
+			- Nhúng inline trong file .html thông qua cặp thẻ <style>, code css ko tính sử dụng lại trong các file khác
+			- Nhúng từ 1 file .css bên ngoài: thực tế các website luôn dùng cách này, nhúng file .css vào file html thông qua thẻ <link />, nhúng trong thẻ <head>
+			+ Tạo 1 file style.css ngang hàng với file hiện tại: demo_css.html;
+		 	*/
+		 </style>
+		 <a style="color: red">
+		 	Thẻ a với css inline
+		 </a>
+
+		 <a id="a-before-after">Thẻ a ban đầu</a>
+
+		 <ul>
+		 	<li>Thẻ li 1</li>
+		 	<li>Thẻ li 2</li>
+		 	<li>Thẻ li 3</li>
+		 	<li>Thẻ li 4</li>
+		 </ul>
+
+		 <a id="a-hover">
+		 	Hover qua thẻ a để đổi màu
+		 </a>
+
+		 <form action="" method="post">
+		 	<input type="text" value="123" name="abc" />
+		 	<br />
+		 	<input type="number" value="" placeholder="Nhập số" />
+		 	<br />
+		 	<input type="email" />
+		 </form>
+
+
+		 <div id="div-id">
+		 	<p>Thẻ con p1</p>
+		 	<p>Thẻ con p2</p>
+		 	<p>Thẻ con p3</p>
+		 	<div>
+		 		<p>Thẻ cháu p4</p>
+		 	</div>
+		 </div>
+
+		 <!-- Khai báo nhiều class cho 1 đối tượng HTML -->
+		 <p class="class1 class2 class3">Thẻ p</p>
+		 <p id="id1" class="class1">Thẻ p</p>
+		 <u class="common">Thẻ u</u>
+		 <b class="common">Thẻ b</b>
+		 <i class="common">Thẻ i</i>
+
+
+		 <p id="p-id">Thẻ p với id</p>
+		 <p id="p-id-2">Thẻ p2 với id</p>
+
+		 <a href="#">Thẻ a1</a>
+		 <a href="#">Thẻ a2</a>
+	</body>
+</html>
