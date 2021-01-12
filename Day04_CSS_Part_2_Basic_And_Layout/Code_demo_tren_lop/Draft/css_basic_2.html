@@ -1,0 +1,158 @@
+<!-- css_basic_2.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8" />
+	<title>CSS cơ bản phần 2</title>
+</head>
+<body>
+	<style type="text/css">
+		/* 1 - Margin: khoảng cách giữa các phần tử HTML liền kề nhau; */
+		#div1 {
+		    background: red;
+		    /* margin-top: 20px;
+		    margin-bottom: 10px;
+		    margin-left: 20px;
+		    margin-right: 20px; */
+		    /* Cú pháp viết gộp margin */
+		    /* - Margin đều 4 hướng  */
+		    /* margin: 10px; */
+		    /* - Margin top=bottom = 5px, left=right=20px */
+	        /* margin: 5px 20px; */
+	        /* Giá trị auto: ; căn tự động so với thành phần cha */
+	        /* margin: 0 auto; */
+	        /* - top-right-bottom-left:  đi từ top theo chiều kim đồng hồ; */
+	        margin: 5px 10px 15px 20px;
+		}
+		#div2 {
+			background:  blue;
+		}
+		#div3 {
+			background:  yellow;
+		}
+
+		/* 2 - Padding: khoảng cách tính từ viền của phần tử HTML đến nội dung bên trong nó */
+		#div1 {
+			/* padding-top: 20px;
+		    padding-bottom: 10px;
+		    padding-left: 30px;
+		    padding-right: 20px; */
+		    /* Cú pháp viết gộp giống hệt margin */
+		    padding: 20px 20px 10px 30px;
+		}
+		/* 3 - Width - Height */
+		#div2 {
+		    background: blue;
+		    /* Kích thước cố định */
+		    width: 50px;
+		    height: 50px;
+		    /* Kích thước nhỏ nhất */
+		    min-width: 100px;
+		    min-height: 300px;
+		    /* Kích thước lớn nhất */
+		    max-width: 1000px;
+		    max-height: 1000px;
+		}
+		/* 4 - Position: vị trí của phần tử, có 3 giá trị chính: fixed, relative, absolute; */
+		/* Đặc tính chung của position:
+		+ Nổi lên trên so với nền web bên trước, nhìn thấy các phần tử position trước rồi mới
+		đến các phần tử ko position
+		+ Di chuyển phần tử position ko ảnh hưởng đến các phần tử xung quanh
+		+ Di chuyển bằng các css top, left, right, bottom
+		*/
+		/* Position: fixed: cố định ; */
+		#div4 {
+		    background: pink;
+		    /* margin: 40px; */
+		    position: fixed;
+		    bottom: 0;
+		    left: 12px;
+		    /* right: 0; */
+		}
+		/* Position: relative: căn vị trí dựa vào chính phần tử hiện tại, ko phải theo phần tử khác; */
+		#div5 {
+		    background: purple;
+		    position: relative;
+		    top: 40px;
+		    left: 10px;
+    /* right: 40px; */
+		}
+		/* Position: absolute: căn vị trí dựa vào 1 phần tử cha gần nhất đang có position là relative, nếu ko có phần tử nào là relative thì sẽ căn dựa theo thẻ body; */
+		#parent {
+			width: 300px;
+			height: 300px;
+			background: brown;
+			position: relative;
+		}
+		#div6 {
+			/* Absolute luôn được dùng với 1 phần tử cha gần nhất có position=relative, khi đó absolute dựa vào phần tử cha để căn theo */
+		    background: red;
+		    width: 100px;
+		    height: 100px;
+		    position: absolute;
+		    bottom: 0;
+		}
+
+		/* 5 - z-index: thứ tự hiển thị ưu tiên cho 1 phần tử, chỉ hoạt động với các phần tử posotion; */
+		#div7 {
+			background: red;
+			width: 200px;height: 200px;
+			/* Ưu tiên hiển thị div 7, mặc định nếu ko set thì z-index=0 */
+			z-index: 1;
+		}
+		#div8 {
+			background: blue;
+			width: 100px;height: 100px
+		}
+		#div9 {
+			background:  yellow;
+			width: 50px;height: 50px;
+		}
+		.ps {position: absolute;}
+
+		/* 6 - Overflow: xác định cách thức hiển thị khi nội dung phần tử bị tràn khỏi khung; */
+		#div10 {
+			border: 1px solid red;
+			width: 30px;
+			height: 30px;
+			overflow: hidden;
+		}
+		/* 7 - Opacity: độ mờ của phần tử, mặc định ban đầu = 1; */
+		#div11 {
+			background:  green;
+			opacity: 0.5;
+		}
+		/* 8 - Transition: hiệu ứng chuyển đổi trạng thái của phần tử; */
+		#div12:hover {
+			background: yellow;
+		}
+		#div12 {
+			transition: all 5s ease;
+		}
+	</style>
+
+	<div id="div12">
+		Hover để đổi màu nền
+	</div>
+
+
+	<div id="div11">Div 11 opacity</div>
+
+	<div id="div10">
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+	</div>
+	<!-- <div id="div7" class="ps">Div 7</div>
+	<div id="div8" class="ps">Div 8</div>
+	<div id="div9" class="ps">Div 9</div> -->
+
+	<!-- <div id="parent">
+		<div id="div6">Div 6 position absolute</div>
+	</div>
+	<div id="div5">Div 5 position relative</div>
+	<div id="div4">Div 4 position fixed</div> -->
+
+	<div id="div2">Thẻ div2</div>
+	<div id="div1">Thẻ div1</div>
+	<div id="div3">Thẻ div3</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!-- layout_css.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Demo layout với CSS</title>
+</head>
+<body>
+	<style type="text/css">
+		/* Layout là gì: bố cục trang web, cấu trúc hàng/cột;
+		Có 3 cơ chế dựng layout: float, flex, grid
+		Ưu tiên sử dụng flex để dựng layout vì tính đơn giản
+		1 - Thành phần inline và block
+		+ Inline: width dựa theo nội dung, các phần tử inline sẽ đứng chung trên 1 hàng;
+		+ Block: width = 100%; ko thể đứng chung hàng với các p hần tử khác
+		- Set background cho các phần tử để đoán là inline/block
+		- Một số thẻ inline: b i u a span...
+		- Một số thẻ block: div, p, h ...;
+		- Để chuyển đổi kiểu hiển thị mặc định, sử dụng css diplay
+		- Nên dùng inline-block thay thế inline để có thể margin top, bottom đc
+		 */
+		 li {
+		    display: inline-block;
+		    margin: 0 10px;
+		}
+
+		/* 2 - Float: chuyên dùng để dựng layout, chia hàng/cột; */
+		.row {
+			border: 3px solid #000;
+		}
+		.col1 {
+			background: red;
+			float: left;
+			width: 50%;
+		}
+		.col2 {
+			background: yellow;
+		    float: left;
+		    width: 50%;
+		}
+		/* + Về bản chất dựng layout với float: set float cho các cột bên trong, sau đó set width tương ứng, với layout with thường có đơn vị là %; */
+		/* + Với float luôn phải fix trường hợp vỡ giao diện, vì phần tử bị float luôn có xu hướng hút phần tử ngay sau nó */
+		/* Có 2 cách fix vỡ giao diện:
+		- Can thiệp vào HTML, ngay sau cột cuối cùng bị float, thêm 1 html trống, set css clear: both;
+		 */
+		 .clearfix {
+		    clear: both;
+		}
+
+		/* Sử dụng css overflow: auto cho hàng; */
+		.row {
+			overflow: auto;
+		}
+
+		/* 3 - Dựng layout theo cơ chế flexbox:
+		- Flex chỉ áp dụng cho cấu trúc hàng/cột theo kiểu cha-con trực tiếp
+		- Flex có hạn chế là thiết kế trên 1 hàng
+		- Áp dụng css display: flex cho hàng;
+		 */
+		 .row-flex {
+		 	border: 5px solid red;
+		 	margin-bottom: 50px;
+		 	/* Áp dụng flex vào thành phần cha */
+		 	display: flex;
+		 }
+		 /* Set with cho các cột bên trong */
+		 .col1-flex {background: blue;width: 50%;}
+		 .col2-flex {background: yellow;width: 50%;}
+		 /* - Flex có cơ chế mặc định: luôn luôn giữ các cột bên trong nó trên cùng 1 hàng, cho dù thay đổi width của các hàng tổng > 100% -> ko bị vỡ giao diện; */
+		 /* - Nên sử dụng flex để dựng layout cho đơn giản */
+	</style>
+
+	<div class="row-flex">
+		<div class="col1-flex">Cột 1 flex</div>
+		<div class="col2-flex">Cột 2 flex</div>
+	</div>
+
+	<div class="row">
+		<div class="col1 col">Cột thứ nhất</div>
+		<div class="col2 col">Cột thứ 2</div>
+		<!-- Thêm html phía sau cột float cuối cùng -->
+		<!-- <div class="clearfix"></div> -->
+	</div>
+
+
+	<ul>
+		<li><a href="#">Link 1</a></li>
+		<li><a href="#">Link 2</a></li>
+		<li><a href="#">Link 3</a></li>
+	</ul>
+
+	<a href="#">Thẻ a1</a>
+	<a href="#">Thẻ a2</a>
+
+	<a href="#">Thẻ a3</a>
+	<p>Thẻ p1</p>
+</body>
+</html>

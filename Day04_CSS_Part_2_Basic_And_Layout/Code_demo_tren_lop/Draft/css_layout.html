@@ -1,0 +1,88 @@
+<!-- css_layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>CSS Layout</title>
+</head>
+<body>
+	<style type="text/css">
+		/* 1 - Layout là gì?
+		- LÀ bố cục của trang web, layout giúp chia cấu trúc trang web thành các khối nội dung theo cột
+		- Không dùng thẻ <table> để dựng layout vì ko linh hoạt khi thiết kế web responsive*/
+		/* 2 - Thành phần inline và block */
+		/* + Mỗi thẻ HTML đều có 1 kiểu hiển thị mặc định dựa vào thuộc tính css display
+		+ Để phân biệt thẻ là inline hay block, có thể khai báo 1 text bất kỳ ngay phía sau thẻ, nếu text bị xuống dòng -> block, ngược lại -> inline
+		+ Thẻ inline: width chiếm vừa đủ nội dung bên trong nó;
+		+ Thẻ block: width chiếm 100% so với khối bao nó;
+		+ Một số thẻ inline: b, i, u, a, span ...;
+		+ Một số thẻ block: p, h, ul, ol ,div ...;
+		 */
+
+		 /* + Thẻ inline ko thể margin trên dưới đc, trong trường hợp muốn display inline nên dùng inline-block thay thế */
+		 li {
+		    list-style: none;
+		    display: inline-block;
+		    margin-top: 17px;
+		    margin-bottom: 20px;
+		    margin-left: 10px;
+		    margin-right: 5px;
+		}
+
+		/* 3 -
+		Dựng layout theo cơ chế Flexbox:
+		+ Để dựng layout có 3 phương pháp chính: float, flex, grid;
+		+ Dựng layout với flex
+		 */
+		 /*Tạo 1 cấu trúc layout có 1 hàng và 3 cột có kích thước bằng nhau */
+		 /* + MẶc định nếu ko có css thì ko thể sắp xếp đc các selector nằm chung 1 hàng (ngoại trừ table) 
+			+ Không dùng css display inline,block khi dựng layout
+			+ Áp dụng display:flex cho khối cha (row) đang bao lấy các con trực tiếp của nó;
+			+ Set with tương ứng cho các cột (col) bên trong
+		 */
+		 .row {
+		 	display: flex;
+		 }
+
+		 .col {
+		    width: 33.33%;
+		    /* margin: 0 10px; */
+		}
+
+		 .col1 {
+		 	background: red;
+		 }
+		 .col2 {
+		 	background: blue;
+		 }
+		 .col3 {
+		 	background: yellow;
+		 }
+	</style>
+	<div class="row">
+		<div class="col1 col">Cột 1</div>
+		<div class="col2 col">Cột 2</div>
+		<div class="col3 col">Cột 3</div>
+	</div>
+
+
+	<ul>
+		<li><a href="#">Link 1</a></li>
+		<li><a href="#">Link 2</a></li>
+		<li><a href="#">Link 3</a></li>
+		<li><a href="#">Link 4</a></li>
+		<li><a href="#">Link 5</a></li>
+	</ul>
+
+
+	<span>Thẻ span</span> text test
+
+	<h1>Thẻ 1</h1> text test thẻ h1
+
+	<a href="#">Thẻ a1</a>
+	<a href="#">Thẻ a2</a>
+
+	<div>Thẻ div1</div>
+	<div>Thẻ div2</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!-- thuc_hanh_layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Demo Layout với Flexbox</title>
+	<!-- nhúng file .css từ bên ngoài -->
+	<link rel="stylesheet" href="style.css" />
+	<!-- css bằng trình duyệt sử dụng công cụ Inspect HTML -->
+</head>
+<body>
+<!--
+Các bước dựng trang web:
+1 - Cần phân tích trang web, để xác định các bố cục trước: header, main, footer
+2 - Dựng HTML , thêm các id hoặc class tương ứng để phục vụ cho css về sau. Trong quá trình dựng HTML, nếu có cấu trúc layout -> chia hàng/cột thì dựng khung liên quan luôn
+3  - CSS
+-->
+	<div class="container">
+		<!-- HEADER -->
+		<div class="header">
+			<h1 class="heading">Websites</h1>
+		</div>
+		<!-- END HEADER -->
+
+		<!-- MAIN CONTENT -->
+		<div class="main-content">
+			<!-- Do đang có cấu trúc layout nên sẽ khai báo cấu trúc row/col -->
+			<div class="row">
+				<!-- Cột 1 -->
+				<div class="menu">
+					<ul>
+						<li><a href="#">Menu 1</a></li>
+						<li><a href="#">Menu 2</a></li>
+						<li><a href="#">Menu 3</a></li>
+					</ul>
+				</div>
+				<!-- Cột 2 -->
+				<div class="content">
+					<span class="title">
+						Taimienphi.vn
+					</span>
+					<p class="des">
+						Nội dung demo Nội dung demo
+						Nội dung demo Nội dung demo
+						Nội dung demo Nội dung demo
+						Nội dung demo Nội dung demo
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- END MAIN CONTENT -->
+
+		<!-- FOOTER -->
+		<div class="footer">Footer</div>
+		<!-- END FOOTER -->
+	</div>
+</body>
+</html>
