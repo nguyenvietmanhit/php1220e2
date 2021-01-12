@@ -1,0 +1,219 @@
+<!-- css_basic.html -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>CSS Basic</title>
+	</head>
+	<body>
+		<style type="text/css">
+			/* Các thuộc tính CSS cơ bản */
+			/* 1 -  Màu nền - Background*/
+			/* Sử dụng công cụ của trình duyệt để CSS 1 cách trực quan nhất - thay đổi
+			trực tiếp CSS -> hiển thị kết quả luôn
+			-> Inspect HTML -> F12, Chuột phải chọn Inspect/Kiểm tra */
+			/*  - CSS có 2 dạng màu: đơn sắc và trộn - Hecxa; */
+			.p-bg {
+    			/* background-color: #3dbe71; */
+    			/* Copy 1 ảnh bất kỳ ngang hàng với file .html hiện tại */
+    			/* background-image: url('img.jpg'); */
+    			height: 400px;
+			    /* background-repeat: no-repeat; */
+			    /* background-position: center; */
+			    background-size: cover;
+			    /* - Viết gộp CSS cho ngắn gọn */
+			    background: red url('img.jpg') no-repeat center;
+				}
+			/* 2 - Font chữ */
+			.span-font {
+				/* Các xác định font family: dựa vào các font đang có trên mt của bạn -> C:/Windows/Fonts; */
+		        font-family: Comic Sans MS;
+			    font-style: italic;
+			    font-weight: bold;
+			    font-size: 30px;
+			}
+			/* 3 - CSS Text */
+			.p-text {
+			    color: #00A65A;
+			    text-align: center;
+			    text-decoration: underline;
+			    text-transform: uppercase;
+			    text-shadow: 3px 3px 8px red;
+			    line-height: 35px;
+			}
+			/* 4 - CSS Border/Viền */
+			.h1-border {
+			    /* border-color: red;
+			    border-style: solid;
+			    border-width: 10px; */
+			    /* CSS gộp với border */
+			    border: 10px solid red;
+			    border-radius: 5px;
+			}
+			/* 5 - Margin: khoảng cách giữa các selector liền kề nhau; */
+			.div-margin {
+			    background: yellow;
+			    /* margin-bottom: 50px;
+			    margin-top: 30px;
+			    margin-left: 30px;
+			    margin-right: 60px; */
+			    /* Cách viết gộp */
+			    /* Đầy đủ 4 giá trị:  top - right - bottom - left; */
+			    /* margin: 30px 60px 50px 30px; */
+			    /* 2 giá trị: trên-dưới trái-phải; */
+			    /* margin: 10px 5px; */
+			    /* 1 giá trị: 4 hướng bằng nhau; */
+			    /* margin: 20px; */
+			        width: 60%;
+    				margin: 0 auto;
+			}
+			/* 6 - Padding: khoảng cách tính từ viền của selector hiện tại đến nội dung bên trong nó;
+			, 4 hướng và viết gộp như margin */
+			.div-padding {
+			    border: 1px solid red;
+			    padding-top: 20px;
+			    padding-left: 10px;
+			    padding-right: 40px;
+			    padding-bottom: 40px;
+			}
+			/* 7 Width - Height */
+			.div-w-h {
+			    background: red;
+			    width: 100px;
+			    height: 100px;
+			    min-width: 200px;
+			    max-width: 100px;
+			}
+			/* 8 - Position:
+			- Di chuyển selector hiện tại ko ảnh hướng đến các selector xung quanh;
+			- Bản chất: selector bị position sẽ nổi lên trên mặt nước/trang web. Đứng từ trên nhìn xuống -> thấy postion trước -> web;
+			- Di chuyển -> top, left, right, bottom
+			- Có 3 giá trị: fixed, relative, absolute;
+			*/
+			/* Fixed: cố định khi cuộn trang; */
+			.div-fixed {
+			    background: green;
+			    position: fixed;
+			    left: 86px;
+			}
+			/* Relative: di chuyển dựa vào chính vị trí hiện tại của nó / vị trí tương đối; */
+			.div-relative {
+			    background: yellow;
+			    position: relative;
+			    top: 49px;
+			    left: 50px;
+			}
+			/* Absolute: 
+			- Ko tự di chuyển đc mà p hải dựa vào thành phần nào đó
+			- Mặc định nếu ko có selector cha nào là postion relative -> 4 cạnh trình duyệt để di chuyển;
+			- Luôn dùng absolute với 1 selector cha nào đó có position=relative
+			 */
+			.parent {
+				width: 200px;
+				height: 200px;
+				background: pink;
+				margin-top: 100px;
+				position: relative;
+			}
+			.div-absolute {
+				width: 50px;
+				height: 50px;
+				background: purple;
+				position: absolute;
+			    bottom: 0;
+			    right: 0;
+			}
+			/* 9 - z-index: thứ tự ưu tiên hiển thị giữa các selctor đang bị position; */
+			.red {
+				background: red;
+			    width: 200px;
+				height: 200px;
+			}
+			.blue {
+				background: blue;
+				width: 100px;
+				height: 100px;
+				/* Mặc định z-index=0 với postion */
+				z-index: 2;
+			}
+			.yellow {
+				background: yellow;
+				width: 50px;
+				height: 50px;
+			}
+			.red, .blue, .yellow {
+				position: absolute;
+    			bottom: 0;
+			}
+			/* 10 - Overflow: xác định cách thức hiển thị phần nội dung bị tràn; */
+			#div-overflow {
+				width: 100px;
+				height: 100px;
+				background: green;
+				overflow: hidden;
+			}
+
+			/* 11 - Opacity: Độ mờ của selector; */
+			.h1-opacity {
+			    opacity: 0.5;
+			}
+			/* 12 - Transition: hiệu ứng chuyển đổi trạng thái của selector; */
+			.h1-transition:hover {
+			    background: red;
+			}
+			.h1-transition {
+				transition: all 3s ease-in;
+			}
+		</style>
+		<h1 class="h1-transition">
+			Rê chuột để xem hiệu ứng đổi màu nền
+		</h1>
+		<h1 class="h1-opacity">Thẻ h1 opacity</h1>
+
+		<div id="div-overflow">
+			aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		</div>
+
+		<div class="red">Red</div>
+		<div class="blue">Blue</div>
+		<div class="yellow">Yellow</div>
+
+		<div class="parent">
+			<div class="div-absolute">
+				Thẻ div absolute
+			</div>
+		</div>
+
+		<div class="div-relative">Div relative</div>
+
+		<div class="div-fixed">Div fixed</div>
+
+		<div class="div-pos">
+			Thẻ div với css position
+		</div>
+
+		<div class="div-w-h">
+			Div css width height
+		</div>
+
+		<div class="div-padding">
+			Div css padding
+		</div>
+
+		<div class="div-margin">
+			Div css margin
+		</div>
+
+		<h1 class="h1-border">Thẻ h1 với css border</h1>
+
+		<p class="p-text">
+			Thẻ p với css text
+		</p>
+
+		<span class="span-font">
+			Thẻ span với css font
+		</span>
+
+		<p class="p-bg">Thẻ p bg</p>
+	</body>
+</html>
