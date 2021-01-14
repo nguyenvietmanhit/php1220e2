@@ -1,0 +1,276 @@
+<!-- demo_css_phan_2.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>
+		Demo CSS phần 2 - Layout trang web
+	</title>
+</head>
+<body>
+	<style type="text/css">
+		/* 1 -  CSS căn bản tiếp của buổi trước */
+		/* CSS Position: absolute; */
+		body {
+			min-height: 1000px;
+			background: #ccc;
+		}
+		/* + absolute nếu đứng độc lập, ko có 1 thành phần cha nào đang có position relative bao lấy nó, khi đó vị trí của phần tử absolute sẽ dựa theo 4 cạnh của trình duyệt, trường hợp này rất ít khi dùng
+		+ Thực tế sẽ luôn dùng absolute đc bao bởi 1 khối cha nào đó đang có position=relative, để vị trí của absolute nó sẽ căn theo vị trí của khối cha đó
+		*/
+		#div-absolute {
+			background: green;
+			position: absolute;
+			bottom: 0;
+		}
+		#relative {
+			background: red;
+			width: 200px;
+			height: 200px;
+			position: relative;
+		}
+
+		/* Width - height */
+		#width-height {
+		    background: yellow;
+		    /* width, height set cố định dài và rộng */
+		    width: 50%;
+		    height: 200px;
+		    max-width: 500px;
+		    max-height: 400px;
+		    min-width: 100px;
+		    min-height: 100px;
+		}
+		/* z-index: thể hiện thị cho mức độ ưu tiên hiển thị của các phần tử đang có css position; */
+		#z-index-1 {
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+		#z-index-2 {
+			width: 200px;
+			height: 200px;
+			background: blue;
+			z-index: 1;
+		}
+		#z-index-3 {
+			width: 300px;
+			height: 300px;
+			background: yellow;
+		}
+		/* viết css cho nhiều selector cùng 1 lúc */
+		#z-index-1, #z-index-2, #z-index-3 {
+			position: absolute;
+		}
+		/* CSS overflow: xác định cách thức hiển thị khi 1 phần tử HTML bị tràn nội dung */
+		/* 1 giá trị chính: hidden, scroll, auto; */
+		#div-overflow {
+		    background: red;
+		    width: 100px;
+		    height: 100px;
+		    overflow: hidden;
+		}
+		/* CSS Opacity: set độ mờ cho phần tử; */
+		#h1-opacity {
+		    opacity: 0.4;
+		}
+		/* CSS Transition: xác định thời gian và hiệu ứng chuyển đổi trạng thái của phần tử; */
+		#div-transition {
+			width: 200px;
+			height: 200px;
+			background: red;
+			transition: all 5s ease;
+		}
+		#div-transition:hover {
+			background: blue;
+		}
+
+		/* 2 - CSS liên quan đến bố cục */
+		/*
+		+ Thành phần inline và block
+		- Inline: text bất kỳ nằm trước/sau phần tử inline thì sẽ ko bị xuống dòng;
+		- Block: text bất kỳ nằm trước/sau phần tử block thì sẽ bị xuống dòng;
+		- Một số thẻ mặc định inline: b, i, u, a, span, img ...;
+		- Một số thẻ mặc định là block: div, h, p, ul, ol ...;
+		- CSS có 1 thuộc tính cho phép chuyển đổi linh hoạt giữa các kiểu inline và block, là display
+		- NGoài ra có thể nhận biết 1 phần tử là inline hay block bằng cách set màu nền cho phần tử đó, nếu màu nền chiếm vừa đủ nội dung của phần tử -> inline, màu nền tràn full width -> block
+		- Chú ý: nếu muốn chuyển từ block về inline thì nên chuyển về kiểu inline-block thay vì inline, để có thể margin-top, margin-bottom đc;
+		- Thực tế ko nên sử dụng inline hay block cho mục đích dựng layout - bố cục
+		*/
+		li {
+		    display: inline-block;
+		    margin: 0 15px;
+		}
+		/* + CSS Float: thường dùng cho việc dựng layout - chia bố cục cho trang;
+		Hiện nay sẽ ít sử dụng thẻ <table> để dựng layout vì ko linh hoạt trong việc thiết kế web responsive
+		- CSS Float có 3 giá trị chính: left, right, none;
+		- Khái niệm dựng layout sẽ liên quan đến hàng và cột
+		- Phần tử bị css float giống như 1 nam châm, hút các phần tử ngay phía sau nó lên trên, có xu hướng sắp xếp các phần tử trên 1 hàng
+		*/
+		.container {
+			border: 4px solid black;
+		}
+		.col1 {
+			background: red;
+		}
+		.col2 {
+			background: green;
+		}
+		.col3 {
+			background: yellow;
+		}
+		/* Khi dựng layout sử dụng float, thì bắt buộc cần set width cho từng cột, nên set width theo đơn vị % để tiện cho việc responsive về sau */
+		.col {
+			float: left;
+			width: 33.33%;
+		}
+		/* Khi sử dụng float, luôn cần phải fix trường hợp bị vỡ giao diện do float gây ra, có 2 cách fix vỡ giao diện này:
+		+ Can thiệp vào HTML, bằng cách thêm 1 phần tử bất kỳ vào sau  của phần tử cuối cùng đang bị float, sử dụng css clear:both cho phần tử vừa thêm;
+		 */
+		 .clearfix {
+		    clear: both;
+		}
+		/* + Ko cần can thiệp HTML, chỉ sử dụng CSS trên khối cha đang bao lấy các phần tử bị float bên trong, overflow: auto; */
+		/* nên sử dụng cách này để fix giao diện khi dùng float */
+		.container {
+			overflow: auto;
+		}
+
+		/* Thực hành dựng cấu trúc layout với css float */
+
+		/* CSS Flex: chuyên dùng để dựng layout như float; */
+		.flex-container {
+			background: pink;
+			display: flex;
+		}
+		.flex-1 {
+			background: red;
+		}
+		.flex-2 {
+			background: blue;
+		}
+		.flex-3 {
+			background: yellow;
+		}
+		.flex-4 {
+			background: green;
+		}
+		.flex-item {
+			width: 25%;
+		}
+		/* Nên ưu tiên sử dùng cơ chế flex để dựng layout, vì tính linh hoạt của nó. Cơ chế mặc định của flex, luôn giữ các khối con bên trong nó trên cùng 1 hàng, cho dù có thay đổi kích thước của các khối con = bao nhiêu đi chăng nữa */
+		/* Để dựng layout với flex sẽ can thiệp css sau vào khối cha, display: flex; */
+	</style>
+	<div class="flex-container">
+		<div class="flex-1 flex-item">Cột 1</div>
+		<div class="flex-2 flex-item">Cột 2</div>
+		<div class="flex-3 flex-item">Cột 3</div>
+		<div class="flex-4 flex-item">Cột 4</div>
+	</div>
+
+
+	<!-- Dựng layout về mặt HTML cần xác định cấu trúc row-col -->
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				cột 1111111 111
+				cột 1111111 111
+				cột 1111111 111
+			</div>
+			<div class="col">
+				cột 1111111 111
+				cột 1111111 111
+				cột 1111111 111
+			</div>
+			<div class="col">
+				cột 1111111 111
+				cột 1111111 111
+				cột 1111111 111
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				cột 1111111 111
+				cột 1111111 111
+				cột 1111111 111
+			</div>
+			<div class="col">
+				cột 1111111 111
+				cột 1111111 111
+				cột 1111111 111
+			</div>
+			<div class="col">
+				cột 1111111 111
+				cột 1111111 111
+				cột 1111111 111
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="container">
+		<div class="col1 col">
+			Cột 1
+		</div>
+		<div class="col2 col">
+			Cột 2
+		</div>
+		<div class="col3 col">
+			Cột 3
+		</div>
+		<!-- <div class="clearfix"></div> -->
+	</div>
+
+	<!-- Xây dựng 1 menu đơn giản sử dụng cấu trúc ul - li -->
+	<ul>
+		<li>
+			<a href="#">Link 1</a>
+		</li>
+		<li>
+			<a href="#">Link 2</a>
+		</li>
+		<li>
+			<a href="#">Link 3</a>
+		</li>
+	</ul>
+
+
+	<!-- Thử kiểm tra 1 số thẻ HTML xem mặc định là hiển thị kiểu inline hay block -->
+	<span>Thẻ span</span> Text kiểm tra span
+
+	<a href="#">Thẻ a1</a>
+	<a href="#">Thẻ a2</a>
+	<div>Thẻ div 1</div> <div>Thẻ div 2</div>
+	<!-- <div id="div-transition">
+		Rê chuột qua div này để xem hiệu ứng đổi màu nền
+	</div>
+
+	<h1 id="h1-opacity">
+		H1 với css opacity
+	</h1>
+
+	<div id="div-overflow">
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+	</div>
+
+	<div id="z-index-1">
+		Red
+	</div>
+	<div id="z-index-2">
+		Blue
+	</div>
+	<div id="z-index-3">
+		Yellow
+	</div>
+
+	<div id="width-height">
+		Thẻ div với css width height
+	</div>
+	<div id="relative">
+		<div id="div-absolute">
+			Thẻ div với css position absolute
+		</div>
+	</div> -->
+</body>
+</html>
