@@ -1,0 +1,110 @@
+<!-- css_layout.html -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>CSS Layout</title>
+	</head>
+	<body>
+		<style type="text/css">
+			/* 1 - Thành phần inline và block:
+			- Mỗi thẻ HTML sẽ có 1 kiểu hiển thị mặc định: block và inline;
+			- Kiểu block: width chiếm full độ rộng, ko thể đứng chung hàng với thẻ khác
+			VD: div, h, p, ul, li, ol ...;
+			- Kiểu inline: width chỉ vừa đủ nội dung, đứng chung với inline;
+			VD: b, u, i, img, span, a;
+			+ Cách xác định inline/block: cho thẻ đó bao lấy 1 nội dung ngắn, set màu nền -> màu nền full width -> block, nếu màu nền chỉ vừa đủ nội dung -> inline;
+			- Chuyển đổi kiểu hiển thị, dùng css display: inline/block/inline-block;
+			*/
+			ul {
+			    list-style: none;
+			}
+
+			/* Nên dùng inline-block thay vì inline để linh hoạt khi margin top, bottom */
+			li {
+			    display: inline-block;
+			    /* background: red; */
+			    margin-right: 15px;
+			    margin-top: 30px;
+			    margin-bottom: 30px;
+			    margin-left: 30px;
+			}
+			/* 2 - CSS Float
+			- Dùng dựng layout/hàng-cột cho trang web
+			- Thẻ table cũng có thể đc dùng để dựng layout -> hiện nay ko nên dùng vì ko linh hoạt trên các thiết bị nhỏ
+			- Ko nên dùng display: inline / inline-block để dựng layout trang ;
+			- Nên dùng cơ chế float / flex để dựng -> nên dùng flex để dựng layout cho đơn giản , có dạng khác là grid
+			- CÁch tạo cấu trúc layout:
+			Hàng có class=row
+			Xác định hàng đó có bao nhiêu cột, dùng các thẻ div để tạo ra các cột đó, cột là con trực tiếp của h
+			 */
+			 .row {
+			 	border: 4px solid red;
+			 }
+			 /* + Xác định cơ chế dựng layout: float/flex;
+			   + Set width tương ứng cho cột
+			   - Với float, luôn cần xử lý trường hợp giao diện bị vỡ, vì phần tử bị float luôn có xu hướng hút phần tử ngay sát phía sau nó
+			   - Cách fix:
+			   + Can thiệp vào HTML, tạo 1 phần tử HTML rỗng ngay phía sau float cuối cùng, dùng css clear:both cho khối rỗng này;
+			   */
+			 .column-1 {
+			    background: yellow;
+			    float: left;
+			    width: 30%;
+			}
+			 .column-2 {
+			    background: blue;
+			    float: left;
+			    width: 70%;
+			}
+			.clearfix {
+			    clear: both;
+			}
+			/* - Ko cần can thiệp HTML, dùng css trên class row */
+			.row {
+			    overflow: auto;
+			}
+			/* CSS Display: kiểu hiển thị của selector; */
+			.h1-display {
+			    display: none;
+			}
+			/* - Dàn trang với Flex 
+			Nên dùng hơn là float vì đơn giản hơn rất nhiều, ko cần phải fix vỡ giao diện
+			*/
+			.col1 {background: green;}
+			.col2 {background: yellow;}
+			.col3 {background: pink;}
+			.col4 {background: blue;}
+		</style>
+		<div class="row">
+			<div class="col1">Hàng 1 cột 1</div>
+			<div class="col2">Hàng 1 cột 2</div>
+			<div class="col3">Hàng 1 cột 3</div>
+			<div class="col4">Hàng 1 cột 4</div>
+		</div>
+
+
+		<h1 class="h1-display">H1 CSS Display</h1>
+
+		<div class="row">
+			<div class="column-1">Hàng 1 cột 1</div>
+			<div class="column-2">Hàng 1 cột 2</div>
+			<!-- Can thiệp vào sau phần tử float cuối cùng -->
+			<!-- <div class="clearfix"></div> -->
+		</div>
+
+		<ul>
+			<li><a href="#">Link 1</a></li>
+			<li><a href="#">Link 2</a></li>
+			<li><a href="#">Link 3</a></li>
+			<li><a href="#">Link 4</a></li>
+		</ul>
+
+
+		<div>Thẻ div</div> 
+		<a href="#">Thẻ a</a>
+
+		<span>Thẻ span</span>
+		<i>Thẻ i</i>
+	</body>
+</html>

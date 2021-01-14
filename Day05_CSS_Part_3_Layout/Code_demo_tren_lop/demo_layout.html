@@ -1,0 +1,50 @@
+<!-- demo_layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo layout</title>
+	<!-- Tạo 1 file style.css đặt ngang hang với file .html hiện tại -->
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<!-- Cách dựng khung trang web:
+	- Đi từ trên -> dưới của web mẫu
+	- Chia thành từng vùng / div, xác định vùng này có cần cấu trúc layout hay ko, nếu có trên 1 cột thì cần áp dụng row-col
+	- Code HTML vùng nào, code hoàn thiện vùng đó r mới tới vùng khác, nên đặt class cho từng thẻ HTML
+	 -->
+	 <div class="container">
+	 	<!-- Logo, ko có cấu trúc layout -->
+	 	<div class="logo background">
+	 		<h1 class="logo-heading">Logo</h1>
+	 	</div>
+	 	<!-- END logo -->
+
+	 	<!-- Menu, ko có cấu trúc layout -->
+	 	<div class="menu background">
+	 		<ul>
+	 			<li><a href="#">Home</a></li>
+	 			<li><a href="#">Products</a></li>
+	 			<li><a href="#">Services</a></li>
+	 			<li><a href="#">About</a></li>
+	 			<li><a href="#">Contact</a></li>
+	 		</ul>
+	 	</div>
+	 	<!-- END Menu -->
+	 	<!-- Feature - ko có layout -->
+	 	<div class="feature background">Feature</div>
+	 	<!-- END feature -->
+	 	<!-- Content, có cấu trúc layout: 1 hàng 3 cột -->
+	 	<div class="content">
+	 		<div class="row">
+	 			<div class="col1 col background">Column One</div>
+	 			<div class="col2 col background">Column Two</div>
+	 			<div class="col3 col background">Column Three</div>
+	 		</div>
+	 	</div>
+	 	<!-- END content -->
+	 	<!-- Footer, ko có cấu trúc layout -->
+	 	<div class="footer background">&copy; Copyright 2011</div>
+	 	<!-- END footer -->
+	 </div>
+</body>
+</html>
