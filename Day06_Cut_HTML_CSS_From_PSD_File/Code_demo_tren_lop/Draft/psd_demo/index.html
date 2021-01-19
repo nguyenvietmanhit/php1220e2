@@ -1,0 +1,89 @@
+<!-- psd/index.html -->
+<!-- 
+Demo việc chuyển đổi HTML CSS từ file .psd
+Các bước thực hiện:
+- Tạo cấu trúc thư mục như sau:
+psd_demo/
+		/index.html: File code HTML
+		/css: chứa các file css
+			/style.css
+		/fonts: chứa các font lấy đc từ psd
+		/images: chứa các ảnh lấy đc từ psd
+		/js: chứa các file javascript
+- Xác định ảnh và cắt ảnh từ psd:
+Chỉ cắt ảnh nào mà ko thể dùng HTML CSS để tạo ra
+- Một số phím tắt:
++ Ctrl +, Ctrl -, Alt + Chuột giữa: zoom to nhỏ
++ Nhấn Phím cách + Chuột trái: di chuyển đến vùng muốn hiển thị
++ Lấy vùng chọn: lấy vùng chọn theo khối chữ nhật/vuông
+phím tắt: M
++ Crop ảnh: sau khi lấy vùng chọn, nhấn phím C -> Enter 2 lần để crop ảnh. Lưu file vào thư mục images
++ Ctrl + Alt + Z: back lại  nhiều lần
+- Xác định các font đang dùng cho text từ file psd:
+Các font trên máy tính đang lưu tại: C:/Windows/Fonts
+Dùng phím T để tìm text, nếu show popup -> fon chưa có
+trên máy -> search google để tải font đó về
+fonts/Pacifico-Regular.ttf
+- Để nhúng font, sử dụng css: @font-face
+- Thiết kế HTML CSS
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Bài tập 1 PSD</title>
+	<!-- Nhúng file css -->
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<div class="container-full">
+		<!-- HEADER -->
+		<div class="header">
+			<div class="container">
+				<!-- Cấu trúc hàng/cột -->
+				<div class="row">
+					<div class="logo">Bloom</div>
+					<div class="menu">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Portfolio</a></li>
+							<li><a href="#">Contact Us</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END HEADER -->
+
+		<!-- MAIN -->
+		<div class="main">
+			<!-- MAIN TOP -->
+			<div class="main-top">
+				<div class="container"></div>
+			</div>
+			<!-- END MAIN TOP -->
+
+			<!-- MAIN CENTER -->
+			<div class="main-center">
+				<div class="container"></div>
+			</div>
+			<!-- END MAIN CENTER -->
+
+			<!-- MAIN BOTTOM -->
+			<div class="main-bottom">
+				<div class="container"></div>
+			</div>
+			<!-- END MAIN BOTTOM -->
+		</div>
+		<!-- END MAIN -->
+
+		<!-- FOOTER -->
+		<div class="footer">
+			<div class="container"></div>
+		</div>
+		<!-- END FOOTER -->
+	</div>
+</body>
+</html>

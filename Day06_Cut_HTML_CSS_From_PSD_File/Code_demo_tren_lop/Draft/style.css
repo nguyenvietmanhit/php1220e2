@@ -1,0 +1,68 @@
+/* File style.css ngang hàng với file .html */
+.container {
+    /* background: red; */
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.logo-heading {
+    margin: 0;
+}
+
+.logo, .menu, .feature, .copyright {
+    background: #EFEFEF;
+}
+
+.logo {
+    text-align: center;
+    padding: 5px 0;
+}
+
+.menu {
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 5px;
+}
+
+.menu ul {
+	list-style: none;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.feature {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    height: 100px;
+}
+
+.column {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Set cơ chế flex cho hàng */
+.row {
+    display: flex;
+    /* Margin trái phải giá trị âm tương ứng với margin
+    trái phải của các cột con bên trong, để fix trường
+    trường hợp cột ko căn thẳng theo lề */
+    margin: 0 -10px;
+}
+/* Set with cho từng cột theo yêu cầu */
+.col {
+    width: 33.33%;
+    height: 100px;
+    margin: 0 10px;
+    background: #EFEFEF;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}

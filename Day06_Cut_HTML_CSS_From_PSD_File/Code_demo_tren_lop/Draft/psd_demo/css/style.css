@@ -1,0 +1,33 @@
+/* psd_demo/css/style.css */
+.header {
+    background: #2F2F2F;
+    padding: 10px 0;
+}
+.container {
+    max-width: 70%;
+    /* background: red; */
+    margin: auto;
+}
+
+.row {
+    display: flex;
+}
+
+.menu {
+	width: 60%;
+}
+
+/* Nhúng font từ bên ngoài sử dụng css @font-face */
+@font-face {
+	font-family: 'Pacifico-Regular';
+	/* Để lên 1 cấp thư mục, sử dụng ký tự ../,
+	do font đang nằm cấu trúc thư mục khác so với
+	file style.css */
+	src: url('../fonts/Pacifico-Regular.ttf');
+}
+.logo {
+    width: 40%;
+    color: #fff;
+    font-size: 20px;
+    font-family: Pacifico-Regular;
+}
