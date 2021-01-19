@@ -1,0 +1,36 @@
+/* bt6.css */
+.container {
+    /* background: red; */
+    width: 60%;
+    margin: 0 auto;
+}
+
+.header {
+    background: #666;
+    text-align: center;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.websites {
+    /* Bỏ đi margin mặc định của trình duyệt
+     với selector này */
+    margin: 0;
+}
+
+.row {
+    display: flex;
+}
+
+.menu {
+    width: 33.33%;
+    background: #ccc;
+}
+
+.content {
+	width: 66.67%;
+}
+
+.menu, .content {
+	min-height: 150px;
+}
