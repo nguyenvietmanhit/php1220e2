@@ -43,8 +43,98 @@
     display: inline-block;
     margin-right: 20px;
 }
-
+/* psd_demo/css/style.css */
 .menu a {
 	color: #fff;
 	text-decoration: none;
+    font-family: Myriad Pro;
+}
+
+.main-top {
+    background: #F1F1F1;
+    padding: 25px 0;
+}
+
+/* Đè css có sẵn, nên viết code css đè phía sau, thêm
+các selector cha phía trước  */
+.main-top .row {
+    align-items: start;
+}
+
+.title {
+    margin: 0;
+}
+
+.article {
+    width: 40%;
+    margin-right: 15px;
+}
+
+.image {
+    width: 60%;
+}
+
+.learn-more {
+    background: #F99640;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 25px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: Myriad Pro;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.img-responsive {
+    width: 100%;
+}
+
+.main-center {
+    padding: 40px 0;
+}
+
+.box {
+    background: #000;
+    height: 200px;
+}
+
+.item {
+    margin: 0 30px;
+}
+
+.main-center .row {
+    /* Fix trường hợp các cột bên trong margin
+     trái phải bao nhiều thì hàng margin giá trị âm 
+     tương ứng */
+    margin: 0 -30px;
+}
+
+body {
+    margin:  0;
+}
+
+/* Code CSS cho mobile,bỏ qua Ipad  */
+@media (max-width: 767px) {
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .article {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .image {
+        width: 100%;
+        margin-top: 30px;
+    }
 }

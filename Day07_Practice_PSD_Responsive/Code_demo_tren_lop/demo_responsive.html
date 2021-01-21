@@ -1,0 +1,145 @@
+<!-- demo_responsive.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Thiết kế web responsive</title>
+	<!-- https://necolas.github.io/normalize.css/8.0.1/normalize.css -->
+	<!-- File reset CSS là file css nhúng đầu tiên -->
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+	<!-- <link  /> -->
+	<!-- Để website có thể resposive đc, BẮT BUỘC phải 
+	khai báo thẻ meta sau -->
+	<meta name="viewport"
+content="width=device-width, initial-scale=1" />
+</head>
+<body>
+	<!-- 
+	1 - Khái niệm responsive
+	- Thiết kế web responsive: tương thích/hiển thị tốt
+	trên cả các thiết bị
+	- 3 thiết bị chính: PC/Laptop, Ipad/Tablet, Mobile
+	- Hiện nay, 1 website luôn cần repsonsive
+	- VD về responsive nhìn ntn ?
+	- Responsive tiếp cận đc nhiều user, tốt cho SEO
+	2 - File reset CSS
+	+ Bài toán: cùng 1 code HTML có thể hiển thị khác nhau trên các trình duyệt khác nhau -> do từng trình
+	duyệt có style khác nhau cho từng thẻ HTML
+	-> khai báo lại các css chung cho tất cả trình duyệt
+	-> reset CSS
+
+	 -->
+	 <style type="text/css">
+	 	/* ko nên reset css theo kiểu này */
+	 	/* * {
+	 		margin:  0;
+	 		padding:  0;
+	 	} */
+	 	/* Thực tế sử dụng các file reset css có sẵn
+	 	trên mạng -> normalize.css */
+
+	 	.div-test {
+	 		background:  red;
+	 	}
+	 </style>
+	 <!-- 
+	 3 - Demo responsive:
+	 -->
+
+	 <style type="text/css">
+	 	/* Để css trên các thiết bị, sử dụng thuộc tính css @media đi kèm với kích thước thiết bị */
+	 	/* .h1-test {
+	 		color:  red;
+	 	} */
+	 	/* + Chia các thiết bị màn hình theo kích thước sau:
+		- PC: min-width: 1024px;
+		- Ipad/Tablet: min-width: 768px, max-width: 1023px;
+		- Mobile: max-width: 767px;
+	 	+ Thứ tự code CSS responsive: PC -> Ipad -> Mobile;
+	 	*/
+
+	 	/* CSS cho PC trước */
+	 	@media(min-width: 1024px) {
+	 		.h1-test {
+	 			color: red;
+	 		}
+	 	}
+	 	/* CSS cho Ipad */
+	 	@media(min-width: 768px) and (max-width: 1023px) {
+	 		.h1-test {
+	 			color: yellow;
+	 		}
+	 	}
+	 	/* CSS cho Mobile */
+	 	@media(max-width: 767px) {
+	 		.h1-test {
+	 			color: blue;
+	 		}
+	 	}
+
+
+
+
+	 	/* Demo Responsive với Flex */
+	 	/* Bài toán: 
+			- Trên PC 1 hàng 4 cột bằng nhau
+			- Trên Ipad thì 2 hàng, mỗi hàng 2 cột bằng nhau
+			- Trên Mobile -> 4 hàng, mỗi hàng 1 cột bằng nhau
+	 	 */
+	 	 /*  Mặc định ko cần chỉ định tường mình @media
+	 	 cho PC */
+	 	 .item1 {
+	 	 	background:  blue;
+	 	 }
+	 	 .item2 {
+	 	 	background: red;
+	 	 }
+	 	 .item3 {
+	 	 	background: purple;
+	 	 }
+	 	 .item4 {
+	 	 	background:  yellow;
+	 	 }
+	 	 .row {
+	 	 	display: flex;
+	 	 }
+	 	 .item {
+	 	 	width: 25%;
+	 	 }
+
+	 	 /* Để thay đổi cơ chế mặc định của flex: nếu width của các cột trong 1 hàng > 100% -> cột bị thừa tự xuống hàng mới; */
+	 	 /* CSS cho Ipad */
+	 	 @media(min-width: 768px) and (max-width: 1023px) {
+	 	 	.row {
+	 	 		/* Bỏ đi cơ chế mặc định của flex bằng css sau */
+	 	 		flex-wrap: wrap;
+	 	 	}
+	 	 	.item {
+	 	 		width: 50%;
+	 	 	}
+	 	 }
+
+	 	 /* CSS cho Mobile */ 
+	 	 @media(max-width: 767px) {
+	 	 	.row {
+	 	 		flex-wrap: wrap;
+	 	 	}
+	 	 	.item {
+	 	 		width: 100%;
+	 	 	}
+	 	 }
+	 </style>
+
+	 <div class="row">
+	 	<div class="item1 item">Nội dung 1</div>
+	 	<div class="item2 item">Nội dung 2</div>
+	 	<div class="item3 item">Nội dung 3</div>
+	 	<div class="item4 item">Nội dung 4</div>
+	 </div>
+
+	 <h1 class="h1-test">
+	 	Màu text sẽ thay đổi theo từng thiết bị
+	 </h1>
+	 <!-- <div class="div-test">Div test</div> -->
+</body>
+</html>
