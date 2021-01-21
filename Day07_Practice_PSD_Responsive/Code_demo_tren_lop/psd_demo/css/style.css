@@ -1,0 +1,50 @@
+/* psd_demo/css/style.css */
+/* Nhúng font từ bên ngoài vào */
+@font-face {
+	font-family: 'Pacifico-Regular';
+	/* Ký tự ../ là lên 1 cấp thư mục */
+	src: url('../fonts/Pacifico-Regular.ttf');
+}
+
+.header {
+    background: #2F2F2F;
+    padding: 15px 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    /* Căn đều các cột bên trong trên 1 trục nằm ngang */
+    align-items: center;
+}
+
+.logo {
+    width: 20%;
+    color: #fff;
+    font-size: 30px;
+    font-family: Pacifico-Regular;
+}
+
+.menu {
+    width: 80%;
+    text-align: right;
+}
+
+.menu ul {
+    list-style: none;
+    margin:  0;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu a {
+	color: #fff;
+	text-decoration: none;
+}

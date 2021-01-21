@@ -1,0 +1,56 @@
+<!-- responsive.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Demo responsive khi thiết kế Website</title>
+	<!-- Để trình duyệt hiểu đc kích thước thiết bị, bắt buộc phải khai báo thẻ sau, để web repsonsive đc thì bắt buộc phải khai báo thẻ sau -->
+	<meta name="viewport"
+	content="width=device-width,initial-scale=1" />
+</head>
+<body>
+	<!-- 
+	+ Web responsive khi hiển thị tương thích với tất
+	cả các thiết bị: PC, Ipad/TAblet, Mobile
+	+ Web responsive ko xuất hiện thanh cuộn ngang
+	+ Để web reponsive đc -> code CSS
+	+ Thiết kế website theo hướng Mobile first, trong quá trình học vẫn theo hướng từ PC -> Mobile
+	 -->
+	 <style>
+	 	
+
+	 	/* 
+	 	+ Định nghĩa các kích thước chuẩn của các thiết bị:
+		PC: min-with: 1024px
+		Ipad/Tablet: min-width: 768px, max-width: 1023px
+		Mobile: max-width: 767px;
+		+ Để css responsive, sử dụng @media
+		+ Mặc định khi code CSS là code cho PC
+	 	; */
+	 	.h1-color {
+	 		background: red;
+	 	}
+
+	 	/* Ipad */
+	 	@media(min-width: 768px) and (max-width: 1023px) {
+	 		/* Tất cả code CSS bên trong sẽ chỉ ăn với Ipad*/
+	 		.h1-color {
+	 			background: blue;
+	 		}
+	 	}
+
+	 	/* Mobile */
+	 	@media(max-width: 767px) {
+	 		/* Code bên trong sẽ chỉ ăn với Mobile */
+	 		.h1-color {
+	 			background: yellow;
+	 		}
+	 	}
+
+
+	 </style>
+	 <h1 class="h1-color">
+	 	Thay đổi kích thước trình duyệt để đổi màu
+	 </h1>
+</body>
+</html>

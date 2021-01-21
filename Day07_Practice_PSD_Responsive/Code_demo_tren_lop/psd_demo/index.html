@@ -1,0 +1,138 @@
+<!--
+psd_demo/index.php
+Cắt HTML CSS từ file thiết kế (Photoshop, AI)
+-> chuyển tài nguyên từ file thiết kế thành giao diện tĩnh (HTML CSS) -> tuân theo file thiết kế
+Các bước cắt HTML CSS:
++ Tạo cấu trúc thư mục để lưu trữ
+psd_demo/
+        /css
+            /style.css
+        /images: chứa các ảnh cắt đc từ file .psd
+        /fonts: chứa các font lấy đc từ file .psd
+        /js
+        /index.html: file HTML chính
++ Thao tác với PSD: cắt ảnh, ảnh ko thể dùng HTML CSS để tạo ra đc
+Kéo vùng làm việc: Space + Chuột trái
+Zoom to/nhỏ: Ctrl + -, Alt  + Con xoay chuột
+Vùng chọn
+Crop ảnh: C -> Enter 2 lần -> Lưu file
+Ctrl + Alt + Z: back nhiều lần
++ Thao tác với PSD: xác định và lấy font từ file thiết kế
+, dùng công cụ Text, T
+Nếu font chưa tồn tại trên hệ thống -> search gg -> tải font đó về -> Pacifico -> fonts-> dùng CSS để nhúng các
+font đó vào hệ thống
++ Code HTML CSS
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="utf-8" />
+ 	<title>PSD Demo</title>
+ 	<link rel="stylesheet" href="css/style.css" />
+ </head>
+ <body>
+ 	<div class="container-fluid">
+ 		<!-- HEADER -->
+ 		<div class="header">
+ 			<div class="container">
+ 				<div class="row">
+ 					<div class="logo">Bloom</div>
+ 					<div class="menu">
+ 						<ul>
+ 							<li><a href="#">Home</a></li>
+ 							<li><a href="#">About Us</a></li>
+ 							<li><a href="#">Services</a></li>
+ 							<li><a href="#">Portfolio</a></li>
+ 							<li><a href="#">Contact Us</a></li>
+ 						</ul>
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 		<!-- END HEADER -->
+
+ 		<!-- MAIN -->
+ 		<div class="main">
+ 			<!-- MAIN TOP -->
+ 			<div class="main-top">
+ 				<div class="container">
+ 					<div class="row">
+ 						<div class="article">
+ 							<h2 class="title">
+ 								Lorem ipsum dolor sit amet
+ 							</h2>
+ 							<p class="des">P1</p>
+ 							<p class="des">P2</p>
+ 							<a href="#" class="learn-more">
+ 								Learn more
+ 							</a>
+ 						</div>
+ 						<div class="image">
+ 							<img src="images/image.jpg" class="img-responsive" />
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+ 			<!-- END MAIN TOP -->
+
+ 			<!-- MAIN CENTER -->
+ 			<div class="main-center">
+ 				<div class="container">
+ 					<h3>This is a heading</h3>
+ 					<div class="row">
+ 						<div class="item">
+ 							<div class="box"></div>
+ 							<h4 class="item-title">
+ 								Aliquam et iaculis sapien
+ 							</h4>
+ 							<p class="item-des">
+ 								Aliquam et iaculis sapienAliquam et iaculis sapien
+ 							</p>
+ 							<a href="#" class="learn-more">
+ 								Learn more
+ 							</a>
+ 						</div>
+ 						<div class="item">
+ 							<div class="box"></div>
+ 							<h4 class="item-title">
+ 								Aliquam et iaculis sapien
+ 							</h4>
+ 							<p class="item-des">
+ 								Aliquam et iaculis sapienAliquam et iaculis sapien
+ 							</p>
+ 							<a href="#" class="learn-more">
+ 								Learn more
+ 							</a>
+ 						</div>
+ 						<div class="item">
+ 							<div class="box"></div>
+ 							<h4 class="item-title">
+ 								Aliquam et iaculis sapien
+ 							</h4>
+ 							<p class="item-des">
+ 								Aliquam et iaculis sapienAliquam et iaculis sapien
+ 							</p>
+ 							<a href="#" class="learn-more">
+ 								Learn more
+ 							</a>
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+ 			<!-- END MAIN CENTER -->
+
+ 			<!-- MAIN BOTTOM -->
+ 			<div class="main-bottom">
+ 				<div class="container"></div>
+ 			</div>
+ 			<!-- END MAIN BOTTOM -->
+
+ 		</div>
+ 		<!-- END MAIN -->
+
+ 		<!-- FOOTER	 -->
+ 		<div class="footer"></div>
+ 		<!-- END FOOTER -->
+ 	</div>
+ </body>
+ </html>
