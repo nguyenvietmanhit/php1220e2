@@ -1,0 +1,128 @@
+<!-- bootstrap.html
+Tạo file này ngang hàng với thư mục
+css và webfonts
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Thẻ responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title>Demo thư viện Bootstrap của CSS</title>
+	<!-- C1: Tích hợp Bootstrap = nhúng file -->
+	<link rel="stylesheet"
+	 href="css/bootstrap.min.css" />
+	 <!-- C2: Nhúng link từ bên ngoài: CDN, search bootstrap 4 link cdn -->
+	 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+</head>
+<body>
+	<!--
+	1 - Thư viện Bootstrap
+	- Là thư viện tích hợp sẵn HTML, CSS, Javascript
+	- Cung cấp các component có sẵn
+	- Cung cấp cơ chế layout dạng flex
+	- Các framework của PHP đều tích hợp sẵn Bootstrap
+	2 - Cài đặt: search bootstrap 4
+	+ Tải về: giải nén -> dist -> css -> 
+	bootstrap.min.css -> copy vào project
+	.min -> minimize -> nén lại dung lượng nhỏ nhất
+	-> ko edit vào file này
+	- Nguyên tắc chung khi sử dụng 1 thư viện có sẵn: ko chỉnh sửa gì trong core của thư viện, tạo các file riêng để chỉnh sửa
+	3 - Layout trong Bootstrap
+	Trên PC: 1 hàng  4 cột bằng nhau
+	Trên Ipad/Tablet: 1 hàng có 2 cột -> 2 hàng
+	Trên Mobile: 1 hàng 1 cột -> 4 hàng
+	- Dùng CSS thuần
+	- Cấu trúc Layout Boostrap
+	+ Thiết kế theo hướng mobile first - thiết kế từ mobile trước -> Ipad -> PC
+	-> Thực tế ko nên theo hướng mobile first -> mất thời gian
+	 - Demo layout mẫu với bootstrap
+	 VD vẫn như file layout.html
+	 -->
+	 <style type="text/css">
+	 	.item1 {background: red;}
+	 	.item2 {background: blue;}
+	 	.item3 {background: green;}
+	 	.item4 {background: yellow;}
+	 </style>
+	 <div class="container">
+	 	<!-- Quy định thiết bị của Bootstrap:
+	 		Ipad/PC min-width: 768px: col-md-
+	 		Mobile lớn min-width: 576px: col-sm-
+	 		Mobile nhỏ max-width: 576px: col-
+	 	 -->
+	 	<div class="row">
+	 		<div class="col-md-3 col-sm-6 col-6 item1">Item 1</div>
+	 		<div class="col-md-3 col-sm-6 col-6 item2">Item 2</div>
+	 		<div class="col-md-3 col-sm-6 col-6 item3">Item 3</div>
+	 		<div class="col-md-3 col-sm-6 col-6 item4">Item 4</div>
+	 	</div>
+	 </div>
+
+	 <!-- VD 2 -->
+	 <div class="container">
+	 	<div class="row">
+	 		<div class="col-md-8 col-sm-4 col-4 item1">Item1 vd2</div>
+	 		<div class="col-md-4 col-sm-8 col-8 item2">Item2 vd2</div>
+	 	</div>
+	 </div>
+
+	 <h1>Demo các component có sẵn của Bootstrap</h1>
+		 <!-- Alert -->
+		 <div class="alert alert-primary" role="alert">
+  This is a primary alert—check it out!
+</div>
+<div class="alert alert-secondary" role="alert">
+  This is a secondary alert—check it out!
+</div>
+<div class="alert alert-success" role="alert">
+  This is a success alert—check it out!
+</div>
+<div class="alert alert-danger" role="alert">
+  This is a danger alert—check it out!
+</div>
+<div class="alert alert-warning" role="alert">
+  This is a warning alert—check it out!
+</div>
+<div class="alert alert-info" role="alert">
+  This is a info alert—check it out!
+</div>
+<div class="alert alert-light" role="alert">
+  This is a light alert—check it out!
+</div>
+<div class="alert alert-dark" role="alert">
+  This is a dark alert—check it out!
+</div>
+<!-- Form -->
+
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<!-- Button -->
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+
+<button type="button" class="btn btn-link">Link</button>
+	 <h1>Thẻ h1 khi áp dụng bootstrap</h1>
+</body>
+</html>

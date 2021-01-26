@@ -1,0 +1,55 @@
+<!-- layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo layout với CSS thuần</title>
+	<!-- Bắt buộc phải có thẻ này khi responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+	<style type="text/css">
+		.item1 {
+			background: red;
+		}
+		.item2 {
+			background:  blue;
+		}
+		.item3 {
+			background:  yellow;
+		}
+		.item4 {
+			background: green;
+		}
+		.row {
+			display: flex;
+		}
+		.item {
+			width: 25%;
+		}
+		/* CSS Ipad */
+		@media(min-width: 768px) and (max-width: 1023px) {
+			.row {
+				flex-wrap: wrap;
+			}
+			.item {
+				width: 50%;
+			}
+		}
+		/* CSS Mobile */
+		@media(max-width: 767px) {
+			.row {
+				flex-wrap: wrap;
+			}
+			.item {
+				width: 100%;
+			}
+		}
+	</style>
+	<div class="row">
+	 	<div class="item item1">Item 1</div>
+	 	<div class="item item2">Item 2</div>
+	 	<div class="item item3">Item 3</div>
+	 	<div class="item item4">Item 4</div>
+	 </div>
+</body>
+</html>
