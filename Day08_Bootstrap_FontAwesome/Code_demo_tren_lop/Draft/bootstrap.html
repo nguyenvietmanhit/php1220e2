@@ -1,0 +1,160 @@
+<!-- bootstrap.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Thư viện Bootstrap của CSS</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<!-- Tích hợp Bootstrap bằng link CDN -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+<body>
+	<!-- Thư viện Bootstrap
+	- Là 1 thư viện dc viết từ CSS, tích hợp thêm cả HTML và Javascript
+	- Cung cấp cơ chế layout và các component rất tiện dụng, có thể tạo ra cấu trúc layout và các component như form, alert, slideshow mà ko cần phải code 1 dòng html css nào
+	- Với PHP, hầu như đều tích hợp Bootstrap 
+	- Bootstrap v4 dùng flex dựng layout, Bootstrap v3 vẫn dùng float
+	- Hỗ trợ responsive theo hướng Mobile-first, thiết kế web từ mobile -> các thiết bị Ipad,PC
+	-> đi ngược lại hướng thiết kế trong khóa học
+	+ Cài đặt:
+	- Tải trực tiếp: Lên trang chủ tải về,copy file:
+	dist/css/bootstrap.min.css đặt vào cấu trúc thư mục của bạn, các file có .min - minimize: nén dung lượng nhỏ nhất có thể, ko muốn edit file này
+	- Dùng link online - CDN: search: link cdn bootstrap 4
+	-->
+	<h1>Thẻ h1 khi chưa có Bootstrap</h1>
+
+	<!-- Layout với Bootstrap:
+		+ Chia là 5 pham vị kích thước màn hình, thay vì 3 phạm vi như đã hoc
+		+ Bootstrap mặc định coi Ipad/PC hiển thị giống hệt nhau
+		+ Chia 1 hàng làm 12 cột có width=nhau
+		+ Mobile-first
+		+ Chỉ cần sử dụng các class prefix = col-, col-sm-, col-md-
+		+ Với Bootstrap 3 thì col- thay bằng col-xs-
+	 -->
+	 <style type="text/css">
+	 	.col1 {background: red;}
+	 	.col2 {background: green;}
+	 	.col3 {background: blue;}
+	 	.col4 {background: yellow;}
+	 	.container {background: #ccc;}
+	 </style>
+	 <div class="container">
+	 	<h1>
+	 		Trên Ipad/PC: 1 hàng 4 cột bằng nhau
+	 		, Trên MObile: 1 hàng 2 cột bằng nhau
+	 	</h1>
+	 	<!-- 1 hàng bootstrap = 12 đơn vị bằng nhau:
+	 	vẫn giữ nguyên cấu trúc hàng/cột từ Ipad/PC, thêm class prefix cho mobile -->
+	 	<div class="row">
+	 		<div class="col1 col-md-3 col-6">Cột 1</div>
+	 		<div class="col2 col-md-3 col-6">Cột 2</div>
+	 		<div class="col3 col-md-3 col-6">Cột 3</div>
+	 		<div class="col4 col-md-3 col-6">Cột 4</div>
+	 	</div>
+
+	 	<!-- VD2: Trên Ipad/PC/Mobile 1 hàng 2 cột: cột thứ 2 with gấp 2 lần cột 1 -->
+	 	<div class="row">
+	 		<div class="col1 col-md-4 col-4">Cột 1</div>
+	 		<div class="col2 col-md-8 col-8">Cột 2</div>
+	 	</div>
+	 </div>
+
+	 <!-- Demo các Component có sẵn của Bootstrap
+		Menu Component
+	  -->
+	  <h1>Alert</h1>
+	  <div class="alert alert-primary" role="alert">
+  This is a primary alert—check it out!
+</div>
+<div class="alert alert-secondary" role="alert">
+  This is a secondary alert—check it out!
+</div>
+<div class="alert alert-success" role="alert">
+  This is a success alert—check it out!
+</div>
+<div class="alert alert-danger" role="alert">
+  This is a danger alert—check it out!
+</div>
+<div class="alert alert-warning" role="alert">
+  This is a warning alert—check it out!
+</div>
+<div class="alert alert-info" role="alert">
+  This is a info alert—check it out!
+</div>
+<div class="alert alert-light" role="alert">
+  This is a light alert—check it out!
+</div>
+<div class="alert alert-dark" role="alert">
+  This is a dark alert—check it out!
+</div>
+
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Home</li>
+  </ol>
+</nav>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Library</li>
+  </ol>
+</nav>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Library</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Data</li>
+  </ol>
+</nav>
+
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+
+<button type="button" class="btn btn-link">Link</button>
+
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+    <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Link with href
+        </a>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Button with data-target
+        </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        </div>
+    </div>
+
+</body>
+
+</html>

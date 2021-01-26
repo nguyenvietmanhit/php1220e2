@@ -1,0 +1,58 @@
+<!-- responsive_layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Repsonsive Layout với flex</title>
+	<!-- Bắt buộc phải khai báo thẻ meta sau để
+	trình duyệt hiểu đc kích thước các thiết bị -->
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+</head>
+<body>
+	<!--
+	VD:
+	- Trên PC: 1 hàng 4 cột bằng nhau
+	- Trên Ipad: 1 hàng chỉ có 2 cột bằng nhau -> cần 2 hàng để hiển thị hết 4 cột từ PC
+	- Trên Mobile: 1 hàng chỉ 1 cột -> 4 hàng để hiển thị hết 4 cột từ PC
+	 -->
+	 <style type="text/css">
+	 	.col1 {background: red;}
+	 	.col2 {background: yellow;}
+	 	.col3 {background: blue;}
+	 	.col4 {background: green;}
+	 	.row {
+		    display: flex;
+		}
+		.col {
+			width: 25%;
+		}
+
+		/* Do cơ chế flex mặc định giữ các cột luôn trên 1 hàng kể cả tổng width của các cột > 100%, nên cần thay đổi lại cơ chế này nếu muốn cột bị thừa bị xuống dòng */
+		/* CSS cho Ipad */
+		@media (min-width: 768px) and (max-width: 1023px) {
+			.row {
+				flex-wrap: wrap;
+			}
+			.col {
+				width: 50%;
+			}
+		}
+
+		/* CSS Mobile */
+		@media (max-width: 767px) {
+			.row {
+				flex-wrap: wrap;
+			}
+			.col {
+				width: 100%;
+			}
+		}
+	 </style>
+	 <div class="row">
+	 	<div class="col1 col">Cột 1</div>
+	 	<div class="col2 col">Cột 2</div>
+	 	<div class="col3 col">Cột 3</div>
+	 	<div class="col4 col">Cột 4</div>
+	 </div>
+</body>
+</html>
