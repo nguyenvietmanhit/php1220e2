@@ -1,0 +1,64 @@
+<!-- js_event.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>
+		Các hàm cơ bản của Javascript
+    </title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 1 - Một số hàm cơ bản của JS
+		// - Hiển thị nội dung ra 1 tài liệu mới,
+		// chỉ dùng cho mục đích demo
+		document.write('Test document.write');
+		// - Hiển thị text ra tab Console của trình duyệt, dùng để debug
+		console.log('Test console.log');
+		// - Hiển thị text dưới dạng 1 popup cảnh báo, sử dụng \n để xuống dòng, newline
+		// alert('Text 1 \n Text 2');
+		// - Hiển thị input dưới dạng 1 popup cảnh báo
+		// var name = prompt('Nhập tên của bạn');
+		// console.log(name);
+		// - Hiển thị text xác nhận dưới 1 cảnh báo, hay dùng với chức năng Xóa
+		// var check = confirm('Bạn muốn xóa hay ko?');
+		// console.log(check);
+		
+	</script>
+
+	<a href="#" id="a-test">Thẻ a1</a>
+	<script type="text/javascript">
+		// - Lấy đối tượng HTML dựa theo id cuả nó
+		// Để đơn giản, chỉ dùng cách lấy đối tượng theo id
+		// Luôn phải có bước lấy ra đối tượng trước, r sau đó muốn tương tác gì với đối tượng đó cũng đc
+		// Lấy đối tượng của Javascript thuần và đối tượng lấy theo jQuery là 2 đối tượng hoàn toàn khác nhau
+		var obj_a = document.getElementById('a-test');
+		console.log(obj_a);
+		console.log(typeof obj_a); //object
+		// Lấy giá trị của text từ đối tượng trên
+		var text = obj_a.innerHTML; //innerText
+		console.log(text); //Thẻ a1
+		// Set giá trị cho đối tượng trên
+		obj_a.innerHTML = "<b>Thẻ a bị bôi đậm</b>";
+		// obj_a.innerText = "<b>Thẻ a bị bôi đậm</b>";
+		// Thay đổi giá trị của thuộc tính đối tượng trên
+		obj_a.href = 'https://google.vn';
+		obj_a.title = 'New title';
+		// - Chuyển hướng sang url khác
+		// window.location = 'https://google.vn';
+		// - Lấy số ký tự của 1 chuỗi
+		var string = 'string 123';
+		var length = string.length;
+		console.log(length); //10
+		// - Trả về lần xuất hiện đầu tiên của 1 chuỗi trong 1 chuỗi khác
+		var email = 'abc@gmail.com';
+		// vị trí đầu tiên trong 1 chuỗi = 0
+		var index = email.indexOf('@');
+		console.log(index);//3
+		var index2 = email.indexOf('dsasasa');
+		console.log(index2); //-1 -> ko tìm thấy
+		// - Mở trình soạn thảo mail mặc định để gửi mail
+		window.open('mailto:nguyenvietmanhit@gmail.com');
+	</script>
+</body>
+</html>
