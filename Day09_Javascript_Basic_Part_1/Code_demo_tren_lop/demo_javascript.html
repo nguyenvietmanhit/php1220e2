@@ -1,0 +1,213 @@
+<!-- demo_javascript.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Javascript cơ bản phần 1</title>
+</head>
+<body>
+<!--
+	Ngôn ngữ lập trình Frontend: Javascript
+	- HTML, CSS chỉ về giao diện
+	- Javascript tương tác với trang web
+	- NGôn ngữ lập trình có các khái niệm của lập trình, lập trình hướng đối tượng
+	- Lập trình frontend: ko kết nối đc CSDL
+	- Javascript và Java là 2 ngôn ngữ hoàn toàn độc lập
+	- Với lập trình web PHP, ko cần quá chuyên sâu về Javascript, sử dụng thư viện jQuery để thao tác là chính
+	- Javacsript khó, nếu học chuyên sâu cần học lên
+	các thư viện của JS: Node, Angular, React ...
+	- Học Javascript: 2 gđ:
+	+ Khái niệm chung của lập trình
+	+ Cách Javscript tương tác với HTML thông qua
+	các sự kiện
+	- 2 / Cú pháp khai báo Javascript, tương tự với CSS: có 3 cách
+	- Nhúng inline trong thẻ HTML thông qua sự kiện của JS
+ -->
+ 	<h1 onclick="alert('Click')">
+ 		Click để show cảnh báo
+ 	</h1>
+ 	<!-- 2 - Nhúng inline trong file .html sử dung cặp thẻ <script> -->
+ 	<script type="text/javascript">
+ 		//Code JS
+ 		console.log('Hello Wolrd');
+ 	</script>
+ 	<!-- 3 - Nhúng từ file .js bên ngoài: tạo 1 file script.js, ngang hàng với file hiện tại
+ 	 -->
+ 	 <script type="text/javascript" src="script.js"></script>
+
+ 	 <!-- 3 - Hiệu suất khi nhúng code JS
+		- Trình duyệt đọc file .html từ trên xuống
+		- Cần ưu tiên hiển thị giao diện trc (HTML, CSS) r mới đến tương tác (Javsacript)
+		- Để tối ưu nhất, code JS nên đặt ngay trước thẻ đóng body 
+ 	  -->
+ 	  <script type="text/javascript">
+  		// KHÁI NIỆM CHUNG CỦA LẬP TRÌNH
+  		// Với Javascript phân biệt hoa thường
+  		// 1 - Biến: biến thiên, biến đổi
+  		// + Về mặt vậy lý, biến là 1 vùng nhớ
+  		// + Biến chứa các giá trị có thể thay đổi
+  		// + Khai báo biến:
+  		// Khai báo biến name
+  		var name;
+  		// Khai báo biến age, khởi tạo/gán giá trị 30 cho biến này
+  		var age = 30;
+  		var number1, number2;
+  		let fullname = 'Mạnh';
+  		//  - Quy tắc khai báo tên biến:
+  		// + Tên biến phải bắt đầu bằng chữ hoặc _
+  		// var 1name;
+  		var name1;
+  		var _name;
+  		// + Tên biến ko dc chứa ký tự đặc biệt trừ ký tự $
+  		// Mọi lỗi trong JS hiển thị trong tab Console, JS ko chạy code phía sau đoạn code lỗi
+  		// var name@1;
+  		var $name;
+  		console.log('test');
+  		// + Tên biến ko đc trùng từ khóa của JS
+  		// var if;
+  		// + Đặt tên biến có ý nghĩa
+  		var x, y, z;
+  		var name = 'Mạnh';
+  		var age = 30;
+  		var user_info = 'abc';
+  		// + Biến trong JS phân biệt hoa thường
+  		var name;
+  		var nAme;
+
+
+  		// Thực hành
+  		var name = 'Nguyễn Viết Mạnh';
+  		var age = 30;
+  		var address = 'Sơn Đồng - Hoài Đức - HN';
+  		// Toán tử nối chuỗi trong JS là +
+  		document.write('Tên của bạn: ' + name);
+  		document.write('<br />');
+  		document.write('Tuổi của bạn: ' + age);
+  		document.write('<br />');
+  		document.write('Địa chỉ: ' + address);
+  		// Hàm document.write chỉ dùng để demo, thực tế sẽ ko áp dụng
+  		//2 - Hằng
+  		// + Là 1 loại biến, ko thể thay đổi giá trị của hằng 1 khi đã gán cho nó
+  		// + Khai báo hằng: hằng nên viết hoa
+  		const PI = 3.14;
+  		const MAX_AGE = 100;
+  		// Gọi hằng -> gọi tên 
+  		console.log(MAX_AGE); //100
+  		// + Cố tình gán lại giá trị khác cho hằng sẽ báo lỗi
+  		// MAX_AGE = 1;
+  		//3 - Kiểu dữ liệu trong JS: nhìn vào giá trị của biến để biết kiểu dữ liệu
+  		// + Number: kiểu số: số nguyên, số thực
+  		var number1 = 30;
+  		var number2 = 1.23;
+  		var number3 = -1;
+  		console.log(typeof number2);//number
+  		// + String: kiểu chuỗi, giá trị bao bởi ký tự ' hoặc "
+  		var string1 = 'String 1';
+  		var string2 = "String 2";
+  		var string3 = "Hello 'Mạnh'"; // Hello 'Mạnh'
+  		console.log(typeof string3); //string
+  		// + Boolean: kiểu đúng/sai, chỉ có 2 giá trị duy nhất: true và false, viết thường hết
+  		var is_true = true;
+  		var is_false = false;
+  		// var is_true123 = True; báo lỗi
+  		console.log(typeof is_true); //bool/boolean
+  		// + Undefined: kiểu ko xác định, xảy ra khi khai báo biến mà ko gán giá trị
+  		var und;
+  		console.log(typeof und); //undefined
+  		// + Null: kiểu dữ liệu đặc biệt, gặp khi thao tác với biến mà chưa tồn tại, có 1 giá trị duy nhất: null
+  		var n = null;
+  		console.log(typeof n); //object
+  		// + Array: kiểu mảng, chứa đc nhiều giá trị tại 1 thời điểm
+  		var arr1 = [1, 'abc', true, 'def', false];
+  		console.log(typeof arr1); //object
+  		// + Object: kiểu đối tượng, lập trình hướng đối tượng
+  		var person = {
+  			name: 'Mạnh',
+  			age: 30,
+  			address: 'HN',
+  			showInfo: function() {
+  				console.log(this.name);
+  			}
+  		};
+  		console.log(typeof person); //object
+  		// Javascript coi kiểu null, array như 1 object
+  		// 4 - Hàm
+  		// + Là 1 tập các dòng code xử lý logic nào đó
+  		// + LÀ khái niệm cực kỳ quan trọng trong lập trình
+  		// + Sử dụng hàm chia nhỏ các chức năng của 1 website
+  		// + Tính sử dụng lại
+  		//vd: cần code chức năng sp yêu thích, xuất hiện tại 3 trang khác nhau, thay vì phải code 3 lần -> viết 1 hàm, tại 3 trang gọi hàm
+  		// + Nếu chức năng xuất hiện >=2 lần nên viết hàm
+  		console.log('adsadsasa');
+  		// Phân loại hàm:
+  		// + Hàm có sẵn
+  		// + Hàm tự định nghĩa
+  		// Cú pháp khai báo
+  		// Tên hàm quy tắc giống biến
+  		function showInfo() {
+  			console.log('hàm showInfo');
+  		}
+  		// Gọi hàm: 
+  		showInfo();
+  		showInfo();
+  		showInfo();
+  		// Các loại hàm tự định nghĩa
+  		// + Hàm ko có tham số, ko có giá trị trả về
+  		function show1() {
+  			console.log('test');
+  		}
+  		show1();
+  		// + Hàm có tham số, ko có giá trị trả về
+  		// Viết hàm tính tổng 2 số -> coi là 2 tham số của hàm, bên trong hàm sẽ thao tác cộng 2 tham số này. Tham số của hàm chưa phải giá trị thật
+  		function sum(number1, number2) {
+  			var sum = number1 + number2;
+  			console.log('Tổng = ' + sum);
+  		}
+  		// Bước gọi hàm là bước truyền giá trị thật vào các tham số của hàm
+  		sum(1, 5); //Tổng = 6
+  		sum(2, 6); //Tổng = 8
+  		// - Hàm có tham số, có giá trị trả về
+  		// + Viết hàm cộng 2 số,
+  		function sum1(number1, number2) {
+  			// Viết hàm nên hạn chế hiển thị bên trong hàm
+  			var sum = number1 + number2;
+  			// Từ khóa return có tác dụng:
+  			// + Làm cho hàm có giá trị trả về nào đó
+  			// + Thoát khỏi hàm: ko thực thi logic code phía sau return
+  			return sum;
+  			console.log('Có hiển thị ko?');
+  		}
+  		// Gọi hàm, với hàm có giá trị trả về - return, hàm này như 1 giá trị
+  		var sum = sum1(2, 5);
+  		// + Hàm dùng return rất linh hoạt khi thao tác
+  		console.log('Tổng 2 số = ' + sum);
+  		// Viết hàm hiển thị tên của ai đó:
+  		// + Xác định tham số hàm nếu có: tên
+  		// + Xác định giá trị trả về của hàm: string
+  		function showName(name) {
+  			var string = "Tên của bạn: " + name;
+  			return string;
+  		}
+  		// Gọi hàm
+  		var show = showName('Mạnh');
+  		console.log(show);
+  		// - Nên viết hàm theo hướng sử dụng từ khóa return
+  		// 5 - Phạm vi của biến
+  		// + Biến cục bộ: biến chỉ hoạt động bên trong hàm , bên ngoài hàm sẽ ko biết đến sự tồn tại của biến này
+  		function showVar() {
+  			// Biến cục bộ
+  			var local = 'Hello';
+  		}
+  		showVar();
+  		// Gọi biến cục bộ bên trong hàm từ bên ngoài sẽ báo lỗi
+  		// console.log(local);
+  		// + Biến toàn cục: có thể truy cập dc từ mọi nơi, sau khi khai báo biến
+  		var g = 'Global';
+  		function testGlobal() {
+  			console.log(g);
+  		}
+  		testGlobal();
+ 	  </script>
+
+</body>
+</html>
