@@ -1,0 +1,176 @@
+<!-- js_event.html -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Xử lý sự kiện trong JS</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 1 - Một số hàm định nghĩa sẵn trong JS
+			// Cú pháp khai báo hàm
+			function showInfo() {
+				console.log('Debug');
+			}
+			// Gọi hàm
+			showInfo();
+			// - Hiển thị nội dung ra màn hình, thực tế ko dùng hàm này
+			document.write('Hello, World');
+			// - console.log -> debug
+			// - Hiển thị popup dạng cảnh báo
+			// alert('Alert');
+			// - Hiển thị popup dưới dạng input nhập
+			// var name = prompt('Nhập vào tên của bạn:');
+			// console.log(name);
+			// - Hiển thị popup dưới dạng xác nhận có hay ko, hay dùng với chức năng Xóa
+			// var is_confirm = confirm('Bạn có chắc chắn muốn xóa?');
+			// console.log(is_confirm);
+		</script>
+
+		<p id="p1">Lấy đối tượng p này</p>
+		<script>
+			// - Lấy đối tượng/phần tử HTML theo id của nó, dùng nhiều trong javascript thuần
+			// Tính chất rất quan trọng của JS là tương tác với HTML, bắt buộc phải lấy đc đối tượng HTML r thích làm gì thì làm 
+			// Còn rất nhiều cách lấy đối tượng ngoài cách lấy theo id
+			var obj = document.getElementById('p1');
+			console.log(obj);
+			// - Set nội dung cho đối tượng HTML
+			// Set theo định dạng HTML
+			//obj.innerHTML = '<b>Thẻ p bị in đậm</b>';
+			// Set theo định dạng text - viết gì hiển thị nấy
+			obj.innerText = '<b>Thẻ p bị in đậm</b>';
+			// - Get nội dung của đối tượng HTML
+			var p_content = obj.innerHTML;
+			console.log(p_content);
+			// - Hàm chuyển hướng
+			// window.location = "https://google.vn";
+			// - Lấy độ dài chuỗi:
+			var str = 'Mạnh';
+			var length = str.length;
+			console.log(length); // 4
+			// - Tìm chuỗi trong chuỗi, trả về vị trí đầu tiên mà nó tìm thấy
+			// Chuỗi trong JS , ký tự đầu tiên bắt đầu từ 0
+			// Trả về -1 nếu ko tìm thấy, ngược lại là thấy
+			var email = 'nguyenvietmanhit@gmail.com';
+			var position = email.indexOf('dhasjkdhasjk');
+			console.log(position);
+			// - Gửi mail sử dụng trình mail mặc định của hệ thống
+			// window.open('mailto:nguyenvietmanhit@gmail.com');
+		</script>
+
+		<a href="#" onclick="alert('Click')">
+			Click thẻ a để show alert
+		</a>
+		<h1 id="h1-click">
+			Click thẻ h1 để show cảnh báo
+		</h1>
+		<script>
+			// Xử lý sự kiện khi click vào thẻ h1
+			// - Lấy đối tượng HTML muốn tương tác
+			var obj_h1 = document.getElementById('h1-click');
+			// - Gắn sự kiện cho đối tượng vừa lấy đc 
+			// Hàm này nhận vào 2 giá trị: 
+			// Giá trị đầu tiên là tên sự kiện: click, focus, blur, submit ...
+			// Giá trị thứ 2 là hàm callback: là hàm chạy sau khi sự kiện trc nó xảy ra xong, hàm callback ko có tên hàm, ko có tham số nào cả
+			obj_h1.addEventListener('click', function() {
+				alert('Alert h1');
+			});
+
+			// Code sau vẫn chạy được do Javascript và PHP là ngôn ngữ biên dịch 2 lần
+			testJS();
+			function testJS() {
+				console.log('hàm testJS');
+			}
+
+			// 2 - CÁc sự kiện trong Javascript
+			// - JS tương tác với HTML thông qua các sự kiện của nó
+			// - Để JS tương tác đc với HTML, bắt buộc phải lấy đc đối tượng HTML bằng document.getElementById 
+		</script>
+
+		<select id="event-onchange">
+			<option value="1">VN1</option>
+			<option value="2">VN2</option>
+			<option value="3">VN3</option>
+		</select>
+
+
+		<h2 id="h2-hover">
+			Demo onmouseenter và onmouseleave
+		</h2>
+		<script>
+			// - Sự kiện trạng thái hover 
+			// onmouseover + onmouseout
+			// onmousenter + onmouseleave
+			// + Lấy đối tượng
+			var obj_h2 = document.getElementById('h2-hover');
+			// + Gắn sự kiện onmouseenter
+			obj_h2.addEventListener('mouseenter', function() {
+				// Obj HTML truy cập tất cả thuộc tính của nó: style , id, class, title ...
+				this.style = "color: red";
+			});
+			// + Gắn sự kiện onmouseleave
+			obj_h2.addEventListener('mouseleave', function() {
+				this.style = "color: #000";
+			});
+
+			// - Sự kiện onchange: áp dụng cho select, radio, checkbox
+			// Lấy đối tượng HTML
+			var obj_select = document.getElementById('event-onchange');
+			// Gắn sự kiện onchange cho obj trên
+			// JS có sự kiện onchange -> truyền vào hàm -> change
+			obj_select.addEventListener('change', function() {
+				// Code bên trong hàm callback
+				// + Lấy giá trị của option
+				// var o_value = obj_select.value;
+				// Sử dụng this nếu đang tham chiếu đến chính đối tượng hiện tại
+				var o_value = this.value;
+				console.log(o_value);
+				// + Lấy text hiển thị của option?
+				var o_text = this.options[this.selectedIndex].text;
+				console.log(o_text);
+			});
+
+
+			// 2 - Demo các sự kiện hay gặp
+			// - Sự kiện click: đã demo
+			// 
+		</script>
+
+		<script>
+			// - Sự kiện onload
+			
+			// Chạy code trên sẽ báo lỗi đối tượng bị null -> ko lấy đc đối tượng -> nguyên nhân là code lấy đối tượng chạy trước HTML
+			// Sử dụng sự kiện onload để xử lý: chờ HTML CSS tải xong thì mới chạy code JS
+			// onload tương đương document.ready của jQuery -> ko cần qtam đến thứ tự code JS và HTML
+			// Gắn sự kiện onload cho window
+			window.addEventListener('load', function() {
+			// + Lấy đối tượng
+			var obj_a = document.getElementById('a-onload');
+			// + Gắn sự kiện click 
+			obj_a.addEventListener('click', function() {
+				alert('alert');
+			});
+			})
+		</script>
+
+		<a href="#" id="a-onload">
+			Click thẻ a để show alert
+		</a>
+
+		<input type="text" id="input-keyup" />
+		<script>
+			// - Sự kiện onkeyup: nhấn vào 1 phím trên bàn phím và nhả ra -> gọi sự kiện keyup
+			// + LẤy đối tượng 
+			var obj_input = document.getElementById('input-keyup');
+			// + Gắn sự kiện onkeyup
+			obj_input.addEventListener('keyup', function() {
+				// Lấy giá trị của input hiện tại mỗi khi nhập
+				var input_value = this.value;
+				console.log(input_value);
+			});
+
+			// + Demo sự kiện onkeydown ở nhà
+			// + Sự kiện onsubmit : dùng cho form
+		</script>
+	</body>
+</html>
