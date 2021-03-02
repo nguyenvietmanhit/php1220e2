@@ -1,0 +1,194 @@
+<!-- js_event.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Xử lý sự kiện trong Javascript</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// - Sự kiện trong Javascript
+		// + Thể hiện rõ nhất là Javascript có mục đích chính tương tác với HTML
+		// + Mọi hành vi trên trang web thì JS đều có các sự kiện để bắt cho  bạn
+		// + Luôn phải có bước lấy đối tượng trước, sau đó mới gắn sự kiện đc
+		// + Có 2 cách code để xử lý sự kiện trong JS:
+		// - Xử lý thẳng trong thẻ HTML, thông qua tên sự kiện, đóng vai trò là thuộc tính thẻ
+		// Với cách này thì ko cần lấy đối tượng, chỉ áp dụng khi logic xử lý đơn giản
+		// - Tách biệt code JS với HTML, sử dụng hàm addEventListener để gắn sự kiện cho đối tượng muốn tương tác
+	</script>
+	<a href="#" onclick="alert('Alert!')">
+		Click thẻ a để show alert
+	</a>
+	<p id="p-click">Click thẻ p để show alert</p>
+
+	<script type="text/javascript">
+		// Lấy đối tượng muốn thao tác, lấy theo id cho đơn giản
+		var obj_p = document.getElementById('p-click');
+		// Gắn sự kiện cho đối tượng vừa lấy đc
+		// Truyền 2 giá trị cho hàm:
+		// - Giá trị đầu tiên: tên sự kiện
+		// - Giá trị thứ 2: là 1 hàm callback - chờ sự kiện trước đó xảy ra xong r mới chạy code bên trong hàm callback, lưu ý hàm callback của JS ko có tham số nào cả
+		function showAlert() {
+			alert('Alert thẻ p');
+		}
+		// Lưu ý cách gọi hàm khi truyền hàm đó như 1 hàm callback
+		// obj_p.addEventListener('click', showAlert);
+
+		// + Cách hay dùng thực tê, là khai báo hàm luôn trong hàm callback
+		obj_p.addEventListener('click', function() {
+			//Code bên trong hàm callback
+			alert('click!!!!!');
+		});
+	</script>
+
+
+	
+	<!-- Demo các sự kiện cơ bản trong JS -->
+	<h1 id="h1-click">Click h1 show alert</h1>
+	<select id="country">
+		<option value="1">VN</option>
+		<option value="2">Japan</option>
+		<option value="3">USA</option>
+	</select>
+
+	<br />
+	<input type="radio" name="gender" id="male" value="male" /> Nam
+	<input type="radio" name="gender" id="female" value="female" /> Nữ
+	<br />
+
+	<h1 id="hover-unhover">
+		Rê chuột qua để đổi màu text,
+		Ra khỏi thẻ để về màu ban đầu
+	</h1>
+
+	<script type="text/javascript">
+		// + onload: chạy khi HTML CSS của trang tải xong hết -> chạy code JS
+		// Test trường hợp lỗi: code JS tương tác với HTML trước đoạn khai báo HTML
+		window.onload = function() {
+			// Lấy obj theo id
+			var obj_a = document.getElementById('a-test2');
+			// Gắn sự kiện
+			obj_a.addEventListener('click', function() {
+				alert('show alert');
+			});
+		}
+	</script>
+	<a href="#" id="a-test2">Click thẻ a show alert</a>
+
+	<input type="text" id="name" />
+
+	<input type="text" id="age" />
+	<br />
+	<input type="text" id="username" />
+
+	<br />
+	<form action="" method="post" id="form">
+		Nhập số bất kỳ
+		<input type="text" id="number" />
+		<br />
+		<!-- Có thể sử dụng sự kiện click trên input submit cũng đc, nhưng bị thiếu mất case submit bằng cách đứng trong input r enter  -->
+		<input type="submit" value="Hiển thị số" />
+	</form>
+	<!-- Khai báo nơi chứa kết quả hiển thị sau khi submit form -->
+	<h3 style="color: green" id="result"></h3>
+
+	<script type="text/javascript">
+		// + onsubmit: chỉ áp dụng với thẻ form
+		// LẤy obj của form theo id
+		var obj_form = document.getElementById('form');
+		// Gắn sự kiện submit cho obj trên
+		obj_form.addEventListener('submit', function() {
+			// Lấy obj số user nhập
+			var obj_number = document.getElementById('number');
+			// Lấy giá trị từ obj trên
+			var number = obj_number12dsas.value;
+			// Hiển thị giá trị trên vào thẻ h3 đang chờ sẵn
+			// Lấy obj của thẻ h3 theo id
+			var obj_result = document.getElementById('result');
+			// Set text dạng html cho obj trên
+			obj_result.innerHTML = "Số vừa nhập: " + number;
+			// Do hành vi mặc định của form là sẽ tải lại trang -> các code js của hàm callback sẽ chưa đc thực thi
+			// Để ngăn ngừa hành vi mặc định của form, cần dùng cách sau
+			//event là 1 đối tượng có sẵn của Javascript, chỉ có sẵn bên trong hàm callback sau khi gọi sự kiện
+			event.preventDefault();
+			// Setting trong tab Console của trình duyệt để giữ lại log khi có lỗi trong trường hợp tải lại trang
+		});
+
+
+		// + onfocus - onblur: ở trong input - đang ở trong input click ra ngoài input, luôn đi cùng nhau
+		// Lấy obj theo id
+		var obj_username = document.getElementById('username');
+		// Gắn sự kiện focus
+		obj_username.addEventListener('focus', function() {
+			this.style = "background: red";
+		})
+		// Gắn sự kiện blur
+		obj_username.addEventListener('blur', function() {
+			this.style = "background: #fff";
+		});
+		// + onkeydown: xả ra khi nhấn phím (chưa nhả phím ra)
+		// Lấy obj theo id
+		var obj_age = document.getElementById('age');
+		obj_age.addEventListener('keydown', function() {
+			console.log(this.value);
+		});
+		// + onkeypress: giống onkeydown
+
+
+		// + onkeyup: áp dụng với các input mà nhập	đc text, key -> phím trên bàn phím
+		// Lấy obj theo id
+		var obj_input = document.getElementById('name');
+		// Gắn sự kiện
+		obj_input.addEventListener('keyup', function() {
+			console.log(this.value);
+		})
+
+		// + onmouseenter: hover css - onmouseleave: unhover, 2 sự kiện này luôn đi cùng nhau
+		// onmouseover - onmouseout tương tự như 2 sự kiện trên, chỉ khác về cơ chế cha con HTML
+		// Lấy obj theo id:
+		var obj_h1 = document.getElementById('hover-unhover');
+		// Gắn sự kiện hover
+		obj_h1.addEventListener('mouseenter', function() {
+			this.style = "color: red";
+		});
+		// Gắn sự kiện unhover
+		obj_h1.addEventListener('mouseleave', function() {
+			this.style = "color: #000";
+		})
+		// + onchange:áp dụng cho select, radio, checkbox
+		// - Radio: Lấy obj theo id
+		var obj_male = document.getElementById('male');
+		var obj_female = document.getElementById('female');
+		// Gắn sự kiện
+		obj_male.addEventListener('change', function() {
+			console.log('Value male = ' + this.value);
+		});
+		obj_female.addEventListener('change', function() {
+			console.log('Value female = ' + this.value);
+		});
+		// Lấy obj theo id
+		var obj_select =
+		document.getElementById('country');
+		// Gắn sự kiện
+		obj_select.addEventListener('change', function() {
+			// + Lấy giá trị của thuộc tính value của thẻ option vừa đc chọn
+			// console.log('Value = ' + obj_select.value);
+			// Sử dụng this để gọi đến đúng obj hiện tại
+			// Có thể set value của option trùng với text của option đó để xử lý đơn giản
+			console.log('Value = ' + this.value);
+			// + Lấy text hiển thị của option
+			var text = this.options[this.selectedIndex].text;
+			console.log('Text = ' + text);
+		});
+
+
+		// + onclick
+		// Lấy đối tượng
+		var obj_h1 = document.getElementById('h1-click');
+		// Gắn sự kiện
+		obj_h1.addEventListener('click', function() {
+			alert('click h1');
+		});
+	</script>
+</body>
+</html>

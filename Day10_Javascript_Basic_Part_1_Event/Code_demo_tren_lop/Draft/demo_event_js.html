@@ -1,0 +1,173 @@
+<!-- 
+demo_event_js.html
+1 - Khái niệm về sự kiện
++ Sự kiện là 1 hành động từ user, tác động vào HTML trên trang.
++ Javascript cung cấp sẵn 1 bộ các sự kiện để bắt các hành vi trên: click, hover, nhấn phím ...
++ Để gắn đc sự kiện cho 1 đối tượng HTML, có thể sử dụng hàm sau: addEventListener
++ Demo từng sự kiện hay gặp trong Javascript
+ -->
+
+<a id="a-click">
+	Click thẻ a để show alert
+</a>
+<!-- Gắn thẳng tên sự kiện vào trong thẻ,
+ko nên quá làm dụng cách gắn sự này -->
+<p onclick="alert('Click thẻ p')">
+	click thẻ p để show alert
+</p>
+<select id="select-onchange">
+	<option value="1">Việt Nam</option>
+	<option value="2">Korea</option>
+	<option value="3">Japan</option>
+</select>
+<span id="span-hover">
+	Hover qua thẻ này để đổi màu nền,
+	Bỏ hover để về màu ban đầu
+</span>
+
+<script type="text/javascript">
+	// //lấy ra đối tượng theo id
+	// var obj_a_onload = document.getElementById('a-onload');
+	// //gắn sự kiện onlick cho đối tượng trên
+	// obj_a_onload.addEventListener('click', function() {
+	// 	alert('Click!!!!!!');
+	// });
+	//để code trên ko bị lỗi, có 2 cách để fix:
+	//1 - Chuyển code HTML lên trên code JS
+	//2 - Chuyển code Js trên vào trong sự kiện onload
+	// với sự kiện onload, thì thường sẽ gắn cho chính trình duyệt, thể hiện qua đối tượng window
+	window.addEventListener('load', function() {
+		//lấy ra đối tượng theo id
+		var obj_a_onload = document.getElementById('a-onload');
+		//gắn sự kiện onlick cho đối tượng trên
+		obj_a_onload.addEventListener('click', function() {
+			alert('Click!!!!!!');
+		});
+		//+ Thực tế tất cả code js của bạn thường sẽ được dặt trong sự kiện onload này, để đảm bảo code JS luôn chạy sau cùng, tương đương jquery: $(document).ready
+	});
+</script>
+
+<a id="a-onload">
+	Click thẻ a này để show alert
+</a>
+
+
+<input type="text" id="input-keyup" value="" name="" placeholder="">
+<input type="number" id="input-keydown" />
+<form id="form-submit" action="" method="post">
+	Nhập tên:
+	<input type="text" id="name" />
+	<br />
+	Nhập tuổi:
+	<input type="number" id="age" />
+	<br />
+	<input type="submit" value="Show thông tin" />
+</form>
+<!-- Khai báo vùng chứa kết quả, ở trạng thái chờ -->
+<h3 id="result"></h3>
+
+
+<script type="text/javascript">
+	// 9 - Sự kiện onsubmit: chỉ áp dụng cho thẻ <form>, xảy ra khi click nút submit form hoặc đứng trong 1 input và enter
+	// + Lấy ra đối tượng form
+	var obj_form = document.getElementById('form-submit');
+	// + Gắn sự kiện onsubmit cho đối tượng form trên
+	obj_form.addEventListener('submit', function() {
+		// + Lấy dữ liệu từ các input và show ra màn hình
+		//Lấy ra giá trị của input nhập tên
+		var obj_name = document.getElementById('name');
+		var name = obj_name.value;
+		//lấy ra giá trị của input nhập tuổi
+		var obj_age = document.getElementById('age');
+		var age = obj_age.value;
+		//set nội dung cho thẻ <h3> đang chờ sẵn
+		var obj_result = document.getElementById('result');
+		obj_result.innerHTML = "Tên: " + name + ", Tuổi: " + age;
+		//do bản chất của submit form là sẽ tải lại trang, nên kết quả sẽ bị mất
+		//Ngăn ngừa hành vị mặc định của form là tải lại trang bằng cách sử dụng 1 biến toàn cục của javascript, tên là event
+		//Biến event này chỉ tồn tại trong hàm callback khi gắn sự kiện cho đối tượng đó
+		event.preventDefault();
+		// Với Javascript, cần tích vào chức năng sau để các log liên quan đến lỗi luôn giữ lại khi trang bị tải lại. Setting như sau: trong tab Console, click vào hình bánh răng -> tích vào checkbox Preserved log
+	});
+
+	//8  - Sự kiện onfocus/onblur
+	// + onfocus: khi con trỏ chuột đang ở trong 1 input
+	// thì sự kiện này sẽ được gọi
+	// + onblur: khi con trỏ chuột đang ở ngoài 1 input
+	// thì sự kiện này sẽ được gọi
+	// Tự thực hành 2 sự kiện trên
+
+	// 7 - Sự kiên keydown/keypress: xảy ra khi nhấn 1 phím nào đó trên bàn phím
+	var obj_keydown = document.getElementById('input-keydown');
+	obj_keydown.addEventListener('keydown', function() {
+		var value = this.value;
+		console.log(value);
+	});
+
+	// 6 - Sự kiện onkeyup: xảy ra khi nhấn vào 1 phím nào đó trên bàn phím, khi ra nhả phím ra thì sự kiện này sẽ đc gọi
+	// + Lấy ra đối tượng muốn tương tác, 
+	var obj_keyup = document.getElementById('input-keyup');
+	// + Gắn sự kiện cho đối tượng trên
+	obj_keyup.addEventListener('keyup', function() {
+		var value = this.value;
+		console.log(value);
+	});
+
+
+	//3 - Sự kiện onmouseover và onmouseout
+	// Sự kiện onmouseover: xảy ra khi rê chuột vào phần tử
+	// Sự kiện onmouseout: ngược lại với onmouseover
+	// + Lấy ra đối tượng muốn tương tác, getElementById
+	var obj_span = document.getElementById('span-hover');
+	// + Gắn sự kiện cho đối tượng trên, addEventListener
+	obj_span.addEventListener('mouseover', function() {
+		//thay đổi màu nền cho đối tượng
+		this.style = "background: red";
+	});
+
+	//+ Gắn sự kiện onmouseout cho đối tượng trên 
+	obj_span.addEventListener('mouseout', function() {
+		this.style = "background: #fff";
+	});
+
+	//4  - Sự kiện onmouseenter và onmouseleave: về bản chất giống với onmouseover và onmouseout
+
+	//5 - Sự kiện onload: bình thường code JS luôn phải đặt bên dưới HTML, tuy nhiên có thể thay đổi dc điều này - thích đặt code JS ở đâu cũng dc - sử dụng sự kiện onload trong javascript
+	//Bản chất của sự kiện này: chờ HTML CSS tải xong thì mới chạy code JS bên trong sự kiện
+
+
+
+	// 2 - Sự kiện onchange: xảy ra khi thay đổi giá trị của
+	// 1 phần tử HTML, thường chỉ áp dùng với 3 thẻ HTML sau: select, input type=radio, input type=checked, hay dùng nhất với thẻ <select>
+	// + LẤy ra đối tượng HTML muốn tương tác
+	var obj_change = document.getElementById('select-onchange');
+	// + Gắn sự kiện onchange cho đối tượng trên
+	obj_change.addEventListener('change', function() {
+		// + Lấy giá trị của thuộc tính option tương ứng được chọn, sử dụng từ khóa this đại điện cho chính đối tượng hiện tại
+		console.log("Value: " + this.value);
+		// console.log("Value: " + obj_change.value);
+		// + Lấy nội dung của thẻ option
+		// console.log("Nội dung: " + this.innerHTML);
+		var selected = this.options[this.selectedIndex].text;
+		console.log("Bạn vừa chọn: " + selected);
+	});
+	
+
+	// Về cơ bản muốn tương tác đc với phần tử HTML nào, thì cần lấy ra đc đối tượng đó trước,
+	// 1 - Sự kiện onclick
+	var obj_click = document.getElementById('a-click');
+	//Khai báo hàm dùng làm hàm callback cho sự kiện sẽ gắn vào đối tượng vừa lấy đc. Hàm callback - là hàm sẽ thực thi sau khi sự kiện trc nó xảy ra xong, hàm callback trong javascript thường sẽ ko có tham số nào
+	function clickShowAlert() {
+	  alert('Bạn đã click!');
+	}
+
+	//Gắn cho đối tượng trên sự kiện click
+	//lưu ý khi gọi hàm callback, sẽ ko truyền vào cặp ()
+	// obj_click.addEventListener('click', clickShowAlert);
+	//viết theo kiểu khai báo thẳng hàm callback bên trong, ko cần viết tách hàm ra bên ngoài
+	obj_click.addEventListener('click', function() {
+		alert('Click!');
+	});
+
+	// + Trong Javascript, tất cả lỗi nếu có đều show ra hết trong tab Console của trình duyệt
+</script>

@@ -1,0 +1,199 @@
+<!-- demo_event.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8" />
+	<title>Demo sự kiện trong Javascript</title>
+</head>
+<body>
+	<!--
+	1 - Phạm vi của biến trong Javascript:
+	+ Mặc định các biến khai báo bên ngoài hàm đc gọi là biến toàn cục
+	 -->
+	 <script type="text/javascript">
+	 	// Khai báo biến toàn cục
+	 	var var_global = 'Biến global';
+	 	console.log(var_global);
+
+	 	function testGlobal() {
+	 		// Biến toàn cục có thể đc truy cập từ bất cứ nơi nào trên file, sau khi khai báo
+	 		console.log("Bên trong hàm: " + var_global);
+	 	}
+	 	testGlobal();
+	 	// + Biến cục bộ: là biến đc khai báo bên trong hàm, ko thể truy cập đc biến cục bộ từ bên ngoài hàm
+	 	function testLocal() {
+	 		// Khai báo biến cục bộ
+	 		var var_local = 'Biến cục bộ';
+	 		console.log('Biến cục bộ bên trong hàm: ' + var_local);
+	 	}
+	 	testLocal();
+	 	//Bên ngoài hàm thử truy cập vào biến var_local
+	 	// console.log("Test biến local: " + var_local);
+
+	 	// 2 - Một hàm có sẵn trong Javascript
+	 	// + Hiển thị nội dung ra màn hình, chỉ dùng với
+	 	//mục đích demo
+	 	// document.write('Chuỗi test');
+	 	// + Log nội dung vào tab Console, dùng để debug
+	 	console.log('test console.log');
+	 	// + Hiển thị 1 cửa sổ dạng popup thô trên trình duyệt
+	 	// alert('Test alert');
+	 	// + Hiển thị 1 input dạng popup cho phép user nhập
+	 	// var name = prompt('Nhập tên của bạn');
+	 	// console.log('Tên vừa nhập: ' + name);
+	 	// + Hiển thị 1 popup dưới dạng xác nhận Yes/No, hàm này hay dùng cho việc xác nhận chức năng Xóa
+	 	// var is_delete = confirm('Are you sure delete?');
+	 	// console.log(is_delete); //true/false
+	 	// + Lấy phần tử/đối tượng HTML theo id của nó
+	 </script>
+	 <a href="#" id="a-id">Hàm lấy đối tượng thẻ a</a>
+	 <script type="text/javascript">
+	 	// + Lấy phần tử/đối tượng HTML theo id của nó
+	 	//tên hàm theo kiểu camel
+	 	// Hàm này rất quan trọng, phải lấy đối tượng HTML thì muốn thao tác trên nó cũng đc
+	 	var a_obj = document.getElementById('a-id');
+	 	console.log(a_obj);
+	 	console.log(typeof a_obj);
+	 	// + Sau khi lấy dc đối tượng, có thể get/set nội dung text bằng thuộc tính innerHTML hoặc innerText
+	 	// + Luôn phải lấy ra đối tượng trước rồi mới thao tác đc 
+	 	// Lấy ra text:
+	 	var a_text = a_obj.innerHTML;
+	 	console.log(a_text); //Hàm lấy đối tượng thẻ a
+	 	// Set text cho đối tượng trên
+	 	a_obj.innerHTML = 'Nội dung thẻ a đc set bằng code JS';
+	 	// + Chuyển hướng tới url nào đó
+	 	// window.location = 'https://google.vn';
+	 	// + Tìm kiếm chuỗi ký tự trong 1 chuỗi ban đầu
+	 	var original = 'abc@gmail.com';
+	 	// Tìm trong chuỗi original xem có chứa chuỗi 'abc' hay ko
+	 	// Chú ý: vị trí bắt đầu của chuỗi trong lập trình sẽ bắt đầu từ 0, chứ ko phải 1
+	 	var position = original.indexOf('abc');
+	 	console.log(position); //0
+	 	console.log(original.indexOf('gmail')); //4
+	 	console.log(original.indexOf('sakjskla')); // -1
+	 	// + Gửi mail bằng trình gửi mail mặc định của window -> outlook:
+	 	// window.open('mailto:nguyenvietmanhit@gmail.com');
+
+	 	// - XỬ LÝ SỰ KIỆN TRONG JAVASCRIPT
+	 	// + Mỗi hành động của user trên trang, bạn đều có thể bắt dc thông qua các sự kiện của Javascript
+	 	// + Có 2 cách để gọi sự kiện trong JS
+	 	// - Gọi trực tiếp trong thẻ HTML thông qua tên sự kiện
+	 	// - Sử dụng hàm addEventListner để gắn sự kiện vào đối tượng HTML muốn thao tác
+	 </script>
+	 <!-- Cách gọi trực tiếp trong thẻ HTML -->
+	 <p onclick="alert('Click');">
+	 	Click thẻ p để show alert
+	 </p>
+	 <a href="#" id="a-click">Click để show alert</a>
+	 <script type="text/javascript">
+	 	// Xử lý sự kiện click vào thẻ a trên
+	 	// + Luôn phải lấy đối tượng trc, lấy theo id cho đơn giản
+	 	var a_obj = document.getElementById('a-click');
+	 	// + Gắn sự kiện cho đối tượng trên bằng hàm addEventListener
+	 	// Hàm callback trong lập trình: hàm chờ sự kiện trước nó xảy ra xong thì nó mới chạy, hàm callback đc truyền như 1 tham số
+	 	// Tách hàm callback ra 1 hàm riêng, showAlert
+	 	function showAlert() {
+	 		alert('Alert!');
+	 	}
+
+	 	// Truyền hàm trên vào addEventListener như 1 giá trị bình thường
+	 	// a_obj.addEventListener('click', showAlert);
+	 	// Viết trực tiếp hàm callback luôn như sau:
+	 	// Hàm callback trong JS ko thể truyền tham số nào vào trong hàm này đc
+	 	a_obj.addEventListener('click', function() {
+	 		// Code bên trong hàm callback
+	 		alert('Alert bên trong callback');
+	 	});
+	 </script>
+
+	 <select id="select-change">
+	 	<option value="vn">VN</option>
+	 	<option value="japan">Japan</option>
+	 	<option value="korea">Korea</option>
+	 </select>
+	 <a id="a-enter-leave" href="#">
+	 	Test sự kiện onmouseenter và onmouseleave
+	 </a>
+
+
+
+
+	 <form id="form" action="" method="post">
+	 	Nhập tên:
+	 	<input type="text" id="name" value="" />
+	 	<br />
+	 	Nhập tuổi:
+	 	<input type="number" id="age" value="" />
+	 	<br />
+	 	<input type="submit" value="Show thông tin" />
+	 </form>
+	 <!-- Khai báo 1 thẻ rỗng để chờ hiển thị nội dung vào -->
+	 <h3 style="color: green" id="result"></h3>
+
+	 <script type="text/javascript">
+	 	// + Sự kiện submit form:
+	 	// - Chỉ áp dụng với thẻ <form>
+	 	// - Ko nên gọi click trên nút submit, vì sẽ bị bỏ qua trường hợp user enter trong form
+	 	// Lấy ra đối tượng form
+	 	var form_obj = document.getElementById('form');
+	 	// Gắn sự kiện submit cho đối tượng form trên
+	 	form_obj.addEventListener('submit', function() {
+	 		// alert('submit');
+	 		// Lấy ra tên, tuổi từ form sau khi submit
+	 		// Lấy ra đối tượng tên:
+	 		var obj_name = document.getElementById('name');
+	 		var name = obj_name.value;
+	 		// Lấy ra đối tượng tuổi:
+	 		var obj_age = document.getElementById('age');
+	 		var age = obj_age.value;
+	 		// Hiển thị các thông tin tên tuổi ra màn hình hiện tại, hiển thị vào thẻ h3 đang chờ dưới form
+	 		// LẤy đối tượng h3
+	 		var obj_result = document.getElementById('result');
+	 		var result = 'Tên: ' + name + '<br />';
+	 		result += 'Tuổi: ' + age;
+	 		obj_result.innerHTML = result;
+	 		// Do hành vi mặc định của form là bị tải lại sau khi submit form nên dữ liệu sẽ mất hơn, nên cần ngăn ngừa hành vi này của form để giữ lại dữ liệu sinh ra từ code JS trên, bằng cách sau:
+	 		//Đối tượng event là đối tượng có sẵn của Javascript, chỉ tồn tại bên trong hàm callback khi sau khi sự kiện xảy ra 
+	 		event.preventDefault();
+	 		// Cách setting để JS giữ lại lỗi khi submit form -> inspect HTML -> Console -> 
+	 		// Cơ chế ngăn ngừa hành vi mặc định cũng áp dụng các link (thẻ a)
+	 	});
+
+	 	//Thực hành nốt các sự kiện: keyup, keydown, keypress, onfocus, onblur
+
+
+	 	// + Sự kiện liên quan đến hover, unhover:
+	 	//onmouseenter + onmouseleave, tương tự cho 
+	 	//onmouseover + onmouseout
+	 	// - Lấy ra đối tượng theo id
+	 	var a_obj = document.getElementById('a-enter-leave');
+	 	// - Gắn sự kiện cho đối tượng trên
+	 	a_obj.addEventListener('mouseenter', function() {
+	 		// Đổi màu text của đối tượng hiện tại
+	 		this.style = 'color: red';
+	 	});
+	 	a_obj.addEventListener('mouseleave', function() {
+	 		// Đổi màu text về trạng thái ban đầu
+	 		this.style = 'color: initial';
+	 	});
+	 	// 2 sự kiện onmouseenter và onmouseleave luôn đi kèm nhau
+
+	 	// + Sự kiện onchange trong JS:
+	 	// Áp dụng đc với thẻ select, input radio và checkbox
+	 	// + Lấy ra đối tượng muốn gắn sự kiện
+	 	var select_obj = document.getElementById('select-change');
+	 	// + Gắn sự kiện cho obj trên
+	 	select_obj.addEventListener('change', function() {
+	 		// Code bên trong hàm callback
+	 		// LẤy đối tượng hiện tại: this
+	 		// + Lấy giá trị của option đc select:
+	 		console.log(this.value);
+	 		// + LẤy nội dung text của option đc chọn:
+	 		var text_option =
+	 		this.options[this.selectedIndex].text;
+	 		console.log(text_option);
+	 		// Với input radio và checkbox xử lý hoàn toàn tương tưj select
+	 	});
+	 </script>
+</body>
+</html>

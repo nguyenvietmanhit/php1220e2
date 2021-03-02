@@ -1,0 +1,48 @@
+<!--
+demo_js_function_basic.html
+
+-->
+<script type="text/javascript">
+// 1 - Ôn lại 1 số hàm căn bản trong Javascript
+// + Hiển thị nội dung text ra màn hình trong 1 tài liệu mới, hàm này thường dùng để demo, ít ứng dụng thực tế
+document.write('Nội dung hiển thị trong 1 tài liệu mới');
+// + Hiển thị nội dung trong tab Console của trình duyệt,
+//thường dùng để debug - xem thông tin của 1 đối tượng nào đó
+console.log('Hello');
+// + Hiển thị 1 popup dưới dạng 1 cảnh báo
+// alert('Alert');
+// + Hiển thị input cho phép nhập thông tin
+// dưới dạng 1 popup 
+// var name = prompt('Nhập tên của bạn');
+// console.log(name);
+// + Hiển thị 1 popup dưới dạng xác nhận, hay dùng cho chức năng xác nhận xóa
+// var is_confirm = confirm('Are you delete');
+// console.log(is_confirm);
+</script>
+<a id="a-html" href="#" title="Hover qua thẻ để hiển thị nội dung text">
+	Thẻ a demo
+</a>
+<script type="text/javascript">
+	// Về mặt cơ bản, để code JS có thể tương tác đc với HTML, thì cần đặt code JS phía sau HTML
+	// Để tương tác đc với 1 phần tử HTML, bắt buộc phải lấy được đối tượng HTML sẽ tương tác, để việc lấy đối tượng đó đc đơn giản thì thường lấy theo thuộc tính id của phần tử. Javascript sử dụng hàm sau để lấy đối tượng theo id: getElementById('tên-id')
+	var obj_a = document.getElementById('a-html');
+	console.log(obj_a);
+	// + Set nội dung hiển thị cho đối tượng vừa lấy đc
+	//innerHTML/innerText
+	//innerHTML: hiển thị nội dung text dưới dạng HTML
+	//innerText: set gì thì hiển thị y nguyên như vậy
+	// obj_a.innerText = '<i>Nội dung mới của thẻ a</i>';
+	// + Get nội dung của đối tượng HTML
+	var a_title = obj_a.innerHTML;
+	console.log(a_title); //Thẻ a demo
+	// + Lấy giá trị của bất kỳ 1 thuộc tính nào của đối tượng 
+	// Lấy giá trị của thuộc tính title từ đối tượng a_obj
+	var a_title_value = obj_a.title;//
+	// lấy giá trị của thuộc tính id
+	var a_id_value = obj_a.id;
+	// Set giá trị mới cho thuộc tính title của thẻ a trên
+	obj_a.title = 'New title';
+
+	// + Hàm chuyển hướng
+	// window.location = 'https://google.vn';
+</script>
