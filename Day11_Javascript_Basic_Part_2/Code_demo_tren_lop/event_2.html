@@ -1,0 +1,59 @@
+<!-- event_2.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Xử lý sự kiện trong JS phần 2</title>
+</head>
+<body>
+	<input type="text" value="" id="fullname">
+
+
+
+	<input type="number" value="" id="amount" />
+	<br />
+	<br />
+	<br />
+	<br />
+	<form action="" method="post" id="form">
+		Nhập tên:
+		<input type="text" id="name" />
+		<br />
+		Nhập tuổi:
+		<input type="number" id="age" />
+		<br />
+		<input type="submit" value="Hiển thị" />
+	</form>
+	<script>
+		// - Sự kiện onsubmit, sk này chỉ dùng đc trên thẻ <form>, xảy ra khi submit form - gửi thông tin từ form đi
+
+
+		// - Sự kiện onfocus và onblur
+		// + Lấy đối tượng
+		var obj = document.getElementById('amount');
+		// + Gắn sk onfocus: xảy ra khi ở trong input
+		obj.addEventListener('focus', function() {
+			console.log('Sk onfocus đc gọi');
+		});
+		// + Gắn sk onblur: xảy ra khi ko ở trong input nữa
+		obj.addEventListener('blur', function() {
+			console.log('Sk onblur đc gọi');
+		});
+
+		// - Sự kiện onkeyup và onkeydown
+		// + Lấy đối tượng theo id
+		var obj = document.getElementById('fullname');
+		// + Gắn sự kiện onkeyup cho obj trên
+		obj.addEventListener('keyup', function() {
+			// Lấy giá trị hiện tại của input
+			var value = this.value;
+			console.log('Sự kiện onkeyup đc gọi, giá trị hiện tại lấy đc = ' + value);
+		});
+		// + Gắn sự kiện onkeydown: xảy ra ngay thời điểm nhấn phím
+		obj.addEventListener('keydown', function() {
+			// Lấy giá trị hiện tại của input
+			var value = this.value;
+			console.log('Sự kiện onkeydown đc gọi, giá trị hiện tại lấy đc = ' + value);
+		});
+	</script>
+</body>
+</html>

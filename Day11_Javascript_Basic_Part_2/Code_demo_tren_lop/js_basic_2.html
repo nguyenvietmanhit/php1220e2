@@ -1,0 +1,113 @@
+<!-- js_basic_2.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Toán tử, Câu lệnh điều kiện, Vòng lặp trong lập trình
+	</title>
+</head>
+<body>
+	<script>
+		// I - Toán tử
+		// 1 + 2 = 3 -> 1 và 2 là các toán hạng, dấu + là toán tử
+		// 1/ Toán tử số học: tính toán các toán hạng và trả về 1 kiểu dữ liệu number
+		var number1 = 8;
+		var number2 = 3;
+		// Toán tử cộng +
+		var op1 = number1 + number2; // 11
+		// Toán tử trừ -
+		var op2 = number1 - number2; // 5
+		// Toán tử nhân *
+		var op3 = number1 * number2; //24
+		// Toán tử chia / phép chia hết hoặc ko
+		var op4 = number1 / 2; //4
+		// Toán tử chia lấy phần dư %
+		var op5 = number1 % number2; //2
+		// Toán tử tăng tích lũy lên 1 ++
+		number1++;
+		++number1;
+		// Toán tử tăng tích lũy đi 1 --
+		number2--;
+
+		var a = 5;
+		var sum = a++ - 2 + ++a;
+		//      =  5  - 2 +  7
+		var x = 5;
+		var sum = x++ * ++x + 2 * --x % 2;
+		//      =  5  *   7 + 2 *   6 % 2 = 35
+		//41 16 35
+		var x = 5;
+		var sum = x * x - --x * 2 + x++ - x * ++x
+		//      = 5 * 5 -   4 * 2 +  4  - 5 *  6
+		//-9
+
+		//2  - Toán tử so sánh: so sánh các toán hạng xung quanh nó, kết quả trả về của biểu thức sử dụng toán tử so sánh luôn là boolean (true/false)
+		var number1 = 5;
+		var number2 = 4;
+		// So sánh lớn hơn >
+		var op1 = number1 > number2; //true
+		console.log(op1);
+		// So sánh lớn hơn hoặc bằng >=
+		var op2 = number1 >= number2; //true
+		// SS nhỏ hơn <
+		var op3 = number1 < number2; //false
+		// SS nhỏ hơn hoặc bằng <=
+		var op4 = number2 <= 4; //true
+		// SS bằng ==
+		var op5 = number1 == number2; // false
+		// SS bằng ===, so sánh bằng cả về giá trị và kiểu dữ liệu
+		var op6 = 6 == '6'; //true
+		var op7 = 6 === '6'; //false
+		// SS khác !=
+		var op8 = 6 != 0; //true
+
+		// 3 / Toán tử logic
+		// Thực tế đa số các trường hợp cần kết hợp nhiều điều kiện thì mới ra đc quyết định cuối cùng, cần toán tử logic để kết hợp các điều kiện lại, kết quả trả về của biểu thức sử dụng toán tử logic -> true/false
+		var x = 5;
+		var y = 3;
+		// - Toán tử AND &&, trả về true khi cả 2 biểu thức quanh nó là true, ngược lại là false
+		var op1 = (x >= 5) && (y <= 2); //false
+		// - Toán tử OR ||, trả về true khi 1 trong 2 biểu thức quanh nó true, ngược lại false
+		var op2 = (x >= 5) || (y <= 2); //true
+		// - Toán tử NOT !, phủ định của 1 biểu thức
+		var op3 = !(x >= 5 || y <= 2);//false
+
+		// 4 - Toán tử gán: =
+		var x = 5;
+		x += 2; // x = x + 2 = 7
+		x -= 3; // x = x - 3 = 4
+		x *= 2; //8
+		x /= 4; // 2
+		x %= 2; // 0
+
+		// II / Câu lệnh điều kiện
+		// + Kiểm tra logic của 1 hành động, nếu logic đúng thì xử lý theo hướng này, ngược lại xử lý theo hướng khác
+		// + if, if...else, if...elseif...else, 
+		//switch...case
+		// + Câu lệnh điều kiện dựa vào biểu thức điều kiện để quyết định đi theo hướng nào
+		var x = 0;
+		// If: chỉ dùng cho 1 trường hợp duy nhất
+		if (x > 0) {
+			console.log('x > 0');
+		}
+		// If...else: dùng cho 2 trường hợp
+		var x = 0;
+		if (x >= -1) {
+			console.log('x >= -1');
+		} else {
+			console.log('x < -1');
+		}
+		// If..elseif..else 
+		var point = 7;
+		if (point >= 8 && point <= 10) {
+			console.log('Giỏi');
+		} else if (point >= 6.5) {
+			console.log('KHá');
+		} else if (point >= 5) {
+			console.log('TB');
+		} else {
+			console.log('Yếu');
+		}
+	</script>
+</body>
+</html>
