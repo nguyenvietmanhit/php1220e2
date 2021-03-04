@@ -1,0 +1,56 @@
+<!-- demo_event_continue.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8" />
+	<title>Demo Sự kiện Javascript</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// - Sự kiện onload
+		// Lấy ra selector dựa theo id
+		// var obj_p = document.getElementById('p-onload');
+		// // Gắn sự kiện cho đối tượng trên
+		// obj_p.addEventListener('click', function() {
+		// 	//Ký tự \n viết tắt newline
+		// 	alert('Hello \n Mạnh');
+		// });
+		// Với ví dụ này thì sẽ báo lỗi do JS đang thao với HTML chưa dc sinh ra
+		//Có thể fix bằng cách đặt HTML trước đoạn xử lý JS, hoặc đặt tất cả code vào trong sự kiện onload của JS
+		// Sự kiện onload sẽ đc chạy khi toàn bộ HTML CSS đc tải xong
+		window.onload = function() {
+			// copy toàn bộ đoạn JS bên trên paste vào đây
+			var obj_p = document.getElementById('p-onload');
+			// Gắn sự kiện cho đối tượng trên
+			obj_p.addEventListener('click', function() {
+				//Ký tự \n viết tắt newline
+				alert('Hello \n Mạnh');
+			});
+
+			// - Sự kiện keyup: key = phím trên bàn phím, xảy ra khi nhấn vào 1 phím r nhả ra
+			// Lấy đối tượng theo id
+			var obj_keyup = document.getElementById('input-keyup');
+			// Gắn sự kiện keyup
+			obj_keyup.addEventListener('keyup', function() {
+				var value = this.value;
+				console.log(value);
+			});
+			// - Sự kiện keydown: xảy ra ngay khi nhấn vào phím, xảy ra trc keyup, tự demo
+			// - Sự kiện focus: xảy ra khi con trỏ chuột đang ở trong 1 input
+			// Gắn thêm sự kiện cho obj_keyup
+			obj_keyup.addEventListener('focus', function() {
+				this.style = "border: 2px solid blue";
+			})
+			// - Sự kiện blur: ngược lại với focus
+			obj_keyup.addEventListener('blur', function() {
+				this.style = "border: 1px solid #000";
+			})
+		}
+	</script>
+	<input type="text" id="input-keyup" />
+
+
+
+	<p id="p-onload">Click để show alert</p>
+</body>
+</html>

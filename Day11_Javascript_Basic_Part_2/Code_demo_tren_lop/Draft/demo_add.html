@@ -1,0 +1,50 @@
+<!-- demo_add.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo cộng 2 số từ form</title>
+</head>
+<body>
+	<form id="form">
+		Nhập số thứ nhất:
+		<input type="text" id="number1" />
+		<br />
+		Nhập số thứ 2:
+		<input type="text" id="number2" />
+		<br />
+		<input type="submit" value="Cộng 2 số" />
+	</form>
+	<script type="text/javascript">
+		// - Tạo biến chứa lỗi và kết quả
+		var error = '';
+		var result = '';
+		// - Lấy đối tượng form
+		var obj_form = document.getElementById('form');
+		// - Gắn sự kiện submit cho đối tượng form
+		obj_form.addEventListener('submit', function() {
+			// - Lấy giá trị của các input
+			// - Đối tượng number 1
+			var obj_number1 = document.getElementById('number1');
+			var number1 = obj_number1.value;
+			// - Đối tượng number 2
+			var obj_number2 = document.getElementById('number2');
+			var number2 = obj_number2.value;
+			// alert(number1 + number2);
+			// - Validate form: chặn các dữ liệu ko có ý nghĩa từ user, đổ thông báo lỗi vào biến error
+			// + Validate để trống 1 trong 2 trường
+			if (number1 == '' || number2 == '') {
+				error = 'Không dc để trống';
+			}
+			// + Validate ko phải số: isNaN - is not a number, trả về true nếu ko phải số, ngược lại trả về false
+			else if(isNaN(number1) == true || isNaN(number2) == true) {
+				error = 'Phải nhập số';
+			}
+			// - Xử lý logic cộng 2 số chỉ khi ko có lỗi xảy ra
+			if (error == '') {
+				var sum = number1 + number2;
+				alert(sum);
+			}
+		});
+	</script>
+</body>
+</html>
