@@ -1,0 +1,95 @@
+<!-- demo_jquery.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thư viện jQuery của Javascript</title>
+	<!-- Tích hợp jQuery CDN -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+	<!-- Tải file jquery về: jquery.com -->
+	<script src="js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+	<script>
+		// 1/ jQuery - Javascript Query
+		// - Là 1 thư viện được xây dựng từ Javacsipt, giúp thao tác với JS đơn giản hơn so với Javascript thuần
+		// - Hiện nay các website thuần PHP hầu như đều tích hợp sẵn jQuery
+		// - jQuery là 1 thành phần được sử dụng làm nền tảng cho rất nhiều thư viện khác, vd: Bootstrap, jQuery UI, jQuery Validate ...
+		// 2/ Cài đặt jQuery: jquery-<version>.min.js, giống như Bootstrap có 2 cách:
+		// + Nhúng link CDN
+		// + Tải về
+		// Code test jQuery đã đc tích hợp thành công hay chưa
+		// - Dấu hiệu nhận biết code sử dụng jQuery là ký tự $ ở đầu, ngoài ký tự $ còn có chuỗi jQuery
+		// - Nên sử dụng document.ready để đảm bảo HTML CSS tải xong thì mới chạy code JS, tương đương với sự kiện onload của JS thuần
+		$(document).ready(function() {
+			// Code JS
+		});
+		$(function() {
+			// Code JS
+		})
+		// 3 - DOM - Document Object Model
+		// Là cây phả hệ của cấu trúc HTML
+		// CÁC MODULE CHÍNH CỦA JQUERY
+		// - jQuery Selector: module quan trọng nhất, dùng cú pháp lấy selector giống hệt CSS
+		// Selector là đối tượng HTML sẽ bị tương tác
+		// + Lấy đối tượng sử dụng JS thuần
+		window.addEventListener('load', function() {
+			var obj_h3 = document.getElementById('test-id');
+			// console.log(obj_h3);
+			// Lấy text của obj trên:
+			var value1 = obj_h3.innerHTML;
+			// console.log(value1);
+		});
+		// + Lấy đối tượng sử dụng jQuery
+		$(document).ready(function() {
+			var obj_h3 = $('#test-id');
+			// console.log(obj_h3);
+			var value2 = obj_h3.innerHTML;
+			// console.log(value2);
+		});
+		// -> Chú ý: đối tượng lấy bằng JS thuần và jQuery là 2 đối tượng hoàn toàn khác nhau, sẽ ko dùng chung đc các thuộc tính/hàm của nhau
+		$(document).ready(function() {
+			// - Lấy selector theo id
+			// - Lấy selector theo class
+			$('.h3-class');
+			// - Lấy selector tên thẻ
+			$('h3');
+			// - Lấy nhiều selector cùng 1 lúc
+			$('.h3-class, #test-id');
+			// - Lấy selector theo thuộc tính thẻ
+			$('input[type=email]');
+			// + Thực tế sẽ gặp trường hợp ko edit source code của KH -> hàm của jQuery để thao tác với cây DOM
+			// + Dùng selector theo cấp
+			$('#div-id a');
+			// + Dùng hàm find để tìm các thành phần con
+			$('#div-id').find('a');
+
+			// - Lấy selector là cha trực tiếp của selector hiện tại: parent
+			$('#a5').parent(); //
+			// - Lấy tất cả selector là thành phần cha của selector hiện tại
+			$('#a5').parents();
+			// - Lấy selector là con trực tiếp của selector hiện tại
+			$('#div-id').children(); 
+			// - next, prev, nextAll, prevAll
+		});
+	</script>
+	<div id="div-id">
+		<a href="#1">Thẻ a1</a>
+		<a href="#2">Thẻ a2</a>
+		<a href="#3">Thẻ a3</a>
+		<div>
+			<a href="#5" id="a5">Thẻ a5</a>
+		</div>
+	</div>
+	<a href="#4">Thẻ a4</a>
+
+
+	<input type="text" placeholder="Nhập tên" />
+	<input type="email" placeholder="Nhập email" />
+
+
+
+	<h3 class="h3-class">h3 class</h3>
+
+	<h3 id="test-id">Thẻ h3</h3>
+</body>
+</html>

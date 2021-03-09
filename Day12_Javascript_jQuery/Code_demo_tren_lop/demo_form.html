@@ -1,0 +1,95 @@
+<!-- demo_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Xử lý cộng hai số trong form</title>
+</head>
+<body>
+	<form action="" method="post" id="form">
+		Nhập số thứ nhất:
+		<input type="text" id="number1" />
+		<br />
+		Nhập số thứ hai:
+		<input type="text" id="number2" />
+		<br />
+		<input type="submit" value="Cộng 2 số" />
+		<input type="reset" value="Reset form" />
+	</form>
+
+	<!-- Khai báo 2 thẻ chờ để hiển thị error và result -->
+	<h3 style="color: red" id="error"></h3>
+	<h3 style="color: green" id="result"></h3>
+
+	<script>
+		// Xử lý form: cộng hai số và in kết quả ra 
+		//màn hình
+		// Áp dụng sự kiện submit cho form, có thể sử dụng sự kiện click vào nút submit
+		// + Lấy obj form theo id
+		var obj_form = document.getElementById('form');
+		// + Gắn sk submit cho obj form
+		obj_form.addEventListener('submit', function() {
+			// alert('submit');
+			// QUY TRÌNH XỬ LÝ FORM
+			// + Tạo các biến chứa lỗi và kết quả để hiển thị ra màn hình
+			var error = '';
+			var result = '';
+			// + Lấy giá trị từ form
+			// Lấy obj và giá trị số thứ nhất
+			var obj_number1 = document.getElementById('number1');
+			var number1 = obj_number1.value;
+			// Lấy obj và giá trị số thứ hai
+			var obj_number2 = document.getElementById('number2');
+			var number2 = obj_number2.value;
+			// Debug
+			// console.log(number1);
+			// console.log(number2);
+			// Với Javascript cấu hình để giữ lại log trong mọi trường hợp, kể cả khi tải lại trang hoặc chuyển hướng: Inspect HTML -> tab Console -> Bánh răng cưa ở góc phải -> Tích Preserve log
+			// + Validate form: lọc dữ liệu từ user, check các điều kiện validate, nếu có lỗi -> đổ vào biến error
+			// Các input bắt buộc phải nhập
+			// Dữ liệu phải là số
+			// Phải nhập số có 2 ký tự trở lên
+			if (number1 == '') {
+				error = 'Phải nhập số thứ nhất';
+				// Focus chuột vào input lỗi luôn, dùng trên đối tượng
+				obj_number1.focus();
+			} else if (number2 == '') {
+				error = 'Phải nhập số thứ hai';
+				obj_number2.focus();
+			}
+			// Kiểm tra 1 giá trị có phải số hay ko: 
+			// isNaN - is not a number -> trả về true nếu ko phải số và ngược lại
+			// Nếu biểu thức trả về true thì ko cần viết tường minh == true, nếu biểu thức trả về false ko cần viết tường mình mà dùng toán tử ! trước biểu thức đó
+			else if (isNaN(number1) == true
+				|| isNaN(number2) == true) {
+				error = 'Cần nhập dữ liệu là số';
+			} else if (number1.length < 2 || number2.length < 2) {
+				error = 'Phải nhập số từ 2 ký tự trở lên';
+			}
+
+			// + Xử lý logic bài toán chỉ khi ko có lỗi nào xảy ra
+			if (error == '') {
+				// Cộng hai số, gán kết quả vào biến result
+				// Với Javascript, giá trị lấy từ form
+				// sẽ có kiểu dữ liệu mặc định là string
+				// Debug
+				// console.log(typeof number1);
+				// console.log(typeof number2);
+				// Nên sẽ thành phép cộng 2 chuỗi -> nối chuỗi
+				// Cần ép kiểu về number để cộng 2 số
+				number1 = parseInt(number1);
+				number2 = parseInt(number2);
+				var sum = number1 + number2;
+				result = "Tổng của số bằng " + sum;
+			}
+			// + Hiển thị kết quả ra màn hình
+			// Đổ error ra thẻ chờ tương ứng
+			document.getElementById('error').innerHTML = error;
+			// Đổ result
+			document.getElementById('result').innerHTML = result;
+			// + Để ngăn ngừa hành vi tải lại trang mặc định khi submit form bằng code sau:
+			// Đối tượng event luôn tồn tại trong các hàm callback khi gọi sự kiện
+			event.preventDefault();
+		});
+	</script>
+</body>
+</html>
