@@ -1,0 +1,115 @@
+<!-- chua_bai_tap_ngay_10.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Chữa bài tập ngày 10</title>
+</head>
+<body>
+	<h1>Chữa bài tập 1</h1>
+	<form action="" method="post">
+		Nhập số a:
+		<input type="text" id="number-a" value="" />
+		<br />
+		Nhập số b:
+		<input type="text" id="number-b" value="" />
+		<br />
+		<input type="submit" id="add" value="a+b" />
+		<input type="submit" id="sub" value="a-b" />
+		<input type="submit" id="multiple" value="a*b" />
+	</form>
+	<h3 style="color: red" id="error"></h3>
+	<h3 style="color: green" id="result"></h3>
+	<script type="text/javascript">
+		// Lấy giá trị của input theo id
+		// Trả về chuỗi chứa giá trị của input đó
+		function getNumber(id) {
+			// Lấy đối tượng theo id
+			var obj_number = document.getElementById(id);
+			var number = obj_number.value;
+			return number;
+		}
+		// Validate 2 số
+		// Trả về message lỗi nếu có
+		function validate(number_a, number_b) {
+			var error = '';
+			if (number_a == '' || number_b == '') {
+				error = 'Ko đc để trống';
+			} else if (isNaN(number_a)
+				|| isNaN(number_b)) {
+				error = 'Phải nhập số';
+			}
+			return error;
+		}
+		//op: toán tử sẽ thực hiện phép tính với 2 số
+		function calculator(number_a, number_b, op) {
+
+			// Hàm này return về 1 giá trị có kiểu dữ liệu number
+			var result = 0;
+			switch (op) {
+				case '+':
+				// Ép kiểu với phép cộng
+				number_a = parseInt(number_a);
+				number_b = parseInt(number_b);
+				result = number_a + number_b;
+				break;
+				case '-': result = number_a - number_b;
+				break;
+				case '*': result = number_a * number_b;
+			}
+
+			return result;
+		}
+
+		// -  Xử lý chức năng a+b
+		// Lấy đối tượng
+		var obj_add = document.getElementById('add');
+		// Gắn sự kiện
+		obj_add.addEventListener('click', function () {
+			event.preventDefault();
+			// Khởi tạo biến chứa lỗi và kết quả
+			var error = '';
+			var result = '';
+			// Gọi hàm lấy 2 giá trị của 2 số a và b
+			var number_a = getNumber('number-a');
+			var number_b = getNumber('number-b');
+			// alert(number_a + number_b);
+			// Gọi hàm validate form
+			error = validate(number_a, number_b);
+			// Gọi hàm tính toán chỉ khi ko có lỗi xảy ra
+			if (error == '') {
+				var sum = calculator(number_a, number_b, '+');
+				result = 'Tổng bằng ' + sum;
+			}
+			// Hiển thi kết quả ra màn hình
+			document.getElementById('error').innerHTML = error;
+			document.getElementById('result').innerHTML = result;
+		});
+
+		// Xử lý chức năng a - b
+		// Lấy đối tượng
+		var obj_sub = document.getElementById('sub');
+		// Gắn sự kiện
+		obj_sub.addEventListener('click', function () {
+			event.preventDefault();
+			// Khởi tạo biến chứa lỗi và kết quả
+			var error = '';
+			var result = '';
+			// Gọi hàm lấy 2 giá trị của 2 số a và b
+			var number_a = getNumber('number-a');
+			var number_b = getNumber('number-b');
+			// alert(number_a + number_b);
+			// Gọi hàm validate form
+			error = validate(number_a, number_b);
+			// Gọi hàm tính toán chỉ khi ko có lỗi xảy ra
+			if (error == '') {
+				var sum = calculator(number_a, number_b, '-');
+				result = 'Hiệu bằng ' + sum;
+			}
+			// Hiển thi kết quả ra màn hình
+			document.getElementById('error').innerHTML = error;
+			document.getElementById('result').innerHTML = result;
+		});
+	</script>
+</body>
+</html>
