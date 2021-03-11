@@ -1,0 +1,90 @@
+<!-- jquery_part_2.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>jQuery phần 2</title>
+	<!-- Tích hợp jQuery -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// alert('hello');
+			// - Module jQuery Effect
+			// Cung cấp 1 số hàm liên quan đến hiệu ứng
+			// + Gọi sự kiện click trên class=btn-hide
+			$('.btn-hide').click(function() {
+				// Ẩn selector ngay lập tức
+				// $('.h1-test').hide();
+				// Ẩn theo khoảng thời gian: ms
+				$('.h1-test').hide(5000);
+			});
+			// + Gọi sự kiện click trên class=btn-show
+			$('.btn-show').click(function() {
+				//Hiển thị selector ngay lập tức
+				// $('.h1-test').show();
+				$('.h1-test').show(4000);
+			});
+			// + Gọi sk click trên .btn-auto
+			$('.btn-auto').click(function() {
+				// Ẩn/hiện tự động bằng toggle
+				// $('.h1-test').toggle();
+				$('.h1-test').toggle(4000);
+			});
+			// + Gọi sk click trên .animate
+			$('.animate').click(function() {
+				// Dùng hàm animate để tạo 1 hiệu ứng
+				//phức tạp
+				// Tạo 1 biến kiểu object
+				var obj = {
+					width: "50%",
+					backgroundColor: '#000',
+					marginLeft: '40px',
+					fontSize: '50px',
+					borderWidth: '10px',
+					opacity: 0.5
+				};
+				// Tạo  hiệu ứng trong 5s
+				$('.h1-test').animate(obj, 5000);
+			});
+			// - Module jQuery Ajax
+			// + Cơ chế ko đồng bộ: ko cần chờ chức năng trước nó đc xử lý xong, mà vẫn có thể chạy trước
+			// + Ajax sử dụng với PHP để tạo ra 1 website cho phép tương tác với CSDL mà ko hề tải lại trang
+			// + So sánh cơ chế đồng bộ và ko đồng bộ với hàng đợi
+			// Đồng bộ: vào trước xử lý trc
+			// Ko đồng bộ: vào sau vẫn có thể đc xử lý trc
+			// + Học chi tiết ở phần PHP, sau khi học xong CSDL
+			// + Khai báo ajax dùng jQuery
+			$.ajax({
+				// Url xử lý ajax, url này sẽ là file PHP
+				url: 'get_list.php',
+				// Phương thức truyền dữ liệu từ ajax
+				method: 'post',
+				// Dữ liệu gửi lên, gửi lên tên, tuổi
+				data: {
+					name: 'Mạnh',
+					age: 30
+				},
+				// Nơi nhận kết quả trả về sau khi PHP xử lý xong, chứa trong tham số của phương thức success -> data
+				success: function(data) {
+					console.log(data);
+				}
+			});
+		})
+	</script>
+	<button class="animate">
+		Click để xem hiệu ứng phức tạp của h1
+	</button>
+
+
+	<button class="btn-auto">
+		Click để show/hide h1 tự động
+	</button>
+	<h1 class="h1-test">Nội dung sẽ đc ẩn hiển</h1>
+	<button class="btn-hide">Click để ẩn h1</button>
+	<button class="btn-show">
+		Click để hiển thị h1
+	</button>
+</body>
+</html>

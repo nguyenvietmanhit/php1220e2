@@ -1,0 +1,89 @@
+<!-- jquery_validate.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Thư viện jQuery Validate</title>
+	<!-- Tích hợp thư viện jQuery Validate theo thứ tự sau:
+	- jquery-.min.js
+	- jquery.validate.min.js
+	 -->
+	 <script src="js/jquery-3.4.1.min.js"></script>
+	 <script src="js/jquery.validate.min.js"></script>
+</head>
+<body>
+	<!-- Bắt buộc phải khai báo name cho input vì thư viện này validate dựa theo thuộc tính name -->
+	<form id="form" method="post" action="">
+		Nhập tên:
+		<input type="text" name="username" />
+		<br />
+		Nhập tuổi:
+		<input type="text" name="age" />
+		<br />
+		Nhập email:
+		<input type="text" name="email" />
+		<br />
+		<input type="submit" value="Validate" />
+	</form>
+
+
+
+
+	<script>
+		// Thư viện jQuery Validate
+		// - Viết dựa trên jQuery
+		// - Validate dữ liệu theo kiểu realtime - validate ngay tại thời điểm nhập dữ liệu mà chưa cần submit form
+		// - Bản chất của thư viện là dùng sk onkeyup
+		$(document).ready(function() {
+			// - Validate form sử dụng thư viện jQuery Validate, chỉ áp dụng cho thẻ <form>
+			// - Validate dựa theo thuộc tính name của input
+			// - Hàm validate có 2 thuộc tính chính:
+			// + rules: tập các rule validate
+			// + messages: message hiển thị lỗi tương ứng với rule đã khai báo
+			// - Hàm validate có 1 phương thức sau:
+			// + errorPlacement: nơi đặt message lỗi
+			$('#form').validate({
+				rules: {
+					username: {
+						required: true,//ko đc để trống
+						minlength: 3 //ít nhất 3 ký tự
+					},
+					age: {
+						required: true, //ko đc để trống
+						number: true, //phải nhập số
+						min: 1, //nhỏ phải là 1
+						max: 10 //lớn nhất là 10
+					},
+					email: {
+						email: true //phải là email
+					}
+				},
+				messages: {
+					username: {
+						required: 'Phải nhập tên',
+						minlength: 'Nhập ít nhất 3 ký tự'
+					},
+					age: {
+						required: 'Phải nhập tuổi',
+						number: 'Phải nhập số',
+						min: 'Nhập nhỏ nhất = 1',
+						max: 'Nhập lớn nhất = 10'
+					},
+					email: {
+						email: 'Phải nhập email'
+					}
+				},
+				errorPlacement: function(error, element) {
+					//error: đối tượng chứa message lỗi
+					//element: đối tượng input tương ứng
+					// Set error hiển thị phía dưới element
+                   alert(error.html());
+                    // alert(error);
+				// error.insertAfter(element);
+				// error.wrap('<div style="color: red"></div>');
+				}
+			});
+		})
+	</script>
+</body>
+</html>
