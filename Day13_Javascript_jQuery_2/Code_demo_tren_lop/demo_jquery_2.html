@@ -1,0 +1,126 @@
+<!-- demo_jquery_2.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery phần 2</title>
+	<!-- Tích hợp thư viện jQuery -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<script>
+		// 1 - Module jQuery Selector
+		$(document).ready(function() {
+			// alert('alert');
+			// 2 - Module jQuery Attribute
+			// + Thao tác với thuộc tính của đối tượng HTML. VD thuộc tính: style, id, class, href ...
+			// - Get/Set giá trị của thuộc tính
+			// Sử dụng jQuery
+			var a_title = $('.a1-class').attr('title');
+			console.log(a_title);
+			// Sử dụng Javascript thuần
+			// var a_title = document.getElementById('a1-id').title;
+			// console.log(a_title);
+			$('#a1-id').attr('href', 'http:://abc.com');
+			// - Xóa thuộc tính: removeAttr
+			$('.a1-class').removeAttr('title');
+			// - Check có class cho trước hay ko: hasClass
+			var is_check = $('#a1-id').hasClass('abc');
+			console.log(is_check); //false
+			// - CSS: css
+			$('#a1-id')
+			.css('background', 'yellow')
+			.css('color', 'red');
+			// - Xóa class theo tên: removeClass
+			$('#h3-id').removeClass('class3');
+			// - Lấy nội dung của đối tượng HTML, áp dụng cho thẻ HTML dạng đầy đủ :html, text
+			var html = $('#h1-id').html();
+			console.log(html);
+			var text = $('#h1-id').text();
+			console.log(text);
+			// - Set nội dung cho obj HTML: html, text
+			// $('#h2-id').html('<i>H2 in nghiêng</i>');
+			$('#h2-id').text('<i>H2 in nghiêng</i>');
+			// - Lấy giá trị của input
+			// Chú ý: obj lấy bằng JAvascript thuần và bằng jQuery là hoàn toàn khác nhau, nên ko dùng chung đc các hàm của nhau
+			var value = $('#input-id').attr('value');
+			// Sử dụng hàm val() thông dụng hơn để lấy giá trị của input
+			var value = $('#input-id').val();
+			// Set giá trị
+			$('#input-id').val('abcdef');
+			// 3 / Module jQuery DOM: tương tác với cây DOM - cây HTML 
+			// - Xóa DOM: remove
+			$('#strong-id').remove();
+			// - Thêm obj HTML vào trước và sau obj hiện tại và ngang hàng: before, after
+			$('#a2').before('<a href="#">Thẻ a before</a>');
+			$('#a2').after('<a href="#">Thẻ a after</a>');
+			// Thêm obj HTML vào đầu/cuối nội dung của obj HTML hiện tại: prepend, append
+			// 4 - Module jQuery Event: xử lý sự kiện
+			// Javascriptt thuần
+			// var obj_p = document.getElementById('p-id');
+			// obj_p.addEventListener('click', function() {
+			// 	alert('alert');
+			// });
+			// jQuery: lấy tên sự kiện làm tên hàm
+			$('#p-id').click(function() {
+				alert('abc');
+			})
+			// 5 - Module jQuery Effect: hiệu ứng
+			$('#hide').click(function() {
+				// Đơn vị :ms, 1s = 1000ms
+				$('#div-id').hide(3000);
+			});
+			$('#show').click(function() {
+				$('#div-id').show(5000);
+			});
+
+			$('#auto').click(function() {
+				$('#div-id').toggle(3000);
+			});
+
+			$('#animate').click(function() {
+				var obj = {
+					width: '50%',
+					opacity: 0.5,
+					marginLeft: '100px',
+					fontSize: '50px'
+				};
+				$('#div-id').animate(obj, 5000);
+			})
+		});
+	</script>
+	<div id="div-id"
+	 style="width: 200px; height: 200px; background: red">
+		Thẻ div
+	</div>
+	<button id="show">Click để hiển thị div</button>
+	<button id="hide">Click ẩn div</button>
+	<button id="auto">Click để ẩn/hiện tự động</button>
+	<button id="animate">Click để chuyển động div</button>
+
+
+
+	<p id="p-id">Click thẻ p show cảnh báo</p>
+
+
+	<a href="#" id="a2">Thẻ a ban đầu</a>
+	<strong id="strong-id">Thẻ strong</strong>
+
+
+	<input type='text' value="123456" id="input-id" />
+
+	<h2 id="h2-id">Thẻ h2</h2>
+
+	<h1 id="h1-id">
+		<u>Nội dung gạch chân</u>
+	</h1>
+
+	<h3 id="h3-id" class="class1 class2 class3">
+		Thẻ h3
+	</h3>
+
+	<a href="https://google.vn" 
+	title="Link google" id="a1-id" class="a1-class">
+		Click để tới Google
+	</a>
+</body>
+</html>
