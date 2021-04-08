@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/Day19_Process_File_Form_Upload/Codes_demo/upload_file.php" line="59" mnemonic="4" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2ee13f4f-b0cf-45e0-9121-c444e5717529" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -14,36 +17,37 @@
     <session id="-1320626186">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="2" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="1" />
-          <entry key="php" value="11" />
+          <entry key="php" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="PHP" value="11" />
+          <entry key="PHP" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="2723" />
-          <entry key="php" value="26200" />
+          <entry key="php" value="24580" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2727" />
-          <entry key="PHP" value="26196" />
+          <entry key="HTML" value="2725" />
+          <entry key="PHP" value="24578" />
         </counts>
       </usages-collector>
     </session>
@@ -51,9 +55,27 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/note.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3286">
+              <caret line="62" column="3" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/Code_demo_tren_lop/php_basic_1.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6996">
+              <caret line="132" selection-start-line="132" selection-end-line="132" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/Code_demo_tren_lop/php_basic_2.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="7473">
               <caret line="143" selection-start-line="143" selection-end-line="143" />
             </state>
           </provider>
@@ -62,7 +84,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day17_PHP_Array_Function_Array_Time/Code_demo_tren_lop/demo_array.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="7844">
               <caret line="148" column="16" selection-start-line="148" selection-start-column="16" selection-end-line="148" selection-end-column="16" />
             </state>
           </provider>
@@ -71,7 +93,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day17_PHP_Array_Function_Array_Time/Code_demo_tren_lop/practice.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="2332">
               <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
               <folding>
                 <element signature="e#6#20#0#PHP" expanded="true" />
@@ -83,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day17_PHP_Array_Function_Array_Time/Code_demo_tren_lop/demo_function.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
+            <state relative-caret-position="303">
+              <caret line="66" column="11" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
               <folding>
                 <element signature="e#6#25#0#PHP" expanded="true" />
               </folding>
@@ -93,54 +115,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day18_PHP_Form/Code_demo/chua_bai_tap_17.php">
+        <entry file="file://$PROJECT_DIR$/Day19_Process_File_Form_Upload/Codes_demo/demo_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="52" column="43" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day18_PHP_Form/Code_demo/form.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="351">
+              <caret line="160" column="8" lean-forward="true" selection-start-line="160" selection-start-column="8" selection-end-line="160" selection-end-column="8" />
               <folding>
-                <element signature="e#6#403#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#1;n#!!top" expanded="true" />
+                <element signature="e#3853#3901#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day18_PHP_Form/Code_demo/post_get.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="62" column="18" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
-              <folding>
-                <element signature="e#1233#1255#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day18_PHP_Form/Code_demo/set_name_input_form.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Day18_PHP_Form/Code_demo/xu_ly_form.php">
+        <entry file="file://$PROJECT_DIR$/Day19_Process_File_Form_Upload/Codes_demo/upload_file.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="57" column="36" lean-forward="true" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
+            <state relative-caret-position="457">
+              <caret line="68" column="43" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
               <folding>
-                <element signature="e#6#187#0#PHP" expanded="true" />
                 <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h3#1;n#!!top" expanded="true" />
               </folding>
@@ -151,7 +144,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/Code_demo_tren_lop/php_basic.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="4081">
               <caret line="77" selection-start-line="77" selection-end-line="77" />
             </state>
           </provider>
@@ -179,11 +172,8 @@
         <option value="$PROJECT_DIR$/Day17_PHP_Array_Function_Array_Time/Code_demo_tren_lop/demo_array.php" />
         <option value="$PROJECT_DIR$/Day17_PHP_Array_Function_Array_Time/Code_demo_tren_lop/practice.php" />
         <option value="$PROJECT_DIR$/Day17_PHP_Array_Function_Array_Time/Code_demo_tren_lop/demo_function.php" />
-        <option value="$PROJECT_DIR$/Day18_PHP_Form/Code_demo/chua_bai_tap_17.php" />
-        <option value="$PROJECT_DIR$/Day18_PHP_Form/Code_demo/form.php" />
-        <option value="$PROJECT_DIR$/Day18_PHP_Form/Code_demo/post_get.php" />
-        <option value="$PROJECT_DIR$/Day18_PHP_Form/Code_demo/set_name_input_form.php" />
-        <option value="$PROJECT_DIR$/Day18_PHP_Form/Code_demo/xu_ly_form.php" />
+        <option value="$PROJECT_DIR$/Day19_Process_File_Form_Upload/Codes_demo/demo_form.php" />
+        <option value="$PROJECT_DIR$/Day19_Process_File_Form_Upload/Codes_demo/upload_file.php" />
       </list>
     </option>
   </component>
@@ -194,10 +184,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="83" />
-    <option name="y" value="24" />
-    <option name="width" value="1751" />
-    <option name="height" value="971" />
+    <option name="x" value="85" />
+    <option name="y" value="25" />
+    <option name="width" value="1750" />
+    <option name="height" value="970" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -207,7 +197,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -218,27 +207,44 @@
             <path>
               <item name="php1220e2" type="b2602c69:ProjectViewProjectNode" />
               <item name="php1220e2" type="462c0819:PsiDirectoryNode" />
-              <item name="Day18_PHP_Form" type="462c0819:PsiDirectoryNode" />
+              <item name="Day17_PHP_Array_Function_Array_Time" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="php1220e2" type="b2602c69:ProjectViewProjectNode" />
               <item name="php1220e2" type="462c0819:PsiDirectoryNode" />
-              <item name="Day18_PHP_Form" type="462c0819:PsiDirectoryNode" />
-              <item name="Code_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="Day17_PHP_Array_Function_Array_Time" type="462c0819:PsiDirectoryNode" />
+              <item name="Code_demo_tren_lop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php1220e2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php1220e2" type="462c0819:PsiDirectoryNode" />
+              <item name="Day17_PHP_Array_Function_Array_Time" type="462c0819:PsiDirectoryNode" />
+              <item name="Slides" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php1220e2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php1220e2" type="462c0819:PsiDirectoryNode" />
+              <item name="Day19_Process_File_Form_Upload" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php1220e2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php1220e2" type="462c0819:PsiDirectoryNode" />
+              <item name="Day19_Process_File_Form_Upload" type="462c0819:PsiDirectoryNode" />
+              <item name="Codes_demo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -266,16 +272,17 @@
       <workItem from="1616414285289" duration="228000" />
       <workItem from="1616499478194" duration="9525000" />
       <workItem from="1616584927956" duration="361000" />
-      <workItem from="1616672387339" duration="9252000" />
-      <workItem from="1617103801737" duration="10604000" />
+      <workItem from="1616672387339" duration="9283000" />
+      <workItem from="1617018213640" duration="111000" />
+      <workItem from="1617708520322" duration="10348000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37519000" />
+    <option name="totallyTimeSpent" value="37405000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1431" height="772" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
@@ -308,35 +315,35 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/note.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="3286">
           <caret line="62" column="3" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/Code_demo_tren_lop/php_basic_1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="6996">
           <caret line="132" selection-start-line="132" selection-end-line="132" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/Code_demo_tren_lop/php_basic_2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="7473">
           <caret line="143" selection-start-line="143" selection-end-line="143" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Day17_PHP_Array_Function_Array_Time/Code_demo_tren_lop/demo_array.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="7844">
           <caret line="148" column="16" selection-start-line="148" selection-start-column="16" selection-end-line="148" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Day17_PHP_Array_Function_Array_Time/Code_demo_tren_lop/practice.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="2332">
           <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
           <folding>
             <element signature="e#6#20#0#PHP" expanded="true" />
@@ -346,61 +353,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/Code_demo_tren_lop/php_basic.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="4081">
           <caret line="77" selection-start-line="77" selection-end-line="77" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Day17_PHP_Array_Function_Array_Time/Code_demo_tren_lop/demo_function.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
+        <state relative-caret-position="303">
+          <caret line="66" column="11" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
           <folding>
             <element signature="e#6#25#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Day18_PHP_Form/Code_demo/chua_bai_tap_17.php">
+    <entry file="file://$PROJECT_DIR$/Day19_Process_File_Form_Upload/Codes_demo/demo_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="52" column="43" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day18_PHP_Form/Code_demo/form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="351">
+          <caret line="160" column="8" lean-forward="true" selection-start-line="160" selection-start-column="8" selection-end-line="160" selection-end-column="8" />
           <folding>
-            <element signature="e#6#403#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#1;n#!!top" expanded="true" />
+            <element signature="e#3853#3901#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Day18_PHP_Form/Code_demo/post_get.php">
+    <entry file="file://$PROJECT_DIR$/Day19_Process_File_Form_Upload/Codes_demo/upload_file.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="62" column="18" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
+        <state relative-caret-position="457">
+          <caret line="68" column="43" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
           <folding>
-            <element signature="e#1233#1255#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day18_PHP_Form/Code_demo/set_name_input_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day18_PHP_Form/Code_demo/xu_ly_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="57" column="36" lean-forward="true" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
-          <folding>
-            <element signature="e#6#187#0#PHP" expanded="true" />
             <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h3#1;n#!!top" expanded="true" />
           </folding>
