@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2ee13f4f-b0cf-45e0-9121-c444e5717529" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day22_MySQL_Database/Codes_demo/login/demo_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day22_MySQL_Database/Codes_demo/login/demo_login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day22_MySQL_Database/Codes_demo/login/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day22_MySQL_Database/Codes_demo/login/logout.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,41 +19,41 @@
     <session id="-1320626186">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="1" />
-          <entry key="php" value="19" />
+          <entry key="html" value="2" />
+          <entry key="php" value="24" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="1" />
-          <entry key="PHP" value="19" />
+          <entry key="HTML" value="2" />
+          <entry key="PHP" value="24" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="2723" />
-          <entry key="php" value="37576" />
+          <entry key="php" value="42258" />
           <entry key="txt" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="2733" />
-          <entry key="PHP" value="37566" />
+          <entry key="PHP" value="42248" />
           <entry key="PLAIN_TEXT" value="31" />
         </counts>
       </usages-collector>
@@ -60,48 +62,11 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day20_PHP_Upload_File_Session_Cookie/Codes_demo/process_file.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1696">
-              <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day20_PHP_Upload_File_Session_Cookie/Codes_demo/xss.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1007">
-              <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day20_PHP_Upload_File_Session_Cookie/Codes_demo/session.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day21_PHP_Cookie_Login_MySQL_Database/Codes_demo/demo_cookie.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Day21_PHP_Cookie_Login_MySQL_Database/Codes_demo/demo_login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="83" column="1" lean-forward="true" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
+            <state relative-caret-position="510">
+              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
               <folding>
-                <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
               </folding>
@@ -110,10 +75,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day21_PHP_Cookie_Login_MySQL_Database/Codes_demo/welcome.php">
+        <entry file="file://$PROJECT_DIR$/Day22_MySQL_Database/Codes_demo/login/welcome.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+            <state relative-caret-position="424">
+              <caret line="11" selection-start-line="11" selection-end-line="15" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -121,7 +86,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day21_PHP_Cookie_Login_MySQL_Database/Codes_demo/logout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
+            <state relative-caret-position="530">
               <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="20" />
             </state>
           </provider>
@@ -150,6 +115,46 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="212">
               <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day22_MySQL_Database/Codes_demo/login/demo_login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="36" />
+              <folding>
+                <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day22_MySQL_Database/Codes_demo/login/logout.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Day22_MySQL_Database/Codes_demo/login/database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="457">
+              <caret line="96" column="20" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day13_Javascript_jQuery_2/Code_demo_tren_lop/bootstrap_jquery.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -189,6 +194,9 @@
         <option value="$PROJECT_DIR$/Day21_PHP_Cookie_Login_MySQL_Database/Codes_demo/welcome.php" />
         <option value="$PROJECT_DIR$/Day21_PHP_Cookie_Login_MySQL_Database/Codes_demo/logout.php" />
         <option value="$PROJECT_DIR$/Day21_PHP_Cookie_Login_MySQL_Database/Codes_demo/demo_login.php" />
+        <option value="$PROJECT_DIR$/Day22_MySQL_Database/Codes_demo/login/demo_login.php" />
+        <option value="$PROJECT_DIR$/Day22_MySQL_Database/Codes_demo/login/logout.php" />
+        <option value="$PROJECT_DIR$/Day22_MySQL_Database/Codes_demo/login/database.php" />
       </list>
     </option>
   </component>
@@ -212,13 +220,41 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="php1220e2" type="b2602c69:ProjectViewProjectNode" />
               <item name="php1220e2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php1220e2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php1220e2" type="462c0819:PsiDirectoryNode" />
+              <item name="Day12_Javascript_jQuery" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php1220e2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php1220e2" type="462c0819:PsiDirectoryNode" />
+              <item name="Day12_Javascript_jQuery" type="462c0819:PsiDirectoryNode" />
+              <item name="Code_demo_tren_lop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php1220e2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php1220e2" type="462c0819:PsiDirectoryNode" />
+              <item name="Day12_Javascript_jQuery" type="462c0819:PsiDirectoryNode" />
+              <item name="Code_demo_tren_lop" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php1220e2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php1220e2" type="462c0819:PsiDirectoryNode" />
+              <item name="Day13_Javascript_jQuery_2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php1220e2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php1220e2" type="462c0819:PsiDirectoryNode" />
+              <item name="Day13_Javascript_jQuery_2" type="462c0819:PsiDirectoryNode" />
+              <item name="Code_demo_tren_lop" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="php1220e2" type="b2602c69:ProjectViewProjectNode" />
@@ -231,10 +267,35 @@
               <item name="Day21_PHP_Cookie_Login_MySQL_Database" type="462c0819:PsiDirectoryNode" />
               <item name="Codes_demo" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="php1220e2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php1220e2" type="462c0819:PsiDirectoryNode" />
+              <item name="Day22_MySQL_Database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php1220e2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php1220e2" type="462c0819:PsiDirectoryNode" />
+              <item name="Day22_MySQL_Database" type="462c0819:PsiDirectoryNode" />
+              <item name="Codes_demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php1220e2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php1220e2" type="462c0819:PsiDirectoryNode" />
+              <item name="Day22_MySQL_Database" type="462c0819:PsiDirectoryNode" />
+              <item name="Codes_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php1220e2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php1220e2" type="462c0819:PsiDirectoryNode" />
+              <item name="Day22_MySQL_Database" type="462c0819:PsiDirectoryNode" />
+              <item name="Slides" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -273,18 +334,20 @@
       <workItem from="1616672387339" duration="9283000" />
       <workItem from="1617018213640" duration="111000" />
       <workItem from="1617708520322" duration="10348000" />
-      <workItem from="1618313267259" duration="9992000" />
+      <workItem from="1618313267259" duration="10064000" />
+      <workItem from="1618399857145" duration="605000" />
+      <workItem from="1618918369740" duration="9158000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56983000" />
+    <option name="totallyTimeSpent" value="66818000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0098335855" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -380,9 +443,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3710">
           <caret line="73" column="43" selection-start-line="73" selection-start-column="43" selection-end-line="73" selection-end-column="43" />
-          <folding>
-            <element signature="e#6#71#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -397,6 +457,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1007">
           <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day20_PHP_Upload_File_Session_Cookie/Codes_demo/session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day21_PHP_Cookie_Login_MySQL_Database/Codes_demo/demo_cookie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2597">
+          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day21_PHP_Cookie_Login_MySQL_Database/Codes_demo/welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1696">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day21_PHP_Cookie_Login_MySQL_Database/Codes_demo/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -421,43 +509,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Day20_PHP_Upload_File_Session_Cookie/Codes_demo/session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day21_PHP_Cookie_Login_MySQL_Database/Codes_demo/demo_cookie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day21_PHP_Cookie_Login_MySQL_Database/Codes_demo/welcome.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day21_PHP_Cookie_Login_MySQL_Database/Codes_demo/logout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Day21_PHP_Cookie_Login_MySQL_Database/Codes_demo/demo_login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="83" column="1" lean-forward="true" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
+        <state relative-caret-position="510">
+          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
           <folding>
             <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day22_MySQL_Database/Codes_demo/login/welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="11" selection-start-line="11" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day22_MySQL_Database/Codes_demo/login/demo_login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day22_MySQL_Database/Codes_demo/login/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day13_Javascript_jQuery_2/Code_demo_tren_lop/bootstrap_jquery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day22_MySQL_Database/Codes_demo/login/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="96" column="20" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
         </state>
       </provider>
     </entry>

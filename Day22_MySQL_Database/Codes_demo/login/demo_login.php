@@ -8,6 +8,18 @@ if (isset($_SESSION['username'])) {
   exit();
 }
 
+// + Ktra nếu tích vào ghi nhớ đăng nhập
+//thì là đăng nhập thành công
+if (isset($_COOKIE['username']) &&
+    isset($_COOKIE['password'])) {
+    $_SESSION['username'] = $_COOKIE['username'];
+    // Chuyển hướng tới trang đăng nhập thành công
+    $_SESSION['success'] =
+        'Ghi nhớ đăng nhập thành công';
+    header('Location: welcome.php');
+    exit();
+}
+
 /**
  * demo_login.php
  * Demo chức đăng nhập đơn giản
@@ -43,6 +55,16 @@ if (isset($_POST['submit'])) {
     if (filter_var($username,
         FILTER_VALIDATE_EMAIL)) {
       // - Xử lý đăng nhập thành công
+      // + Xử lý lưu cookie cho chức năng Ghi nhớ
+      // đăng nhập và có tích vào
+      // ghi nhớ đăng nhập
+      if (isset($_POST['remember'])) {
+        setcookie('username', $username,
+            time() + 3600);
+        // demo
+        setcookie('password', $password,
+            time() + 3600);
+      }
       // + Khi đăng nhập thành công, hiển thị
       // username và 1 thông báo đăng nhập thành công
       // ở file welcome.php
