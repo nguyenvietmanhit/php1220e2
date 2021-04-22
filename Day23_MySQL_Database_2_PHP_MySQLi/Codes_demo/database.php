@@ -96,10 +96,150 @@ USE php1220e2_mysql; #chỉ có tác dụng nếu
 # khi dùng PHPMyadmin -> click thẳng vào
 # CSDL muốn thao tác
 # 5 - Các kiểu dữ liệu trong MySQL: 3 kiểu
-# Kiểu số - Number
-# Kiểu chuỗi - String
-# Kiểu Date Time
+# Kiểu số - Number: lưu thông tin dạng số
+  Hay gặp ở 2 dạng:
+ TINYINT: tốn 1 Byte để lưu, phạm vi từ -128 -> 127
+ INT: tốn 4 Byte để lưu, phạm vi ~ -2 tỷ -> +2 tỷ
+ FLOAT: lưu số thực
+# Kiểu chuỗi - String: lưu thông tin dạng chuỗi
+ VARCHAR: lưu thông tin chuỗi có độ dài ký tự
+ thay đổi, tối đa 255 ký tự
+ TEXT: lưu chuỗi độ dài tối đa ~ 65000 ký tự
+# Kiểu ngày giờ - Date time: lưu thông tin dạng
+ thời gian
+ Kiểu dữ liệu ngày giờ khi lưu vào CSDL bắt buộc
+ phải có định dạng sau:
+ Năm-Tháng-Ngày Giờ:Phút:Giây
+ Viết tắt:
+ + Năm: Y - 4 số đầy đủ của năm: 2021, 2010
+    y - 2 số cuối của năm: 21, 10.
+   Khi lưu thì bắt buộc phải là Y
+ + Tháng: m
+ + Ngày: d
+ + Giờ: H
+ + Phút: i
+ + Giây: s
+ - VD: Lưu ngày giờ hiện tại vào CSDL
+ 2021-04-22 19:15:15
+ + Dùng 2 kiểu ngày giờ sau:cả 2 kiểu đều lưu cả
+ ngày tháng và thời gian Y-m-d H:i:s
+ DATETIME: lưu ngày giờ sinh ra kiểu thủ công, vd:
+ ngày sinh, phạm vi lưu thoải mái
+ TIMESTAMP: lưu ngày giờ sinh tự động bởi hệ thống,
+ VD: ngày giờ tạo bản ghi, ngày giờ cập nhật bản
+ ghi. Phạm vi ko rộng như DATETIME: 01-01-1970
+ đến năm 2038
+ *
+ * #6 - TẠo bảng: Tạo bảng quản lý danh mục và
+ * bảng quản lý sản phẩm, 2 bảng có mối liên
+ * kết với nhau: 1 danh mục sẽ có nhiều sp, 1sp
+ * chỉ thuộc về 1 danh mục
+ * + Bảng danh mục: categories:
+ * - id: khóa chính, INT, sinh tự động theo cơ chế
+ * tăng lên 1 mỗi khi có 1 bản ghi mới sinh ra:
+ * AUTO_INCREMENT - trường nghiệp vụ
+ * - name: tên danh mục, VARCHAR(100), cho phép
+ * giá trị null: DEFAULT NULL
+ * - created_at: ngày giờ tạo danh mục, TIMESTAMP,
+ * để sinh tự động cần dùng:
+ * DEFAULT CURRENT_TIMESTAMP
+ * Truy vấn SQL tạo bảng categories:
+# SQL tạo bảng categories:id,name,created_at
+CREATE TABLE IF NOT EXISTS categories(
+id INT(11) AUTO_INCREMENT,
+name VARCHAR(100) DEFAULT NULL,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+# khai báo khóa chính, khóa ngoại nếu có
+PRIMARY KEY (id)
+);
+ * + Bảng quản lý thông tin sản phẩm: products
+ * id: khóa chính, kiểu INT(11), tự động tăng
+ * name: tên sp, VARCHAR(200), cho phép NULL
+ * price: giá sp, INT(11), ko cho phép NULL: NOT NULL
+ * content: chi tiết sp, TEXT, cho phép NULL
+ * category_id: id của danh mục, INT(11), khóa ngoại
+ * created_at: ngày tạo, TIMESTAMP,
+ * Viết truy vấn SQL tạo bảng products
+ *
+ * #Tạo bảng products: id,category_id,name,price,content,created_at
+CREATE TABLE IF NOT EXISTS products(
+id INT(11) AUTO_INCREMENT,
+category_id INT(11),
+name VARCHAR(200),
+price INT(11) NOT NULL,
+content TEXT,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+PRIMARY KEY (id),
+FOREIGN KEY (category_id) REFERENCES categories(id)
+);
+ *
+ * 7/ Truy vấn Insert: thêm dữ liệu vào bảng
+ *
+#7/ Truy vấn Insert: thêm dữ liệu vào bảng
+# Thêm vào bảng categories: id, name, created_at
+# Chỉ thêm dữ liệu cho các trường sinh thủ
+#công, ko thêm cho trường sinh tự động
+#INSERT INTO categories(name)
+#VALUES('Thể thao');
 
+# Thêm nhiều bản ghi cùng 1 truy vấn:
+INSERT INTO categories(name)
+VALUES('Thế giới'), ('Kinh tế'), ('Khoa học');
+# Thêm dữ liệu vào bảng products: id, category_id, name, price, content, created_at
+# Chú ý khi thêm giá trị cho khóa ngoại category_id, cần phải dựa vào bảng categories để thêm giá trị id đã tồn tại
+INSERT INTO products(category_id, name, price, content)
+VALUES(1, 'Bóng đá', 1000, 'Chi tiết bóng đá'),
+(1, 'Cầu lông', 3000, 'Chi tiết cầu lông'),
+(1, 'Bóng bàn', 4000, 'Chi tiết bóng bàn');
+
+ * 8 / Truy vấn lấy dữ liệu: SELECT
+
+#8 / Truy vấn lấy dữ liệu: SELECT
+# Lấy tất cả các trường của tất cả bản ghi trong bảng products
+SELECT * FROM products;
+# Lấy 1 vài trường
+SELECT id, name, price FROM products;
+# Lấy kèm theo điều kiện: WHERE
+SELECT * FROM products WHERE price < 2000;
+# Lấy kết hợp nhiều điều kiện sử dụng AND OR
+SELECT * FROM products WHERE price <= 2000
+AND id < 3;
+# Lấy giới hạn bản ghi: LIMIT
+SELECT * FROM products LIMIT 2;
+# LẤy giới hạn bản ghi: LIMIT start,limit
+SELECT * FROM products LIMIT 2,3;
+# Truy cập cập nhật bản ghi: UPDATE, luôn sử
+# dụng WHERE khi update, nếu ko update toàn bộ
+# bảng !
+UPDATE products SET name = 'Name123', price = 5000 WHERE id = 1;
+# 12/ Truy vấn xóa bản ghi: DELETE, luôn cần
+# WHERE khi xóa
+DELETE FROM products WHERE id > 10;
+# 4 truy vấn cơ bản: INSERT, SELECT, UPDATE, DELETE
+# 13 - Từ khóa LIKE: tìm kiếm tương đối: ký tự % đại diện cho 1 ký tự bất kỳ
+SELECT * FROM products WHERE name LIKE '%a%';
+# Tìm kiếm tuyệt đối:
+SELECT * FROM products WHERE name = 'a';
+# 14 - Sắp xếp thứ tự bản ghi trả về: ORDER BY
+SELECT * FROM products ORDER BY created_at DESC;
+# DESC: giảm dần - descending
+# ASC: tăng dần - ascending
+
+#15 - Join bảng:
+# VD: lấy tất cả sản phẩm kèm theo tên danh mục tương ứng của sp đó
+# Join bảng chỉ thực hiện đc khi 2 bảng có mối liên kết
+# 3 cơ chế join chính: INNER JOIN, LEFT JOIN,
+# RIGHT JOIN -> INNER JOIN -> LEFT JOIN
+# + INNER JOIN: cả 2 bảng đều phải có dữ liệu
+# thì mới trả về kết quả -> đảm bảo tính toàn
+# vẹn của data
+# LEFT JOIN: dựa vào bảng gốc(LEFT) để join vào bảng kia, nếu bảng join có dữ liệu thì trả về, còn nếu ko có vẫn trả về nhưng giá trị sẽ bị null
+# Truy vấn INNER JOIN, phải thêm tên bảng vào trước tên trường
+# Đặt định dạng - alias cho trường/bảng, sử dụng từ khóa AS
+SELECT products.*,categories.name AS category_name
+FROM products
+INNER JOIN categories
+ON products.category_id = categories.id
 
 
 
