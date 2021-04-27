@@ -240,7 +240,26 @@ SELECT products.*,categories.name AS category_name
 FROM products
 INNER JOIN categories
 ON products.category_id = categories.id
+ * 16 - Từ khóa IN
 
+#16 - Từ khóa IN: thay thế cho OR
+# VD: tìm tất cả danh mục có id = 1 hoặc = 2 hoặc 5
+SELECT * FROM categories WHERE id = 1 OR id = 2 OR id = 5;
+SELECT * FROM categories WHERE id IN (1, 2, 5);
+#17 - BETWEEN: thay thế cho >= AND <=
+#VD: tìm danh mục có id trong khoảng từ 2 đến 5
+SELECT * FROM categories WHERE id >= 2 AND id <= 5;
+SELECT * FROM categories WHERE id BETWEEN 2 AND 5;
+#18 - Hàm COUNT: đếm số bản ghi trả về từ SELECT
+SELECT COUNT(id) AS count_id FROM categories;
+#19 - Hàm MAX: lấy giá trị max theo trường
+SELECT MAX(id) FROM categories;
+#20 - Hàm MIN, AVG, SUM
+#21 - GROUP BY: nhóm giá trị theo trường nào đó, để sử dụng
+# cho mục đích tính toán trên nhóm giá trị này
+#VD: Tìm xem có bao nhiêu thí sinh đạt điểm 8 và 9 như bảng students dưới
+SELECT diemthi, COUNT(diemthi) FROM students
+GROUP BY diemthi;
 
 
  */
