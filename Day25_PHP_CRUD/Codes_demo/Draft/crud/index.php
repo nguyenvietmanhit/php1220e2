@@ -22,6 +22,12 @@ if (isset($_SESSION['success'])) {
   echo $_SESSION['success'];
   unset($_SESSION['success']);
 }
+// Session dạng flash, chứa lỗi nếu có
+if (isset($_SESSION['error'])) {
+  echo $_SESSION['error'];
+  unset($_SESSION['error']);
+}
+
 // Xử lý lấy dữ liệu từ bảng products
 // + Viết truy vấn: theo thứ tự giảm dần của ngày tạo
 $sql_select_all =
