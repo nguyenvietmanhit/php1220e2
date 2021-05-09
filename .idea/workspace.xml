@@ -127,7 +127,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../estate_web-main" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
@@ -165,7 +165,8 @@
       <workItem from="1619523119801" duration="9091000" />
       <workItem from="1619609411617" duration="54000" />
       <workItem from="1619696582536" duration="9689000" />
-      <workItem from="1620303117079" duration="8851000" />
+      <workItem from="1620303117079" duration="9052000" />
+      <workItem from="1620437803679" duration="543000" />
     </task>
     <servers />
   </component>
