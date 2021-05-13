@@ -1,0 +1,4 @@
+<?php
+/**
+ * crud/detail.php
+ */
