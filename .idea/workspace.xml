@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2ee13f4f-b0cf-45e0-9121-c444e5717529" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day28_OOP_PDO_CRUD_And_MVC/Codes_demo/crud/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day28_OOP_PDO_CRUD_And_MVC/Codes_demo/crud/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day28_OOP_PDO_CRUD_And_MVC/Codes_demo/crud/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day28_OOP_PDO_CRUD_And_MVC/Codes_demo/crud/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day28_OOP_PDO_CRUD_And_MVC/Codes_demo/crud/detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day28_OOP_PDO_CRUD_And_MVC/Codes_demo/crud/detail.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Day28_OOP_PDO_CRUD_And_MVC/Codes_demo/crud/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day28_OOP_PDO_CRUD_And_MVC/Codes_demo/crud/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day28_OOP_PDO_CRUD_And_MVC/Codes_demo/crud/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day28_OOP_PDO_CRUD_And_MVC/Codes_demo/crud/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day28_OOP_PDO_CRUD_And_MVC/Slides/2_MVC_OOP.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/Day28_OOP_PDO_CRUD_And_MVC/Slides/2_MVC_OOP.ppt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +29,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -174,7 +185,7 @@
       <workItem from="1620561744032" duration="601000" />
       <workItem from="1620621580587" duration="25000" />
       <workItem from="1620732350904" duration="11155000" />
-      <workItem from="1620905059480" duration="3948000" />
+      <workItem from="1620905059480" duration="10732000" />
     </task>
     <servers />
   </component>
