@@ -50,8 +50,11 @@ $mail = new PHPMailer(true);
 try {
   //Server settings
   // Cấu hình để gửi mail ko bị lỗi font với ký tự có dấu
+  $mail->CharSet = 'utf8';
   // Hiển thị debug khi gửi mail
-  $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+  // TRên local có thể show debug này ra, tuy nhiên khi web chạy thật
+  // phải off debug này -> SMTP::DEBUG_OFF
+  $mail->SMTPDebug = SMTP::DEBUG_OFF;                      //Enable verbose debug output
   $mail->isSMTP();                                            //Send using SMTP
   // Máy chủ chịu trách nhiệm gửi mail, demo gửi mail sử dụng gmail, host có giá trị sau:
   $mail->Host = 'smtp.gmail.com';                     //Set the SMTP server to send through
@@ -97,4 +100,6 @@ try {
   echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 
+// Cần 1 bạn thực tập cho ITPlus:
+// Biết PHP, OOP, MVC cơ bản là đc -> tinh thần xông pha ko ngại
 
