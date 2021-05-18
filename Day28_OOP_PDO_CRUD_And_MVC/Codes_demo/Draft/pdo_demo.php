@@ -1,4 +1,5 @@
 <?php
+echo 0x11;die;
 /**
  * pdo_demo.php
  * - Với thư viện MySQLi có cả cú pháp của OOP, tuy nhiên MySQLi
