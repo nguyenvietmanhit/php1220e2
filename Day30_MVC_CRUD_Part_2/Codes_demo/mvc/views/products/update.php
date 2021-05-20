@@ -1,0 +1,2 @@
+<?php
+//update.php
