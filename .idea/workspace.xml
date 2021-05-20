@@ -6,12 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="2ee13f4f-b0cf-45e0-9121-c444e5717529" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day28_OOP_PDO_CRUD_And_MVC/Slides/2_MVC_OOP.ppt" beforeDir="false" afterPath="$PROJECT_DIR$/Day28_OOP_PDO_CRUD_And_MVC/Slides/2_MVC_OOP.ppt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day29_MVC_CRUD_Part_1/Codes_demo/mvc/configs/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day29_MVC_CRUD_Part_1/Codes_demo/mvc/configs/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day29_MVC_CRUD_Part_1/Codes_demo/mvc/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day29_MVC_CRUD_Part_1/Codes_demo/mvc/controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day29_MVC_CRUD_Part_1/Codes_demo/mvc/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day29_MVC_CRUD_Part_1/Codes_demo/mvc/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day29_MVC_CRUD_Part_1/Codes_demo/send_mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day29_MVC_CRUD_Part_1/Codes_demo/send_mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day29_MVC_CRUD_Part_1/Codes_demo/~$ch_tạo_mật_khẩu_ứng_dụng_Gmail.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/models/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/views/layouts/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/views/layouts/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/views/products/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/views/products/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/views/products/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/views/products/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +192,9 @@
       <workItem from="1620905059480" duration="11398000" />
       <workItem from="1621058237141" duration="798000" />
       <workItem from="1621209775344" duration="597000" />
-      <workItem from="1621337397959" duration="10668000" />
+      <workItem from="1621337397959" duration="11655000" />
+      <workItem from="1621436179516" duration="15000" />
+      <workItem from="1621509860534" duration="11288000" />
     </task>
     <servers />
   </component>
