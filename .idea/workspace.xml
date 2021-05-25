@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2ee13f4f-b0cf-45e0-9121-c444e5717529" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/views/products/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/views/products/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
