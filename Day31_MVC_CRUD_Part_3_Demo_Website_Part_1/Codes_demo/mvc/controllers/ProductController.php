@@ -68,6 +68,7 @@ class ProductController extends Controller {
   }
 
   // PHương thức liệt kê sp dựa trên khung MVC đã dựng
+  //controllers/ProductController.php
   public function index() {
     // + Gọi model để lấy danh sách sp
     $product_model = new Product();
@@ -86,6 +87,14 @@ class ProductController extends Controller {
     $this->content = $this->render('views/products/index.php', $variables);
     $this->page_title = 'Trang liệt kê sp';
     // Gọi layout để hiển thị nội dung trên
+    require_once 'views/layouts/main.php';
+  }
+
+  // Phương thức cập nhật sp theo id
+  public function update() {
+    // + Lấy nội dung view và gọi layout để hiển thị view cho user
+    $this->content = $this->render('views/products/update.php');
+    $this->page_title = 'Trang cập nhật sp';
     require_once 'views/layouts/main.php';
   }
 }
