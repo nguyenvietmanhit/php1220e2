@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2ee13f4f-b0cf-45e0-9121-c444e5717529" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/views/products/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day30_MVC_CRUD_Part_2/Codes_demo/mvc/views/products/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day31_MVC_CRUD_Part_3_Demo_Website_Part_1/Codes_demo/mvc/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day31_MVC_CRUD_Part_3_Demo_Website_Part_1/Codes_demo/mvc/controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day31_MVC_CRUD_Part_3_Demo_Website_Part_1/Codes_demo/mvc/models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day31_MVC_CRUD_Part_3_Demo_Website_Part_1/Codes_demo/mvc/models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day31_MVC_CRUD_Part_3_Demo_Website_Part_1/Codes_demo/mvc/views/products/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day31_MVC_CRUD_Part_3_Demo_Website_Part_1/Codes_demo/mvc/views/products/update.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +140,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Day31_MVC_CRUD_Part_3_Demo_Website_Part_1/Codes_demo" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
@@ -148,6 +149,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\php1220e2\Day31_MVC_CRUD_Part_3_Demo_Website_Part_1\Codes_demo" />
       <recent name="C:\xampp\htdocs\php1220e2\Day29_MVC_CRUD_Part_1\Codes_demo" />
       <recent name="C:\xampp\htdocs\php1220e2\Day27_PHP_OOP_Basic_PDO" />
       <recent name="C:\xampp\htdocs\php1220e2" />

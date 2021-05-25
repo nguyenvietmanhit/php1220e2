@@ -92,10 +92,81 @@ class ProductController extends Controller {
 
   // Phương thức cập nhật sp theo id
   public function update() {
-    // + Lấy nội dung view và gọi layout để hiển thị view cho user
-    $this->content = $this->render('views/products/update.php');
+
+    // + Lấy sp tương ứng theo id truyền từ url để đổ ra view
+    //index.php?controller=product&action=update&id=9
+    // Validate id hợp lệ: nếu tham số id ko tồn tại hoặc tồn tại nhưng ko phải số
+    // -> ko cho truy cập trang này
+    if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
+      $_SESSION['error'] = 'Tham số Id ko hợp lệ';
+      header('Location: index.php?controller=product&action=index');
+      exit();
+    }
+    $id = $_GET['id'];
+    $product_model = new Product();
+    // + Xử lý submit form / đứng trước hiển thị form
+    // - Debug
+    echo "<pre>";
+    print_r($_POST);
+    echo "</pre>";
+    // - Ktra nếu user submit form thì mới xử lý
+    if (isset($_POST['submit'])) {
+      // - Gán biến trung gian
+      $name = $_POST['name'];
+      $price = $_POST['price'];
+      // - Validate: nếu có lỗi sẽ đổ vào thuộc tính error -> bỏ qua
+      // - Xử lý cập nhật sp chỉ khi ko có lỗi xảy ra
+      if (empty($this->error)) {
+        // + Gọi model để cập nhật sp
+        // Gán giá trị cho thuộc tính name và price của class
+        $product_model->name = $name;
+        $product_model->price = $price;
+        $is_update = $product_model->update($id);
+//        var_dump($is_update);
+        if ($is_update) {
+          $_SESSION['success'] = 'Cập nhật sp thành công';
+          header('Location: index.php?controller=product&action=index');
+          exit();
+        } else {
+          $this->error = 'Cập nhật sp thất bại';
+        }
+      }
+    }
+    // + Gọi Model để lấy sp theo id -> MVC -> Controller gọi Model
+    $product = $product_model->getOne($id);
+
+    // + Lấy nội dung view và gọi layout để hiển thị view cho user,
+    // truyền biến $product ra view để view có thể sử dụng
+    $this->content = $this->render('views/products/update.php', [
+      'product' => $product
+    ]);
     $this->page_title = 'Trang cập nhật sp';
     require_once 'views/layouts/main.php';
+  }
+
+  //Phương thức delete
+  public function delete() {
+    // + Ko cần view
+    // + Đoạn validate id copy từ chức năng update
+    //index.php?controller=product&action=delete&id=9
+    if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
+      $_SESSION['error'] = 'Tham số Id ko hợp lệ';
+      header('Location: index.php?controller=product&action=index');
+      exit();
+    }
+    $id = $_GET['id'];
+    // + Gọi model để xóa sp theo id
+    $product_model = new Product();
+    $is_delete = $product_model->delete($id);
+//    var_dump($is_delete);
+    if ($is_delete) {
+      $_SESSION['success'] = 'Xóa sp thành công';
+    } else {
+      $_SESSION['error'] = 'Xóa sp thất bại';
+    }
+    header('Location: index.php?controller=product&action=index');
+    exit();
+    // Các bạn nghỉ giải lao 15p
   }
 }
 //

@@ -13,7 +13,6 @@ class Product extends Model {
   public $price;
   public $created_at;
   // Sử dụng đc thuộc tính $connection của model cha
-
   // Xây dựng phương thức thêm mới vào bảng products
   public function insert() {
     // bảng products: id, name, price, created_at
@@ -32,7 +31,6 @@ class Product extends Model {
     $is_insert = $obj_insert->execute($inserts);
     return $is_insert;
   }
-
   // Phương thức lấy tất cả sp
   public function getAll() {
     // + Tạo truy vấn lấy tất cả sp theo chiều giảm dần của ngày tạo
@@ -45,5 +43,54 @@ class Product extends Model {
     // + Trả về mảng các sp
     $products = $obj_select_all->fetchAll(PDO::FETCH_ASSOC);
     return $products;
+  }
+
+  // Phương thức lấy sp theo id truyền vào
+  public function getOne($id) {
+    // + Viết truy vấn dạng tham số, SQL Injection
+    $sql_select_one = "SELECT * FROM products WHERE id = :id";
+    // + Cbi obj truy vấn: prepare
+    $obj_select_one = $this->connection->prepare($sql_select_one);
+    // + [Tùy chọn] Tạo mảng truyền giá trị thật cho tham số câu truy vấn nếu có
+    $selects = [
+      ':id' => $id
+    ];
+    // + Thực thi obj truy vấn
+    $obj_select_one->execute($selects);
+    // + Trả về mảng 1 chiều chứa 1 bản ghi duy nhất:
+    $product = $obj_select_one->fetch(PDO::FETCH_ASSOC);
+    return $product;
+  }
+
+  //Phương thức cập nhật sp theo id truyền vào
+  public function update($id) {
+    // + Viết câu truy vấn dạng tham số
+    $sql_update = "UPDATE products SET name = :name, price = :price WHERE id = :id";
+    // + Cbi obj truy vấn:
+    $obj_update = $this->connection->prepare($sql_update);
+    // + Tạo mảng truyền giá trị cho tham số câu truy vấn nếu có
+    $updates = [
+      ':name' => $this->name,
+      ':price' => $this->price,
+      ':id' => $id
+    ];
+    // + Thực thi
+    $is_update = $obj_update->execute($updates);
+    return $is_update;
+  }
+
+  // PHương thức xóa sp theo id
+  public function delete($id) {
+    // + Viết truy vấn dạng tham số
+    $sql_delete = "DELETE FROM products WHERE id = :id";
+    // + Cbi obj truy vấn
+    $obj_delete = $this->connection->prepare($sql_delete);
+    // + Tạo mảng:
+    $deletes = [
+      ':id' => $id
+    ];
+    // + Thực thi obj truy vấn:
+    $is_delete = $obj_delete->execute($deletes);
+    return $is_delete;
   }
 }
