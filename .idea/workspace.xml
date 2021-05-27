@@ -6,9 +6,42 @@
   <component name="ChangeListManager">
     <list default="true" id="2ee13f4f-b0cf-45e0-9121-c444e5717529" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day31_MVC_CRUD_Part_3_Demo_Website_Part_1/Codes_demo/mvc/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day31_MVC_CRUD_Part_3_Demo_Website_Part_1/Codes_demo/mvc/controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day31_MVC_CRUD_Part_3_Demo_Website_Part_1/Codes_demo/mvc/models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day31_MVC_CRUD_Part_3_Demo_Website_Part_1/Codes_demo/mvc/models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day31_MVC_CRUD_Part_3_Demo_Website_Part_1/Codes_demo/mvc/views/products/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day31_MVC_CRUD_Part_3_Demo_Website_Part_1/Codes_demo/mvc/views/products/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/file_create_db.html" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/file_create_db.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/backend/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/backend/assets/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/backend/configs/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/backend/configs/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/backend/controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/backend/controllers/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/backend/controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/backend/controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/backend/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/backend/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/backend/models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/backend/models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/backend/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/backend/models/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/backend/views/categories/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/backend/views/categories/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/backend/views/layouts/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/backend/views/layouts/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/configs/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/configs/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/controllers/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/css/AdminLTE.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/css/AdminLTE.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/css/_all-skins.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/css/_all-skins.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/css/all.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/css/all.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/images/info.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/images/info.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/images/user2-160x160.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/images/user2-160x160.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/js/adminlte.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/js/adminlte.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/js/jquery-ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/js/jquery-ui.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/models/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/views/categories/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/views/categories/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/views/categories/detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/views/categories/detail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/views/categories/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/views/categories/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/views/categories/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/views/categories/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/views/layouts/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/views/layouts/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/views/layouts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/views/layouts/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/assets/views/layouts/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day32_Demo_Website_Part_2/mvc_project/frontend/views/layouts/main.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +173,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Day31_MVC_CRUD_Part_3_Demo_Website_Part_1/Codes_demo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Day32_Demo_Website_Part_2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
@@ -149,11 +182,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\php1220e2\Day32_Demo_Website_Part_2" />
       <recent name="C:\xampp\htdocs\php1220e2\Day31_MVC_CRUD_Part_3_Demo_Website_Part_1\Codes_demo" />
       <recent name="C:\xampp\htdocs\php1220e2\Day29_MVC_CRUD_Part_1\Codes_demo" />
       <recent name="C:\xampp\htdocs\php1220e2\Day27_PHP_OOP_Basic_PDO" />
       <recent name="C:\xampp\htdocs\php1220e2" />
-      <recent name="C:\xampp\htdocs\php1220e2\Day25_PHP_CRUD" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\php1220e2\Day32_Demo_Website_Part_2\mvc_project\frontend" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -194,6 +230,8 @@
       <workItem from="1621436179516" duration="15000" />
       <workItem from="1621509860534" duration="11288000" />
       <workItem from="1621589748739" duration="704000" />
+      <workItem from="1622034927337" duration="91000" />
+      <workItem from="1622115804843" duration="10881000" />
     </task>
     <servers />
   </component>

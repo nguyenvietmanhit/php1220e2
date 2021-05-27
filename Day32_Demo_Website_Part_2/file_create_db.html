@@ -87,7 +87,7 @@ FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
 #order_details
-CREATE TABLE IF NOT EXISTS order_details1(
+CREATE TABLE IF NOT EXISTS order_details(
 order_id INT(11) COMMENT "Id của order tương ứng, là khóa ngoại liên kết với bảng orders",
 product_name VARCHAR(150) COMMENT "Tên sp tại thời điểm đặt hàng",
 product_price INT(11) COMMENT "Giá sản phẩm tương ứng tại thời điểm đặt hàng",

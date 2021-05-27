@@ -1,9 +1,18 @@
+<?php
+//views/layouts/main.php
+//File layout chính của trang
+// Cách ghép layout từ template có sẵn
+// + Copy file .html trang chủ của template -> paste vào file này
+// + Thay đổi các đường dẫn tới các file theo đúng tư duy MVC: css, js, image ...., trước đó cần copy các file này
+// vào thư mục assets của MVC
+// + Hiển thị giá trị động cho layout, dựa vào các thuộc tính chung của controller cha
+?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | Dashboard</title>
+    <title><?php echo $this->page_title; ?></title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -128,18 +137,28 @@
     <div class="message-wrap content-wrap content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-            <div class="alert alert-danger">Lỗi validate</div>
-            <p class="alert alert-success">Thành công</p>
+<!--          Đổ thông tin lỗi/thành công -->
+            <?php if (!empty($this->error)): ?>
+                <div class="alert alert-danger"><?php echo $this->error?></div>
+            <?php endif; ?>
+
+            <?php if (isset($_SESSION['success'])): ?>
+                <p class="alert alert-success">
+                    <?php
+                    echo $_SESSION['success'];
+                    unset($_SESSION['success']);
+                    ?>
+                </p>
+            <?php endif; ?>
         </section>
     </div>
-
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Main content -->
         <section class="content">
-            Nội dung hiển thị ở đây
-
+            <?php echo $this->content; ?>
         </section>
+<!--        Nghỉ giải lao 15p -->
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
@@ -164,5 +183,10 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="assets/js/adminlte.min.js"></script>
+<!--views/layouts/main.php-->
+<!--Tích hợp Ckeditor -->
+<script src="assets/ckeditor/ckeditor.js"></script>
+<!--Nhúng file js của bạn, nhúng sau tất cả file js để có độ ưu tiên cao nhất -->
+<script src="assets/js/script.js"></script>
 </body>
 </html>
