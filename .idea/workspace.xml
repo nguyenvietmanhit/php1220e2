@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2ee13f4f-b0cf-45e0-9121-c444e5717529" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day33_Demo_Website_Part_3_Register_Login/mvc_project/backend/configs/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day33_Demo_Website_Part_3_Register_Login/mvc_project/backend/configs/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day33_Demo_Website_Part_3_Register_Login/mvc_project/backend/controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day33_Demo_Website_Part_3_Register_Login/mvc_project/backend/controllers/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Day33_Demo_Website_Part_3_Register_Login/mvc_project/backend/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day33_Demo_Website_Part_3_Register_Login/mvc_project/backend/controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day33_Demo_Website_Part_3_Register_Login/mvc_project/backend/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day33_Demo_Website_Part_3_Register_Login/mvc_project/backend/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day33_Demo_Website_Part_3_Register_Login/mvc_project/backend/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day33_Demo_Website_Part_3_Register_Login/mvc_project/backend/models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day33_Demo_Website_Part_3_Register_Login/mvc_project/backend/views/users/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day33_Demo_Website_Part_3_Register_Login/mvc_project/backend/views/users/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day33_Demo_Website_Part_3_Register_Login/mvc_project/backend/views/users/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day33_Demo_Website_Part_3_Register_Login/mvc_project/backend/views/users/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +145,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Day33_Demo_Website_Part_3_Register_Login/mvc_project/backend/views/layouts" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -200,7 +203,7 @@
       <workItem from="1622034927337" duration="91000" />
       <workItem from="1622115804843" duration="11254000" />
       <workItem from="1622259678453" duration="508000" />
-      <workItem from="1622549004327" duration="1943000" />
+      <workItem from="1622549004327" duration="9860000" />
     </task>
     <servers />
   </component>

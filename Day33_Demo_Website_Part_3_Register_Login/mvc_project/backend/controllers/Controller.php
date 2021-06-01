@@ -5,9 +5,24 @@
  * Date: 3/13/2020
  * Time: 11:02 PM
  */
-
+//controllers/Controller.php
 class Controller
 {
+  // KHai báo phương thức khởi tạo cho controller cha
+  public function __construct() {
+    // Do tất cả các controller đều kế thừa từ controller, nên lợi dùng phương thức khởi tạo
+    // để xử lý logic chặn truy cập khi user chưa đăng nhập vào hệ thống
+    // + Dựa vào session user để ktra xem user đã đăng nhập thành công hay chưa, loại trừ 2 chức năng
+    //mà ko cần login vẫn truy cập là: đăng ký và đăng nhập
+    if (!isset($_SESSION['user'])
+      && $_GET['controller'] != 'user'
+      && !in_array($_GET['action'], ['register', 'login'])) {
+      $_SESSION['error'] = 'Bạn chưa đăng nhập';
+      header('Location: index.php?controller=user&action=login');
+      exit();
+    }
+  }
+
     //chứa nội dung view
     public $content;
     //chứa nội dung lỗi validate
