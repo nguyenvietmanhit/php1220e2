@@ -36,7 +36,7 @@ require_once "$path_controller";
 //khởi tạo đối tượng sau khi nhúng file
 $object = new $controller(); //$object = new BookController()
 
-if (!method_exists($object, $action) == false) {
+if (!method_exists($object, $action)) {
   die("Không tồn tại phương thức $action của class $controller");
 }
 //index.php?controller=book&action=create
