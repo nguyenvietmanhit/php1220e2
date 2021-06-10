@@ -1,6 +1,28 @@
 <?php
+//models/Product.php;
 require_once 'models/Model.php';
 class Product extends Model {
+
+  // Lấy sản phẩm có tên chứa từ khóa $search
+  public function getProductSearch($search) {
+    // + Viết truy vấn dạng tham só: SQL Injection
+    // Ký tự % đại diện cho ký tứ bất kỳ trong MySQL
+    // sam -> sam, abcsam, ípsam123
+    $sql_select_all = "SELECT * FROM products WHERE title LIKE :search";
+    // + Cbi obj truy vấn: prepare
+    $obj_select_all = $this->connection->prepare($sql_select_all);
+    // + Tạo mảng truyền giá trị vào câu truy vấn
+    $selects = [
+      ':search' => "%$search%"
+    ];
+    // + Thực thị obj truy vấn: execute
+    $obj_select_all->execute($selects);
+    // + Trả về mảng kết hợp
+    $products = $obj_select_all->fetchAll(PDO::FETCH_ASSOC);
+    return $products;
+    // Test lại chức năng tìm kiếm
+
+  }
 
   public function getProductInHomePage($params = []) {
     $str_filter = '';

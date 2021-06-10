@@ -101,9 +101,10 @@
                     <a href="login.html" class="material-button submenu-toggle">Đăng nhập</a>
                 </li>
                 <li>
-                    <form action="index.php?controller=product&action=search" method="get">
+                    <form action="" method="get">
                         <input type="text" name="search" placeholder="Tìm kiếm sản phẩm..." class="form-control"/>
                         <!--
+                        frontend/views/layouts/header.php, search từ Tìm kiềm sản phẩm
                         Khi phương thức của form là GET, bắt buộc phải thêm 2 input ẩn với type=hidden,
                          để giữ lại giá trị của 2 tham số controller và action sau khi submit form,
                          theo như cách sau:
