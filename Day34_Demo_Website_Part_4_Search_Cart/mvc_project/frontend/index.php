@@ -41,4 +41,8 @@ if (method_exists($object, $action) == false) {
 }
 //index.php?controller=book&action=create
 $object->$action();
+
+// Thêm 1 số danh mục và sản phẩm mẫu bên backend, để có data hiển thị ở frontend
 ?>
+
+

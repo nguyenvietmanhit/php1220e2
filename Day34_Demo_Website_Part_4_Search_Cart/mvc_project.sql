@@ -56,16 +56,16 @@ CREATE TABLE `news`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for order_details1
+-- Table structure for order_details
 -- ----------------------------
-DROP TABLE IF EXISTS `order_details1`;
-CREATE TABLE `order_details1`  (
+DROP TABLE IF EXISTS `order_details`;
+CREATE TABLE `order_details`  (
   `order_id` int(11) NULL DEFAULT NULL COMMENT 'Id của order tương ứng, là khóa ngoại liên kết với bảng orders',
   `product_name` varchar(150) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Tên sp tại thời điểm đặt hàng',
   `product_price` int(11) NULL DEFAULT NULL COMMENT 'Giá sản phẩm tương ứng tại thời điểm đặt hàng',
   `quantity` int(11) NULL DEFAULT NULL COMMENT 'Số lượng sản phẩm tương ứng tại thời điểm đặt hàng',
   INDEX `order_id`(`order_id`) USING BTREE,
-  CONSTRAINT `order_details1_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+  CONSTRAINT `order_details_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
