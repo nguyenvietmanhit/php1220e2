@@ -94,6 +94,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="46b8cc99-7da9-416d-974a-1ad973446c0e" name="localhost" />
@@ -243,6 +244,11 @@
       <recent name="C:\xampp\htdocs\php1220e2\Day27_PHP_OOP_Basic_PDO" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" nameIsGenerated="true" server_name="localhost" start_url="">
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
@@ -291,6 +297,8 @@
       <workItem from="1623545644554" duration="96000" />
       <workItem from="1623546410944" duration="179000" />
       <workItem from="1623547754815" duration="30000" />
+      <workItem from="1623930869217" duration="223000" />
+      <workItem from="1623931123466" duration="2386000" />
     </task>
     <servers />
   </component>
@@ -349,6 +357,36 @@
           <url>file://$PROJECT_DIR$/Day33_Demo_Website_Part_3_Register_Login/mvc_project/backend/index.php</url>
           <line>38</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/note_xdebug.php</url>
+          <line>21</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/note_xdebug.php</url>
+          <line>33</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/note_xdebug.php</url>
+          <line>23</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/note_xdebug.php</url>
+          <line>25</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/note_xdebug.php</url>
+          <line>28</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/note_xdebug.php</url>
+          <line>30</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
