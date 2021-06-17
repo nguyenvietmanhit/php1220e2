@@ -7,6 +7,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2ee13f4f-b0cf-45e0-9121-c444e5717529" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/mvc_project/frontend/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/mvc_project/frontend/assets/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/mvc_project/frontend/controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/mvc_project/frontend/controllers/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/mvc_project/frontend/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/mvc_project/frontend/controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/note_xdebug.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/note_xdebug.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,10 +98,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
-      <server host="localhost" id="46b8cc99-7da9-416d-974a-1ad973446c0e" name="localhost" />
+      <server host="localhost" id="96cf5792-070f-437f-be00-6e2eb0426af5" name="localhost" />
     </servers>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -224,7 +227,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Day33_Demo_Website_Part_3_Register_Login/mvc_project/backend/views/layouts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -233,19 +236,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\php1220e2\Day32_Demo_Website_Part_2\mvc_project\frontend" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\php1220e2\Day35_Demo_Website_Part_5_Cart_Xdebug" />
       <recent name="C:\xampp\htdocs\php1220e2\Day33_Demo_Website_Part_3_Register_Login\mvc_project\backend\views\layouts" />
       <recent name="C:\xampp\htdocs\php1220e2\Day32_Demo_Website_Part_2" />
       <recent name="C:\xampp\htdocs\php1220e2\Day31_MVC_CRUD_Part_3_Demo_Website_Part_1\Codes_demo" />
       <recent name="C:\xampp\htdocs\php1220e2\Day29_MVC_CRUD_Part_1\Codes_demo" />
-      <recent name="C:\xampp\htdocs\php1220e2\Day27_PHP_OOP_Basic_PDO" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\php1220e2\Day32_Demo_Website_Part_2\mvc_project\frontend" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" nameIsGenerated="true" server_name="localhost" start_url="">
+    <configuration name="Unnamed" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" nameIsGenerated="true" start_url="">
       <method v="2" />
     </configuration>
   </component>
@@ -298,7 +301,7 @@
       <workItem from="1623546410944" duration="179000" />
       <workItem from="1623547754815" duration="30000" />
       <workItem from="1623930869217" duration="223000" />
-      <workItem from="1623931123466" duration="2386000" />
+      <workItem from="1623931123466" duration="10520000" />
     </task>
     <servers />
   </component>
@@ -360,36 +363,55 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/note_xdebug.php</url>
-          <line>21</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/note_xdebug.php</url>
-          <line>33</line>
+          <line>34</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/note_xdebug.php</url>
-          <line>23</line>
-          <option name="timeStamp" value="7" />
+          <url>file://$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/mvc_project/frontend/controllers/ProductController.php</url>
+          <line>96</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/note_xdebug.php</url>
-          <line>25</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/mvc_project/frontend/controllers/ProductController.php</url>
+          <line>97</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/note_xdebug.php</url>
-          <line>28</line>
-          <option name="timeStamp" value="9" />
+          <url>file://$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/mvc_project/frontend/models/Product.php</url>
+          <line>10</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/note_xdebug.php</url>
-          <line>30</line>
-          <option name="timeStamp" value="10" />
+          <url>file://$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/mvc_project/frontend/models/Product.php</url>
+          <line>14</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/mvc_project/frontend/models/Product.php</url>
+          <line>20</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/mvc_project/frontend/models/Product.php</url>
+          <line>21</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/mvc_project/frontend/controllers/ProductController.php</url>
+          <line>87</line>
+          <properties>
+            <option name="className" value="\ProductController" />
+            <option name="methodName" value="search" />
+          </properties>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="index.php">
+        <watch expression="$path_controller" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Day15_PHP_Setup_Enviroment_And_Basic/Code_demo_tren_lop/php_basic_1.php">

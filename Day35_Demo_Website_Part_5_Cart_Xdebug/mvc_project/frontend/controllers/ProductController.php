@@ -88,17 +88,17 @@ class ProductController extends Controller {
   public function search() {
     // Lấy ra thông tin từ URL
     //frontend/index.php?search=dsa&controller=product&action=search
-    echo "<pre>";
-    print_r($_GET);
-    echo "</pre>";
+//    echo "<pre>";
+//    print_r($_GET);
+//    echo "</pre>";
     $search = $_GET['search'];
 
     // Gọi model để truy vấn CSDL, lấy ra các sp có tên chứa từ khóa search
     $product_model = new Product();
     $products = $product_model->getProductSearch($search);
-    echo "<pre>";
-    print_r($products);
-    echo "</pre>";
+//    echo "<pre>";
+//    print_r($products);
+//    echo "</pre>";
 
 
     // Lấy nội dung view:

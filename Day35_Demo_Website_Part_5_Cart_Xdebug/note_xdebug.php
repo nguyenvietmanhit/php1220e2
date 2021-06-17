@@ -18,6 +18,7 @@
  * - Bật trình lắng nghe của Xdebug: là icon điện thoại ở trên thanh menu PHPStorm
  * - Tạo ra các breakpoint trong code của bạn: là các điểm dừng mà XDebug sẽ dừng lại để lắng nghe
  * - Chạy lại file
+ * -
  */
 echo "<h2>Test</h2>";
 //note_debug.php?controller=product&action=create
@@ -32,6 +33,8 @@ $controller .= "Controller";
 // Test với mảng
 $string = '1,2,3,4,5,6';
 $arrs = explode(',', $string);
+$a = 5;
 //echo "<pre>";
 //print_r($arrs);
 //echo "</pre>";
+// Nghỉ giải lao 15p

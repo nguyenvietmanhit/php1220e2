@@ -22,6 +22,26 @@ $(document).ready(function() {
            // Nơi nhận kết quả trả về từ PHP thông qua tham số data truyền vào
            success: function(data) {
                console.log(data);
+               // Xử lý trả về, hiển thị cho user biết họ đã thêm sp thành công vào giỏ
+               // Inspect HTML, tab Elements, search/ Ctrl + F: ajax-message
+               // - Set text và thêm class cho selector .ajax-message
+               $('.ajax-message')
+                   .html('Thêm sp vào giỏ thành công')
+                   .addClass('ajax-message-active');
+               // Tự động ẩn message trên sau khoảng thời gian nào đó
+               // hàm này có tác dụng thực thi code bên trong nó sau 1 khoảng thời gian tính bằng ms
+               setTimeout(function() {
+                   $('.ajax-message').removeClass('ajax-message-active');
+               }, 3000);
+               // Cập nhật tăng số lượng của icon giỏ hàng lên 1
+               // Lấy số lượng hiện tại đang có trong giỏ
+               var cart_total = $('.cart-amount').html();
+               // Tăng biến lên 1
+               cart_total++;
+               // Set lại giá trị mới cho selector trên
+               $('.cart-amount').html(cart_total);
+               // Set luôn trên mobile
+               $('.cart-amount-mobile').html(cart_total);
            }
        };
        // Gọi ajax dùng cú pháp của jQuery
