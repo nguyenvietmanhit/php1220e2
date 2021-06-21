@@ -7,7 +7,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2ee13f4f-b0cf-45e0-9121-c444e5717529" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/Hướng dẫn cài đặt XDebug cho PHPStorm.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug/Hướng dẫn cài đặt XDebug cho PHPStorm.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,6 +298,7 @@
       <workItem from="1623547754815" duration="30000" />
       <workItem from="1623930869217" duration="223000" />
       <workItem from="1623931123466" duration="11204000" />
+      <workItem from="1624066573241" duration="1198000" />
     </task>
     <servers />
   </component>
