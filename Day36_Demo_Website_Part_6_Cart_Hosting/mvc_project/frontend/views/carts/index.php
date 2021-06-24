@@ -30,7 +30,8 @@
                         </div>
                     </td>
                     <td>
-                        <!--  cần khéo léo đặt name cho input số lượng, để khi xử lý submit form update lại giỏ hànTin nổi bậtg sẽ đơn giản hơn    -->
+                        <!--  cần khéo léo đặt name cho input số lượng,
+                         để khi xử lý submit form update giỏ hàng sẽ đơn giản hơn    -->
                         <input type="number" min="0"
                                name="<?php echo $product_id; ?>"
                                class="product-amount form-control"

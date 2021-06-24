@@ -53,4 +53,36 @@ class CartController extends Controller
     print_r($_SESSION['cart']);
     echo "</pre>";
   }
+
+  public function index() {
+    //Xử lý update giỏ hàng
+    echo "<pre>";
+    print_r($_POST);
+    print_r($_SESSION['cart']);
+    echo "</pre>";
+    if (isset($_POST['submit'])) {
+      // Thử nhập số lượng âm trên giao diện r submir form xem có được ko ?
+      // Bt ko submit đc do input có thuộc tính HTML5 min=0
+      // Tuy nhiên nếu chỉnh sửa bằng Inspect HTML có thể bỏ đi thuộc tính này
+      // -> vẫn submit đc form với số lượng âm!
+      foreach ($_POST AS $product_id => $quantity) {
+        if (is_numeric($quantity) && $quantity < 0) {
+          $_SESSION['error'] = 'Số lượng phải lớn hơn 0';
+          header('Location: gio-hang-cua-ban.html');
+          exit();
+        }
+      }
+
+      // Lặp mảng giỏ hàng, set lại số lượng mới cho từng cart
+      foreach ($_SESSION['cart'] AS $product_id => $cart) {
+        $_SESSION['cart'][$product_id]['quantity'] = $_POST[$product_id];
+      }
+
+      $_SESSION['success'] = 'Cập nhật giỏ thành công';
+    }
+
+    // + Lấy nội dung, gọi layout
+    $this->content = $this->render('views/carts/index.php');
+    require_once 'views/layouts/main.php';
+  }
 }

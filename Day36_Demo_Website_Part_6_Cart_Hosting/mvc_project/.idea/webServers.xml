@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="676ee702-d3dc-4b8e-a3bf-43b55442014a" name="itplus_upload" url="http://php1220e2-10.itpsoft.com.vn">
+        <fileTransfer host="php1220e2-10.itpsoft.com.vn" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

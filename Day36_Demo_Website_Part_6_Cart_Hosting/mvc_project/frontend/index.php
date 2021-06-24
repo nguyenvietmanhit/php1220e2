@@ -23,6 +23,9 @@ $controller = ucfirst($controller); //Book
 $controller .= "Controller"; //BookController
 //đường dẫn của file BookController.php đang nằm tại vị trí:
 //controllers/BookController.php
+// controllers
+//            /tickets
+                      //TicketContr
 $path_controller = "controllers/$controller.php";
 //controller/BookController.php
 

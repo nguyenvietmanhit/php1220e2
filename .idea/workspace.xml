@@ -7,6 +7,12 @@
   <component name="ChangeListManager">
     <list default="true" id="2ee13f4f-b0cf-45e0-9121-c444e5717529" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/backend/configs/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/backend/configs/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/frontend/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/frontend/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/frontend/configs/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/frontend/configs/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/frontend/controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/frontend/controllers/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/frontend/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/frontend/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/frontend/views/carts/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/frontend/views/carts/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +229,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Day35_Demo_Website_Part_5_Cart_Xdebug" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -299,6 +305,9 @@
       <workItem from="1623930869217" duration="223000" />
       <workItem from="1623931123466" duration="11204000" />
       <workItem from="1624066573241" duration="1198000" />
+      <workItem from="1624534597398" duration="2027000" />
+      <workItem from="1624539650021" duration="318000" />
+      <workItem from="1624541996957" duration="2744000" />
     </task>
     <servers />
   </component>
