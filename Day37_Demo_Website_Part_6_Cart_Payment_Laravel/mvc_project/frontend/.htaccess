@@ -1,0 +1,7 @@
+#.htaccess: là file nhạy cảm, cú pháp rất khó nhớ
+# Rewrite URL
+RewriteEngine On
+
+# Khai báo các rule
+# Rule trang Giỏ hàng của bạn
+RewriteRule gio-hang-cua-ban.html index.php?controller=cart&action=index
