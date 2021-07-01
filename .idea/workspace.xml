@@ -7,12 +7,13 @@
   <component name="ChangeListManager">
     <list default="true" id="2ee13f4f-b0cf-45e0-9121-c444e5717529" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/backend/configs/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/backend/configs/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/frontend/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/frontend/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/frontend/configs/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/frontend/configs/Database.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/frontend/controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/frontend/controllers/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/frontend/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/frontend/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/frontend/views/carts/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day36_Demo_Website_Part_6_Cart_Hosting/mvc_project/frontend/views/carts/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day37_Demo_Website_Part_7_Cart_Payment_Laravel/mvc_project/frontend/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/Day37_Demo_Website_Part_7_Cart_Payment_Laravel/mvc_project/frontend/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day37_Demo_Website_Part_7_Cart_Payment_Laravel/mvc_project/frontend/controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day37_Demo_Website_Part_7_Cart_Payment_Laravel/mvc_project/frontend/controllers/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day37_Demo_Website_Part_7_Cart_Payment_Laravel/mvc_project/frontend/controllers/PaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day37_Demo_Website_Part_7_Cart_Payment_Laravel/mvc_project/frontend/controllers/PaymentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day37_Demo_Website_Part_7_Cart_Payment_Laravel/mvc_project/frontend/libraries/nganluong/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day37_Demo_Website_Part_7_Cart_Payment_Laravel/mvc_project/frontend/libraries/nganluong/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day37_Demo_Website_Part_7_Cart_Payment_Laravel/mvc_project/frontend/models/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day37_Demo_Website_Part_7_Cart_Payment_Laravel/mvc_project/frontend/models/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day37_Demo_Website_Part_7_Cart_Payment_Laravel/mvc_project/frontend/models/OrderDetail.php" beforeDir="false" afterPath="$PROJECT_DIR$/Day37_Demo_Website_Part_7_Cart_Payment_Laravel/mvc_project/frontend/models/OrderDetail.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -308,6 +309,7 @@
       <workItem from="1624534597398" duration="2027000" />
       <workItem from="1624539650021" duration="318000" />
       <workItem from="1624541996957" duration="2744000" />
+      <workItem from="1625139546113" duration="10314000" />
     </task>
     <servers />
   </component>

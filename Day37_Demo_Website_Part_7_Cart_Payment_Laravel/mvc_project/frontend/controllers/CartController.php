@@ -56,10 +56,16 @@ class CartController extends Controller
 
   public function index() {
     //Xử lý update giỏ hàng
-    echo "<pre>";
-    print_r($_POST);
-    print_r($_SESSION['cart']);
-    echo "</pre>";
+//    echo "<pre>";
+//    print_r($_POST);
+//    print_r($_SESSION['cart']);
+//    echo "</pre>";
+    if (!isset($_SESSION['cart'])) {
+      $_SESSION['error'] = 'Giỏ hàng trống';
+      header('Location: index.php');
+      exit();
+    }
+
     if (isset($_POST['submit'])) {
       // Thử nhập số lượng âm trên giao diện r submir form xem có được ko ?
       // Bt ko submit đc do input có thuộc tính HTML5 min=0
@@ -84,5 +90,23 @@ class CartController extends Controller
     // + Lấy nội dung, gọi layout
     $this->content = $this->render('views/carts/index.php');
     require_once 'views/layouts/main.php';
+  }
+
+  public function delete() {
+    echo "<pre>";
+    print_r($_GET);
+    print_r($_SESSION['cart']);
+    echo "</pre>";
+    //Xóa sp khỏi giỏ:
+    $id = $_GET['id'];
+    unset($_SESSION['cart'][$id]);
+    // NẾu xóa hết sp trong giỏ, thì cần xóa bỏ giỏ hàng
+    if (empty($_SESSION['cart'])) {
+      unset($_SESSION['cart']);
+    }
+    $_SESSION['success'] = "Xóa sp có id = $id khỏi giỏ hàng thành công";
+    $url_redirect = $_SERVER['SCRIPT_NAME'] . "/gio-hang-cua-ban.html";
+    header("Location: $url_redirect");
+    exit();
   }
 }

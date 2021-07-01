@@ -5,3 +5,13 @@ RewriteEngine On
 # Khai báo các rule
 # Rule trang Giỏ hàng của bạn
 RewriteRule gio-hang-cua-ban.html index.php?controller=cart&action=index
+# Rule trang Xóa sp khỏi giỏ, cần phải sử dụng rule chứa tham số động cho id,
+#chứ ko đc để id tĩnh, cần sử dụng Biểu thức chính quy/Regex để tạo ra tham số động
+# Sử dụng cú pháp $<vị trí của Regex> tại url mvc
+RewriteRule xoa-san-pham/([0-9]+).html index.php?controller=cart&action=delete&id=$1
+#VD: url rewrite cho trang chi tiết sản phẩm
+RewriteRule san-pham/([0-9]+).html index.php?controller=product&action=detail&id=$1
+#RewriteRule xoa-san-pham/([0-9]+)/abc/([0-9]+).html index.php?controller=cart&action=delete&param1=$1&param2=$2
+
+# Rule trang thanh toán
+RewriteRule thanh-toan.html index.php?controller=payment&action=index

@@ -72,7 +72,7 @@ class CartController extends Controller
           exit();
         }
       }
-
+      // Design pattern:
       // Lặp mảng giỏ hàng, set lại số lượng mới cho từng cart
       foreach ($_SESSION['cart'] AS $product_id => $cart) {
         $_SESSION['cart'][$product_id]['quantity'] = $_POST[$product_id];
