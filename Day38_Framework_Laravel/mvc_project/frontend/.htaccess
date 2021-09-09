@@ -1,0 +1,16 @@
+#frontend/.htaccess
+# - File này ko có tên file, các file
+# ko có tên file -> file nhạy cảm,
+# ẩn với ng dùng: .git
+# - Cẩn thận khi thao tác với các file này
+# - Mục đích chính: Rewrite URL - tạo ra đường
+# dẫn thân thiện
+# - File .htaccess luôn luôn nằm cùng cấp với
+# file index.php gốc của MVC
+RewriteEngine On
+
+RewriteRule gio-hang-cua-ban.html index.php?controller=cart&action=index
+# Tham số động Url Rewrite phải dùng regex,
+# THam số tương ứng url mvc : $<vị-trí-regex>
+RewriteRule xoa-san-pham/([0-9]+).html index.php?controller=cart&action=delete&id=$1
+
