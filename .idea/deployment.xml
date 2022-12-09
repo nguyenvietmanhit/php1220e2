@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="ádf" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="ádf">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$/../PHP0322E_SKDA" web="/" />
+            <mapping local="$PROJECT_DIR$/../PHP0721E_HDT" web="/" />
+            <mapping local="$PROJECT_DIR$/../mvc_demo" web="/" />
+            <mapping local="$PROJECT_DIR$/../php0422e2" web="/" />
+            <mapping local="$PROJECT_DIR$/../php0422e3" web="/" />
+            <mapping local="$PROJECT_DIR$/../php0722e" web="/" />
+            <mapping local="$PROJECT_DIR$/../php0922e2_skda" web="/" />
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3590c01-8ca4-4659-8d82-0d71e110aef2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php1220e2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php1220e2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day12_Javascript_jQuery/Code_demo_tren_lop/Draft/chua_bai_tap_ngay_10.html" beforeDir="false" afterPath="$PROJECT_DIR$/Day12_Javascript_jQuery/Code_demo_tren_lop/Draft/chua_bai_tap_ngay_10.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,25 +51,25 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PHP0921E2_SKDA" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../php1222e_skda" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\PHP0921E2_SKDA" />
-      <recent name="C:\xampp\htdocs\PHP0921E2_SKDA\Day17_PHP_Form\Slides" />
-      <recent name="C:\xampp\htdocs\PHP0921E2_SKDA\Day16_PHP_Bacsic_And_Array\Slides" />
-      <recent name="C:\xampp\htdocs\PHP0721E_HDT\Day18_Process_File_Form_Upload\Codes_demo" />
-      <recent name="C:\xampp\htdocs\PHP0721E_HDT" />
+      <recent name="C:\xampp\htdocs\php0722e" />
+      <recent name="C:\xampp\htdocs\php0922e2_skda\Day10_CD3_Responsive_Bootstrap_FontAwesome\Code_demo" />
+      <recent name="C:\xampp\htdocs\php0922e2_skda" />
+      <recent name="C:\xampp\htdocs\php0422e2" />
+      <recent name="C:\xampp\htdocs\php0422e2\Day20_Demo_Website_4_Sendmail_Cart" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\PHP0921E2_SKDA\Day17_PHP_Form\Code_demo\Draft" />
-      <recent name="C:\xampp\htdocs\PHP0921E2_SKDA\Day16_PHP_Bacsic_And_Array\Code_demo_tren_lop\Draft" />
-      <recent name="C:\xampp\htdocs\PHP0721E_HDT\Day18_Process_File_Form_Upload\Codes_demo\Draft" />
-      <recent name="C:\xampp\htdocs\php1220e2\Day15_PHP_Setup_Enviroment_And_Basic" />
-      <recent name="C:\xampp\htdocs\PHP0721E_HDT\Day17_PHP_Form\Code_demo" />
+      <recent name="C:\xampp\htdocs\PHP0322E_SKDA\Day_27_mvc_demo_original\mvc" />
+      <recent name="C:\xampp\htdocs\mvc_demo\mvc_demo_original\frontend" />
+      <recent name="C:\xampp\htdocs\php0422e2\Day14_PHP_PDO_MVC\Codes_demo\Draft" />
+      <recent name="C:\xampp\htdocs\php0422e2\Day12_PHP_SQLInjection_Ajax_OOP\Codes_demo\crud" />
+      <recent name="C:\xampp\htdocs\php0422e2\Day10_MySQL_PHP_Connect_MySQL\Codes_demo\Draft" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -113,6 +111,75 @@
       <workItem from="1638237885264" duration="2037000" />
       <workItem from="1638249071061" duration="381000" />
       <workItem from="1638342363012" duration="328000" />
+      <workItem from="1644907555687" duration="1867000" />
+      <workItem from="1644976240597" duration="598000" />
+      <workItem from="1645153454564" duration="1575000" />
+      <workItem from="1645409130266" duration="3436000" />
+      <workItem from="1645495864989" duration="1431000" />
+      <workItem from="1645593087117" duration="26000" />
+      <workItem from="1645766777487" duration="408000" />
+      <workItem from="1646026478319" duration="1672000" />
+      <workItem from="1646286559155" duration="875000" />
+      <workItem from="1646371536464" duration="2116000" />
+      <workItem from="1646632763292" duration="806000" />
+      <workItem from="1646881312531" duration="2087000" />
+      <workItem from="1647066827037" duration="59000" />
+      <workItem from="1647082718877" duration="17000" />
+      <workItem from="1647145606007" duration="3931000" />
+      <workItem from="1647232998265" duration="2000000" />
+      <workItem from="1647258020074" duration="231000" />
+      <workItem from="1647485746477" duration="1131000" />
+      <workItem from="1647828128897" duration="6296000" />
+      <workItem from="1647919559865" duration="1844000" />
+      <workItem from="1648006727805" duration="1141000" />
+      <workItem from="1648103167673" duration="714000" />
+      <workItem from="1648221632562" duration="469000" />
+      <workItem from="1648259388007" duration="1564000" />
+      <workItem from="1648445479705" duration="1570000" />
+      <workItem from="1648469189013" duration="38000" />
+      <workItem from="1648519560847" duration="32000" />
+      <workItem from="1648606798212" duration="1195000" />
+      <workItem from="1648702502960" duration="1640000" />
+      <workItem from="1649038294158" duration="1946000" />
+      <workItem from="1649472849881" duration="2463000" />
+      <workItem from="1649475448639" duration="603000" />
+      <workItem from="1649643156359" duration="91000" />
+      <workItem from="1650694830490" duration="188000" />
+      <workItem from="1650886678770" duration="86000" />
+      <workItem from="1651542839228" duration="615000" />
+      <workItem from="1651814288662" duration="512000" />
+      <workItem from="1651849873130" duration="235000" />
+      <workItem from="1652240394585" duration="827000" />
+      <workItem from="1652285357499" duration="85000" />
+      <workItem from="1652497890489" duration="2206000" />
+      <workItem from="1653101541393" duration="183000" />
+      <workItem from="1653356928785" duration="3379000" />
+      <workItem from="1653369645997" duration="1134000" />
+      <workItem from="1653539654264" duration="1131000" />
+      <workItem from="1653543579050" duration="10000" />
+      <workItem from="1653544026442" duration="169000" />
+      <workItem from="1653703169331" duration="1587000" />
+      <workItem from="1654318518331" duration="609000" />
+      <workItem from="1654671376259" duration="324000" />
+      <workItem from="1654908438460" duration="1288000" />
+      <workItem from="1655181407464" duration="1138000" />
+      <workItem from="1655528071286" duration="1091000" />
+      <workItem from="1656124490369" duration="385000" />
+      <workItem from="1656728834408" duration="588000" />
+      <workItem from="1657332168793" duration="521000" />
+      <workItem from="1658021226396" duration="8000" />
+      <workItem from="1660444092600" duration="666000" />
+      <workItem from="1660716503280" duration="6000" />
+      <workItem from="1665809211135" duration="90000" />
+      <workItem from="1665809323624" duration="5000" />
+      <workItem from="1666235156443" duration="1514000" />
+      <workItem from="1666345078756" duration="1565000" />
+      <workItem from="1667787276471" duration="1369000" />
+      <workItem from="1668307165846" duration="1225000" />
+      <workItem from="1668699992010" duration="852000" />
+      <workItem from="1669044657521" duration="70000" />
+      <workItem from="1669044753195" duration="247000" />
+      <workItem from="1670553416662" duration="683000" />
     </task>
     <servers />
   </component>
@@ -130,5 +197,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

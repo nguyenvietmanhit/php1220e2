@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$/../PHP0721E_HDT" />
-    <content url="file://$MODULE_DIR$/../PHP0921E2_SKDA" />
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$/../mvc_demo" />
+    <content url="file://$MODULE_DIR$/../php0722e" />
+    <content url="file://$MODULE_DIR$/../php0922e2_skda" />
+    <content url="file://$MODULE_DIR$/../php1222e_skda" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
