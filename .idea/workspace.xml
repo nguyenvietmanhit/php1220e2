@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3590c01-8ca4-4659-8d82-0d71e110aef2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php1220e2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php1220e2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,18 +57,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\php1222e_skda" />
       <recent name="C:\xampp\htdocs\php0722e" />
       <recent name="C:\xampp\htdocs\php0922e2_skda\Day10_CD3_Responsive_Bootstrap_FontAwesome\Code_demo" />
       <recent name="C:\xampp\htdocs\php0922e2_skda" />
       <recent name="C:\xampp\htdocs\php0422e2" />
-      <recent name="C:\xampp\htdocs\php0422e2\Day20_Demo_Website_4_Sendmail_Cart" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\php1222e_skda\Day02_CD1_Git_PSR_Standard\Code_demo\Draft" />
       <recent name="C:\xampp\htdocs\PHP0322E_SKDA\Day_27_mvc_demo_original\mvc" />
       <recent name="C:\xampp\htdocs\mvc_demo\mvc_demo_original\frontend" />
       <recent name="C:\xampp\htdocs\php0422e2\Day14_PHP_PDO_MVC\Codes_demo\Draft" />
       <recent name="C:\xampp\htdocs\php0422e2\Day12_PHP_SQLInjection_Ajax_OOP\Codes_demo\crud" />
-      <recent name="C:\xampp\htdocs\php0422e2\Day10_MySQL_PHP_Connect_MySQL\Codes_demo\Draft" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -179,7 +178,13 @@
       <workItem from="1668699992010" duration="852000" />
       <workItem from="1669044657521" duration="70000" />
       <workItem from="1669044753195" duration="247000" />
-      <workItem from="1670553416662" duration="683000" />
+      <workItem from="1670553416662" duration="1509000" />
+      <workItem from="1670766586780" duration="136000" />
+      <workItem from="1672583447288" duration="15000" />
+      <workItem from="1672669132055" duration="32000" />
+      <workItem from="1672886674873" duration="355000" />
+      <workItem from="1672918985234" duration="46000" />
+      <workItem from="1672979392724" duration="657000" />
     </task>
     <servers />
   </component>
